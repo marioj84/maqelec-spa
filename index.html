@@ -40,13 +40,22 @@ body.jao-inspired img{max-width:100%;display:block}
 .ma-icons a{width:34px;height:34px;border-radius:999px;border:1px solid var(--mq-line);display:grid;place-items:center;background:#fff}
 .ma-icons img{width:21px;height:21px;object-fit:contain}
 .ma-nav{background:var(--mq-blue);box-shadow:0 8px 14px rgba(7,29,51,.12)}
-.ma-nav-inner{height:44px;display:flex;align-items:center;gap:10px}
+.ma-nav-inner{height:44px;display:flex;align-items:center;gap:10px;position:relative}
+.ma-service-selector{position:relative;display:inline-flex;align-items:center}
 .ma-category-btn{height:36px;min-width:240px;padding:0 18px;border:0;border-radius:6px;background:#fff;color:var(--mq-text);display:inline-flex;align-items:center;justify-content:space-between;gap:12px;font-weight:900;font-size:14px;cursor:pointer}
+.ma-service-dropdown{position:absolute;top:42px;left:0;width:286px;background:#fff;border:1px solid var(--mq-line);border-radius:0 0 12px 12px;box-shadow:0 18px 34px rgba(7,29,51,.18);padding:8px;display:none;z-index:120}
+.ma-service-dropdown.open{display:block}
+.ma-service-dropdown a{display:block;padding:12px 13px;border-radius:9px;color:var(--mq-text)!important;background:#fff;border-bottom:1px solid #eef2f5}
+.ma-service-dropdown a:last-child{border-bottom:0}
+.ma-service-dropdown a:hover{background:#f3f7fb}
+.ma-service-dropdown strong{display:block;font-size:13px;line-height:1.1;color:var(--mq-blue-dark)}
+.ma-service-dropdown span{display:block;margin-top:4px;font-size:12px;color:var(--mq-muted);font-weight:600}
 .ma-menu{display:flex;align-items:center;gap:2px;flex:1}
-.ma-menu a{height:44px;display:inline-flex;align-items:center;padding:0 14px;color:#fff;font-size:13px;font-weight:800}
-.ma-menu a:hover{background:rgba(255,255,255,.13)}
+.ma-menu a{height:44px;display:inline-flex;align-items:center;padding:0 14px;color:#fff!important;font-size:13px;font-weight:800;text-shadow:0 1px 1px rgba(0,0,0,.16)}
+.ma-menu a:hover{background:rgba(255,255,255,.13);color:#fff!important}
 .ma-social-mini{display:flex;align-items:center;gap:12px;margin-left:auto}
-.ma-social-mini a{color:#fff;font-weight:900;font-size:20px;line-height:1}
+.ma-social-mini a{width:24px;height:24px;display:grid;place-items:center;color:#fff!important;font-weight:900;font-size:20px;line-height:1}
+.ma-social-mini img{width:20px;height:20px;object-fit:contain;filter:brightness(0) invert(1)}
 .ma-hero{padding:20px 0 22px;background:#eef1f4;border-top:1px solid rgba(255,255,255,.3)}
 .ma-hero-grid{display:grid;grid-template-columns:2fr .98fr;gap:14px;min-height:336px}
 .ma-hero-card,.ma-side-card{position:relative;border-radius:12px;overflow:hidden;background:#111;isolation:isolate;box-shadow:0 10px 24px rgba(7,29,51,.12)}
@@ -70,8 +79,8 @@ body.jao-inspired img{max-width:100%;display:block}
 .ma-trust-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:42px;align-items:center}.ma-pill{display:inline-flex;align-items:center;border-radius:999px;background:var(--mq-yellow);color:#fff;padding:9px 16px;font-size:12px;font-weight:900;margin-bottom:18px}.ma-trust h2{font-family:'Archivo',sans-serif;font-size:clamp(2.2rem,4.2vw,3.5rem);line-height:.98;margin:0 0 18px;text-transform:none;letter-spacing:-.04em}.ma-trust p{color:var(--mq-muted);font-size:16px;max-width:590px}.ma-checks{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}.ma-checks span{display:inline-flex;align-items:center;gap:7px;background:#f6f8fa;border:1px solid #edf1f5;border-radius:9px;padding:11px 14px;font-weight:800;font-size:14px}.ma-checks span:before{content:'✓';font-weight:900;color:var(--mq-blue)}.ma-quote-box{background:#f8fafc;border:1px solid var(--mq-line);border-radius:20px;padding:32px;box-shadow:0 12px 34px rgba(7,29,51,.045)}.ma-quote-box h3{font-family:'Archivo',sans-serif;font-size:24px;margin:0 0 8px}.ma-quote-box p{color:var(--mq-muted);margin:0 0 24px}.ma-quote-box .ma-btn{width:100%}
 .ma-projects{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.ma-project-main,.ma-project-list article{border-radius:16px;border:1px solid var(--mq-line);background:#fff;overflow:hidden}.ma-project-main img{height:330px;width:100%;object-fit:cover}.ma-project-main div{padding:20px}.ma-project-main h3,.ma-project-list h3{font-family:'Archivo',sans-serif;margin:0 0 7px;font-size:26px}.ma-project-main p,.ma-project-list p{margin:0;color:var(--mq-muted)}.ma-project-list{display:grid;gap:14px}.ma-project-list article{display:grid;grid-template-columns:126px 1fr;align-items:center}.ma-project-list img{height:100%;min-height:118px;width:126px;object-fit:cover}.ma-project-list div{padding:14px}.ma-project-list h3{font-size:19px}
 .ma-cta{background:linear-gradient(135deg,var(--mq-blue),var(--mq-blue-dark));color:#fff;padding:52px 0}.ma-cta-box{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.ma-cta h2{font-family:'Archivo',sans-serif;font-size:clamp(2rem,3.6vw,3.2rem);line-height:1;margin:0 0 10px;text-transform:none}.ma-cta p{margin:0;color:#dceaf6;max-width:720px}.ma-footer{background:var(--mq-blue);color:#fff;padding:38px 0 20px}.ma-footer-grid{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:54px}.ma-footer img{height:36px;width:auto;margin-bottom:12px;background:#fff;padding:4px}.ma-footer p,.ma-footer a{display:block;color:#dbeaf7;font-size:13px;margin:7px 0}.ma-footer h4{font-size:14px;margin:0 0 14px;color:#fff}.ma-copy{border-top:1px solid rgba(255,255,255,.18);margin-top:32px;padding-top:14px;text-align:center;color:rgba(255,255,255,.62);font-size:12px}.ma-whatsapp{position:fixed;right:20px;bottom:18px;z-index:90;display:inline-flex;align-items:center;gap:10px;border-radius:999px;background:#03c766;color:#fff;padding:12px 18px;font-size:13px;font-weight:900;box-shadow:0 10px 26px rgba(0,0,0,.18)}.ma-whatsapp img{width:22px;height:22px}.ma-mobile-toggle{display:none;border:0;background:#fff;color:var(--mq-blue);font-weight:900;border-radius:8px;padding:10px 12px}
-@media(max-width:980px){.ma-topbar .ma-container{justify-content:center;text-align:center}.ma-contact-line{display:none}.ma-header-main{grid-template-columns:1fr auto}.ma-search{grid-column:1/-1;order:3}.ma-nav-inner{height:auto;min-height:50px;flex-wrap:wrap;padding:7px 0}.ma-mobile-toggle{display:inline-flex}.ma-category-btn{min-width:0;flex:1}.ma-menu{display:none;flex-direction:column;align-items:stretch;width:100%;background:var(--mq-blue-dark);border-radius:10px;overflow:hidden}.ma-menu.open{display:flex}.ma-menu a{width:100%;height:42px}.ma-social-mini{display:none}.ma-hero-grid,.ma-trust-grid,.ma-projects,.ma-cta-box{grid-template-columns:1fr}.ma-hero-card{padding:36px 30px}.ma-cap-grid{grid-template-columns:repeat(3,1fr)}.ma-services{grid-template-columns:repeat(2,1fr)}.ma-footer-grid{grid-template-columns:1fr 1fr}.ma-project-main img{height:260px}}
-@media(max-width:620px){.ma-container{width:min(100% - 22px,1110px)}.ma-topbar{font-size:11px}.ma-header-main{height:auto;padding:10px 0}.ma-logo img{height:45px}.ma-icons{display:none}.ma-search button{padding:0 14px}.ma-category-btn{width:100%;min-width:100%}.ma-hero{padding-top:12px}.ma-hero-card{min-height:430px;padding:34px 22px;background-position:center}.ma-hero h1{font-size:2.7rem}.ma-side-card{min-height:185px}.ma-cap-grid,.ma-services{grid-template-columns:1fr 1fr;gap:10px}.ma-cap-card{font-size:12px}.ma-section{padding:54px 0}.ma-section-title{display:block}.ma-section-title p{margin-top:10px}.ma-project-list article{grid-template-columns:1fr}.ma-project-list img{width:100%;height:155px}.ma-footer-grid{grid-template-columns:1fr}.ma-whatsapp{right:12px;bottom:12px;padding:11px 14px}.ma-whatsapp span{display:none}}
+@media(max-width:980px){.ma-topbar .ma-container{justify-content:center;text-align:center}.ma-contact-line{display:none}.ma-header-main{grid-template-columns:1fr auto}.ma-search{grid-column:1/-1;order:3}.ma-nav-inner{height:auto;min-height:50px;flex-wrap:wrap;padding:7px 0}.ma-mobile-toggle{display:inline-flex}.ma-service-selector{flex:1}.ma-category-btn{min-width:0;width:100%}.ma-service-dropdown{top:42px;width:100%}.ma-menu{display:none;flex-direction:column;align-items:stretch;width:100%;background:var(--mq-blue-dark);border-radius:10px;overflow:hidden}.ma-menu.open{display:flex}.ma-menu a{width:100%;height:42px;color:#fff!important}.ma-social-mini{display:none}.ma-hero-grid,.ma-trust-grid,.ma-projects,.ma-cta-box{grid-template-columns:1fr}.ma-hero-card{padding:36px 30px}.ma-cap-grid{grid-template-columns:repeat(3,1fr)}.ma-services{grid-template-columns:repeat(2,1fr)}.ma-footer-grid{grid-template-columns:1fr 1fr}.ma-project-main img{height:260px}}
+@media(max-width:620px){.ma-container{width:min(100% - 22px,1110px)}.ma-topbar{font-size:11px}.ma-header-main{height:auto;padding:10px 0}.ma-logo img{height:45px}.ma-icons{display:none}.ma-search button{padding:0 14px}.ma-service-selector{width:100%;min-width:100%}.ma-hero{padding-top:12px}.ma-hero-card{min-height:430px;padding:34px 22px;background-position:center}.ma-hero h1{font-size:2.7rem}.ma-side-card{min-height:185px}.ma-cap-grid,.ma-services{grid-template-columns:1fr 1fr;gap:10px}.ma-cap-card{font-size:12px}.ma-section{padding:54px 0}.ma-section-title{display:block}.ma-section-title p{margin-top:10px}.ma-project-list article{grid-template-columns:1fr}.ma-project-list img{width:100%;height:155px}.ma-footer-grid{grid-template-columns:1fr}.ma-whatsapp{right:12px;bottom:12px;padding:11px 14px}.ma-whatsapp span{display:none}}
 </style>
 </head>
 <body class="jao-inspired">
@@ -106,7 +115,18 @@ body.jao-inspired img{max-width:100%;display:block}
 
     <nav class="ma-nav">
       <div class="ma-container ma-nav-inner">
-        <button class="ma-category-btn" onclick="toggleMenu()" type="button"><span>☰ &nbsp; BUSCAR POR SERVICIO</span><span>⌄</span></button>
+        <div class="ma-service-selector">
+          <button class="ma-category-btn" onclick="toggleServiceDropdown(event)" type="button" aria-expanded="false" aria-controls="serviceDropdown"><span>☰ &nbsp; BUSCAR POR SERVICIO</span><span>⌄</span></button>
+          <div class="ma-service-dropdown" id="serviceDropdown">
+            <a href="#servicios"><strong>Corte CNC Plasma</strong><span>Cortes de precisión en acero y metales.</span></a>
+            <a href="#servicios"><strong>Oxicorte</strong><span>Soluciones robustas para mayores espesores.</span></a>
+            <a href="#servicios"><strong>Torno y mecanizado</strong><span>Fabricación y ajuste de piezas.</span></a>
+            <a href="#servicios"><strong>Fresado</strong><span>Terminaciones y geometrías técnicas.</span></a>
+            <a href="#servicios"><strong>Soldadura</strong><span>Apoyo metalmecánico y reparación.</span></a>
+            <a href="#servicios"><strong>Electricidad industrial</strong><span>Instalaciones y soporte técnico.</span></a>
+            <a href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20quiero%20cotizar%20un%20servicio%20industrial" target="_blank"><strong>Cotizar otro servicio</strong><span>Enviar consulta directa por WhatsApp.</span></a>
+          </div>
+        </div>
         <button class="ma-mobile-toggle" onclick="toggleMenu()" type="button">Menú</button>
         <div class="ma-menu" id="navMenu">
           <a href="index.html">Inicio</a>
@@ -118,7 +138,10 @@ body.jao-inspired img{max-width:100%;display:block}
           <a href="vip.html">Centro Técnico</a>
           <a href="contacto.html">Contacto</a>
         </div>
-        <div class="ma-social-mini"><a href="https://www.instagram.com/maqelec.spa/" target="_blank">◎</a><a href="https://wa.me/56991514957" target="_blank">☎</a></div>
+        <div class="ma-social-mini">
+          <a href="https://www.instagram.com/maqelec.spa/" target="_blank" aria-label="Instagram"><img src="logo_instagram.png" alt="Instagram"></a>
+          <a href="https://wa.me/56991514957" target="_blank" aria-label="WhatsApp"><img src="logo_wsp.png" alt="WhatsApp"></a>
+        </div>
       </div>
     </nav>
   </div>
@@ -287,10 +310,28 @@ body.jao-inspired img{max-width:100%;display:block}
 <a class="ma-whatsapp" href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20necesito%20ayuda" target="_blank"><img src="logo_wsp.png" alt="WhatsApp"><span>Contacto inmediato</span></a>
 
 <script>
+function toggleServiceDropdown(event){
+  if(event){ event.stopPropagation(); }
+  const dropdown = document.getElementById('serviceDropdown');
+  const button = document.querySelector('.ma-category-btn');
+  if(dropdown){
+    dropdown.classList.toggle('open');
+    if(button){ button.setAttribute('aria-expanded', dropdown.classList.contains('open') ? 'true' : 'false'); }
+  }
+}
 function toggleMenu(){
   const menu = document.getElementById('navMenu');
   if(menu){ menu.classList.toggle('open'); }
 }
+document.addEventListener('click', function(event){
+  const dropdown = document.getElementById('serviceDropdown');
+  const selector = document.querySelector('.ma-service-selector');
+  const button = document.querySelector('.ma-category-btn');
+  if(dropdown && selector && !selector.contains(event.target)){
+    dropdown.classList.remove('open');
+    if(button){ button.setAttribute('aria-expanded','false'); }
+  }
+});
 function sendSearchToWhatsapp(event){
   event.preventDefault();
   const input = document.getElementById('maSearchInput');
