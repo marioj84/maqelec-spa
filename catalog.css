@@ -31,6 +31,10 @@ body.catalog-site a {
   text-decoration: none;
 }
 
+body.catalog-site .ma-menu a {
+  color: #fff;
+}
+
 body.catalog-site img {
   display: block;
   max-width: 100%;
