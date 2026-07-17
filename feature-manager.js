@@ -1,1 +1,210 @@
-KGZ1bmN0aW9uICgpIHsKICAidXNlIHN0cmljdCI7CgogIGNvbnN0IGNvbmZpZyA9IHdpbmRvdy5NQVFFTEVDX1NJVEVfQ09ORklHOwogIGNvbnN0IHZhbGlkU3RhdGVzID0gbmV3IFNldChbIm9mZiIsICJwcmV2aWV3IiwgImxpdmUiXSk7CgogIGlmICghY29uZmlnIHx8ICFjb25maWcuZmVhdHVyZXMgfHwgIWNvbmZpZy5kZXBlbmRlbmNpZXMpIHsKICAgIGNvbnNvbGUuZXJyb3IoCiAgICAgICJNQVFFTEVDOiBubyBzZSBlbmNvbnRyw7MgdW5hIGNvbmZpZ3VyYWNpw7NuIGRlIGZ1bmNpb25lcyB2w6FsaWRhLiIsCiAgICApOwogICAgcmV0dXJuOwogIH0KCiAgZnVuY3Rpb24gZ2V0RmVhdHVyZShuYW1lKSB7CiAgICByZXR1cm4gY29uZmlnLmZlYXR1cmVzW25hbWVdIHx8IG51bGw7CiAgfQoKICBmdW5jdGlvbiBnZXRNaXNzaW5nRGVwZW5kZW5jaWVzKG5hbWUpIHsKICAgIGNvbnN0IGZlYXR1cmUgPSBnZXRGZWF0dXJlKG5hbWUpOwogICAgaWYgKCFmZWF0dXJlKSByZXR1cm4gW107CgogICAgcmV0dXJuIChmZWF0dXJlLmRlcGVuZGVuY2llcyB8fCBbXSkuZmlsdGVyKChkZXBlbmRlbmN5TmFtZSkgPT4gewogICAgICBjb25zdCBkZXBlbmRlbmN5ID0gY29uZmlnLmRlcGVuZGVuY2llc1tkZXBlbmRlbmN5TmFtZV07CiAgICAgIHJldHVybiAhZGVwZW5kZW5jeSB8fCBkZXBlbmRlbmN5LnJlYWR5ICE9PSB0cnVlOwogICAgfSk7CiAgfQoKICBmdW5jdGlvbiBnZXRFZmZlY3RpdmVTdGF0ZShuYW1lKSB7CiAgICBjb25zdCBmZWF0dXJlID0gZ2V0RmVhdHVyZShuYW1lKTsKICAgIGlmICghZmVhdHVyZSB8fCAhdmFsaWRTdGF0ZXMuaGFzKGZlYXR1cmUuc3RhdGUpKSByZXR1cm4gIm9mZiI7CiAgICBpZiAoZmVhdHVyZS5zdGF0ZSAhPT0gImxpdmUiKSByZXR1cm4gZmVhdHVyZS5zdGF0ZTsKCiAgICByZXR1cm4gZ2V0TWlzc2luZ0RlcGVuZGVuY2llcyhuYW1lKS5sZW5ndGggPyAicHJldmlldyIgOiAibGl2ZSI7CiAgfQoKICBmdW5jdGlvbiBnZXRDdXJyZW50UGFnZUZlYXR1cmUoKSB7CiAgICBjb25zdCBleHBsaWNpdEZlYXR1cmUgPSBkb2N1bWVudC5ib2R5LmRhdGFzZXQucGFnZUZlYXR1cmU7CiAgICBpZiAoZXhwbGljaXRGZWF0dXJlKSByZXR1cm4gZXhwbGljaXRGZWF0dXJlOwoKICAgIGNvbnN0IHBhZ2VOYW1lID0gd2luZG93LmxvY2F0aW9uLnBhdGhuYW1lLnNwbGl0KCIvIikucG9wKCkgfHwgImluZGV4Lmh0bWwiOwogICAgcmV0dXJuIGNvbmZpZy5wYWdlc1twYWdlTmFtZV0gfHwgbnVsbDsKICB9CgogIGZ1bmN0aW9uIG1hcmtDb25maWd1cmVkRWxlbWVudHMoKSB7CiAgICBPYmplY3QuZW50cmllcyhjb25maWcuZmVhdHVyZXMpLmZvckVhY2goKFtuYW1lLCBmZWF0dXJlXSkgPT4gewogICAgICAoZmVhdHVyZS5zZWxlY3RvcnMgfHwgW10pLmZvckVhY2goKHNlbGVjdG9yKSA9PiB7CiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChzZWxlY3RvcikuZm9yRWFjaCgoZWxlbWVudCkgPT4gewogICAgICAgICAgaWYgKCFlbGVtZW50LmRhdGFzZXQuZmVhdHVyZSkgZWxlbWVudC5kYXRhc2V0LmZlYXR1cmUgPSBuYW1lOwogICAgICAgIH0pOwogICAgICB9KTsKICAgIH0pOwogIH0KCiAgZnVuY3Rpb24gY2xlYXJHZW5lcmF0ZWRJbmRpY2F0b3JzKCkgewogICAgZG9jdW1lbnQKICAgICAgLnF1ZXJ5U2VsZWN0b3JBbGwoIltkYXRhLWZlYXR1cmUtZ2VuZXJhdGVkXSIpCiAgICAgIC5mb3JFYWNoKChlbGVtZW50KSA9PiBlbGVtZW50LnJlbW92ZSgpKTsKCiAgICBkb2N1bWVudAogICAgICAucXVlcnlTZWxlY3RvckFsbCgiW2RhdGEtZmVhdHVyZS1wYWdlLWhpZGRlbl0iKQogICAgICAuZm9yRWFjaCgoZWxlbWVudCkgPT4gewogICAgICAgIGVsZW1lbnQuaGlkZGVuID0gZmFsc2U7CiAgICAgICAgZGVsZXRlIGVsZW1lbnQuZGF0YXNldC5mZWF0dXJlUGFnZUhpZGRlbjsKICAgICAgfSk7CiAgfQoKICBmdW5jdGlvbiBjcmVhdGVCYWRnZShuYW1lKSB7CiAgICBjb25zdCBiYWRnZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNwYW4iKTsKICAgIGJhZGdlLmNsYXNzTmFtZSA9ICJtcS1mZWF0dXJlLWJhZGdlIjsKICAgIGJhZGdlLmRhdGFzZXQuZmVhdHVyZUdlbmVyYXRlZCA9IG5hbWU7CiAgICBiYWRnZS50ZXh0Q29udGVudCA9ICJWaXN0YSBwcmV2aWEiOwogICAgcmV0dXJuIGJhZGdlOwogIH0KCiAgZnVuY3Rpb24gY3JlYXRlUHJldmlld05vdGUobmFtZSwgbWVzc2FnZSkgewogICAgY29uc3Qgbm90ZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoImRpdiIpOwogICAgbm90ZS5jbGFzc05hbWUgPSAibXEtZmVhdHVyZS1ub3RlIjsKICAgIG5vdGUuZGF0YXNldC5mZWF0dXJlR2VuZXJhdGVkID0gbmFtZTsKICAgIG5vdGUuaW5uZXJIVE1MID0gYDxzdHJvbmc+Q29udGVuaWRvIGVuIGRlc2Fycm9sbG88L3N0cm9uZz48c3Bhbj4ke21lc3NhZ2V9PC9zcGFuPmA7CiAgICByZXR1cm4gbm90ZTsKICB9CgogIGZ1bmN0aW9uIGFwcGx5RWxlbWVudFN0YXRlcygpIHsKICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoIltkYXRhLWZlYXR1cmVdIikuZm9yRWFjaCgoZWxlbWVudCkgPT4gewogICAgICBjb25zdCBuYW1lID0gZWxlbWVudC5kYXRhc2V0LmZlYXR1cmU7CiAgICAgIGNvbnN0IGZlYXR1cmUgPSBnZXRGZWF0dXJlKG5hbWUpOwogICAgICBjb25zdCBzdGF0ZSA9IGdldEVmZmVjdGl2ZVN0YXRlKG5hbWUpOwoKICAgICAgaWYgKCFmZWF0dXJlKSByZXR1cm47CgogICAgICBlbGVtZW50LmhpZGRlbiA9IHN0YXRlID09PSAib2ZmIjsKICAgICAgZWxlbWVudC5kYXRhc2V0LmZlYXR1cmVTdGF0ZSA9IHN0YXRlOwoKICAgICAgaWYgKHN0YXRlICE9PSAicHJldmlldyIpIHJldHVybjsKCiAgICAgIGlmIChlbGVtZW50Lm1hdGNoZXMoIm5hdiBhLCBmb290ZXIgYSwgLm1hLW1lbnUgYSIpKSB7CiAgICAgICAgZWxlbWVudC5hcHBlbmRDaGlsZChjcmVhdGVCYWRnZShuYW1lKSk7CiAgICAgIH0KCiAgICAgIGlmIChlbGVtZW50Lm1hdGNoZXMoInNlY3Rpb24iKSkgewogICAgICAgIGNvbnN0IGNvbnRhaW5lciA9IGVsZW1lbnQucXVlcnlTZWxlY3RvcigiLm1hLWNvbnRhaW5lciwgLmNvbnRhaW5lciIpOwogICAgICAgIGlmIChjb250YWluZXIpIHsKICAgICAgICAgIGNvbnRhaW5lci5wcmVwZW5kKAogICAgICAgICAgICBjcmVhdGVQcmV2aWV3Tm90ZSgKICAgICAgICAgICAgICBuYW1lLAogICAgICAgICAgICAgIGZlYXR1cmUucHJldmlld01lc3NhZ2UgfHwKICAgICAgICAgICAgICAgICJFc3RlIG3Ds2R1bG8gdG9kYXbDrWEgdXRpbGl6YSBjb250ZW5pZG8gZGUgZGVtb3N0cmFjacOzbi4iLAogICAgICAgICAgICApLAogICAgICAgICAgKTsKICAgICAgICB9CiAgICAgIH0KICAgIH0pOwogIH0KCiAgZnVuY3Rpb24gcmVuZGVyVW5hdmFpbGFibGVQYWdlKG5hbWUpIHsKICAgIGNvbnN0IGZlYXR1cmUgPSBnZXRGZWF0dXJlKG5hbWUpOwogICAgY29uc3QgbWFpbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoIm1haW4iKTsKICAgIGNvbnN0IHVuYXZhaWxhYmxlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2VjdGlvbiIpOwogICAgdW5hdmFpbGFibGUuY2xhc3NOYW1lID0gIm1xLWZlYXR1cmUtdW5hdmFpbGFibGUiOwogICAgdW5hdmFpbGFibGUuZGF0YXNldC5mZWF0dXJlR2VuZXJhdGVkID0gbmFtZTsKICAgIHVuYXZhaWxhYmxlLmlubmVySFRNTCA9IGAKICAgICAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIiPgogICAgICAgICAgPHNwYW4gY2xhc3M9Im1xLWZlYXR1cmUta2lja2VyIj5Nw7NkdWxvIGRlc2FjdGl2YWRvPC9zcGFuPgogICAgICAgICAgPGgxPiR7ZmVhdHVyZS5sYWJlbH08L2gxPgogICAgICAgICAgPHA+RXN0YSBmdW5jacOzbiB0b2RhdsOtYSBubyBlc3TDoSBkaXNwb25pYmxlLiBTZSBhY3RpdmFyw6EgY3VhbmRvIHN1cyBjb250ZW5pZG9zIHkgZGVwZW5kZW5jaWFzIGVzdMOpbiB2YWxpZGFkb3MuPC9wPgogICAgICAgICAgPGEgY2xhc3M9ImJ0biIgaHJlZj0iaW5kZXguaHRtbCI+Vm9sdmVyIGFsIGluaWNpbzwvYT4KICAgICAgICA8L2Rpdj5gOwoKICAgIGlmIChtYWluKSB7CiAgICAgIG1haW4uaGlkZGVuID0gdHJ1ZTsKICAgICAgbWFpbi5kYXRhc2V0LmZlYXR1cmVQYWdlSGlkZGVuID0gInRydWUiOwogICAgICBtYWluLmJlZm9yZSh1bmF2YWlsYWJsZSk7CiAgICB9IGVsc2UgewogICAgICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKHVuYXZhaWxhYmxlKTsKICAgIH0KICB9CgogIGZ1bmN0aW9uIHJlbmRlclBhZ2VTdGF0ZSgpIHsKICAgIGNvbnN0IG5hbWUgPSBnZXRDdXJyZW50UGFnZUZlYXR1cmUoKTsKICAgIGlmICghbmFtZSkgcmV0dXJuOwoKICAgIGNvbnN0IGZlYXR1cmUgPSBnZXRGZWF0dXJlKG5hbWUpOwogICAgY29uc3Qgc3RhdGUgPSBnZXRFZmZlY3RpdmVTdGF0ZShuYW1lKTsKICAgIGRvY3VtZW50LmJvZHkuZGF0YXNldC5wYWdlRmVhdHVyZVN0YXRlID0gc3RhdGU7CgogICAgaWYgKHN0YXRlID09PSAib2ZmIikgewogICAgICByZW5kZXJVbmF2YWlsYWJsZVBhZ2UobmFtZSk7CiAgICAgIHJldHVybjsKICAgIH0KCiAgICBpZiAoc3RhdGUgPT09ICJwcmV2aWV3IikgewogICAgICBjb25zdCB0YXJnZXQgPQogICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoIi5wYWdlLWhlcm8gLmNvbnRhaW5lciIpIHx8CiAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigibWFpbiAuY29udGFpbmVyIik7CiAgICAgIGlmICh0YXJnZXQpIHsKICAgICAgICB0YXJnZXQucHJlcGVuZCgKICAgICAgICAgIGNyZWF0ZVByZXZpZXdOb3RlKAogICAgICAgICAgICBuYW1lLAogICAgICAgICAgICBmZWF0dXJlLnByZXZpZXdNZXNzYWdlIHx8CiAgICAgICAgICAgICAgIkVzdGUgbcOzZHVsbyB0b2RhdsOtYSB1dGlsaXphIGNvbnRlbmlkbyBkZSBkZW1vc3RyYWNpw7NuLiIsCiAgICAgICAgICApLAogICAgICAgICk7CiAgICAgIH0KCiAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2FbaHJlZj0iIyJdJykuZm9yRWFjaCgobGluaykgPT4gewogICAgICAgIGxpbmsuc2V0QXR0cmlidXRlKCJhcmlhLWRpc2FibGVkIiwgInRydWUiKTsKICAgICAgICBsaW5rLmNsYXNzTGlzdC5hZGQoIm1xLWZlYXR1cmUtZGlzYWJsZWQtYWN0aW9uIik7CiAgICAgICAgbGluay50ZXh0Q29udGVudCA9ICJQcsOzeGltYW1lbnRlIjsKICAgICAgICBsaW5rLmFkZEV2ZW50TGlzdGVuZXIoImNsaWNrIiwgKGV2ZW50KSA9PiBldmVudC5wcmV2ZW50RGVmYXVsdCgpKTsKICAgICAgfSk7CiAgICB9CiAgfQoKICBmdW5jdGlvbiBnZXRSZXBvcnQoKSB7CiAgICByZXR1cm4gT2JqZWN0LmVudHJpZXMoY29uZmlnLmZlYXR1cmVzKS5tYXAoKFtuYW1lLCBmZWF0dXJlXSkgPT4gKHsKICAgICAgZmVhdHVyZTogbmFtZSwKICAgICAgbGFiZWw6IGZlYXR1cmUubGFiZWwsCiAgICAgIGNvbmZpZ3VyZWRTdGF0ZTogZmVhdHVyZS5zdGF0ZSwKICAgICAgZWZmZWN0aXZlU3RhdGU6IGdldEVmZmVjdGl2ZVN0YXRlKG5hbWUpLAogICAgICBtaXNzaW5nRGVwZW5kZW5jaWVzOiBnZXRNaXNzaW5nRGVwZW5kZW5jaWVzKG5hbWUpLAogICAgfSkpOwogIH0KCiAgZnVuY3Rpb24gYXBwbHkoKSB7CiAgICBjbGVhckdlbmVyYXRlZEluZGljYXRvcnMoKTsKICAgIG1hcmtDb25maWd1cmVkRWxlbWVudHMoKTsKICAgIGFwcGx5RWxlbWVudFN0YXRlcygpOwogICAgcmVuZGVyUGFnZVN0YXRlKCk7CiAgfQoKICB3aW5kb3cuTUFRRUxFQ19GRUFUVVJFUyA9IHsKICAgIGFwcGx5LAogICAgZ2V0RmVhdHVyZSwKICAgIGdldFN0YXRlOiBnZXRFZmZlY3RpdmVTdGF0ZSwKICAgIGdldE1pc3NpbmdEZXBlbmRlbmNpZXMsCiAgICBnZXRSZXBvcnQsCiAgICBzZXRTdGF0ZShuYW1lLCBzdGF0ZSkgewogICAgICBpZiAoIWdldEZlYXR1cmUobmFtZSkgfHwgIXZhbGlkU3RhdGVzLmhhcyhzdGF0ZSkpIHJldHVybiBmYWxzZTsKICAgICAgY29uZmlnLmZlYXR1cmVzW25hbWVdLnN0YXRlID0gc3RhdGU7CiAgICAgIGFwcGx5KCk7CiAgICAgIHJldHVybiB0cnVlOwogICAgfSwKICB9OwoKICBpZiAoZG9jdW1lbnQucmVhZHlTdGF0ZSA9PT0gImxvYWRpbmciKSB7CiAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJET01Db250ZW50TG9hZGVkIiwgYXBwbHksIHsgb25jZTogdHJ1ZSB9KTsKICB9IGVsc2UgewogICAgYXBwbHkoKTsKICB9Cn0pKCk7Cg==
+(function () {
+  "use strict";
+
+  const config = window.MAQELEC_SITE_CONFIG;
+  const validStates = new Set(["off", "preview", "live"]);
+
+  if (!config || !config.features || !config.dependencies) {
+    console.error(
+      "MAQELEC: no se encontró una configuración de funciones válida.",
+    );
+    return;
+  }
+
+  function getFeature(name) {
+    return config.features[name] || null;
+  }
+
+  function getMissingDependencies(name) {
+    const feature = getFeature(name);
+    if (!feature) return [];
+
+    return (feature.dependencies || []).filter((dependencyName) => {
+      const dependency = config.dependencies[dependencyName];
+      return !dependency || dependency.ready !== true;
+    });
+  }
+
+  function getEffectiveState(name) {
+    const feature = getFeature(name);
+    if (!feature || !validStates.has(feature.state)) return "off";
+    if (feature.state !== "live") return feature.state;
+
+    return getMissingDependencies(name).length ? "preview" : "live";
+  }
+
+  function getCurrentPageFeature() {
+    const explicitFeature = document.body.dataset.pageFeature;
+    if (explicitFeature) return explicitFeature;
+
+    const pageName = window.location.pathname.split("/").pop() || "index.html";
+    return config.pages[pageName] || null;
+  }
+
+  function markConfiguredElements() {
+    Object.entries(config.features).forEach(([name, feature]) => {
+      (feature.selectors || []).forEach((selector) => {
+        document.querySelectorAll(selector).forEach((element) => {
+          if (!element.dataset.feature) element.dataset.feature = name;
+        });
+      });
+    });
+  }
+
+  function clearGeneratedIndicators() {
+    document
+      .querySelectorAll("[data-feature-generated]")
+      .forEach((element) => element.remove());
+
+    document
+      .querySelectorAll("[data-feature-page-hidden]")
+      .forEach((element) => {
+        element.hidden = false;
+        delete element.dataset.featurePageHidden;
+      });
+  }
+
+  function createBadge(name) {
+    const badge = document.createElement("span");
+    badge.className = "mq-feature-badge";
+    badge.dataset.featureGenerated = name;
+    badge.textContent = "Vista previa";
+    return badge;
+  }
+
+  function createPreviewNote(name, message) {
+    const note = document.createElement("div");
+    note.className = "mq-feature-note";
+    note.dataset.featureGenerated = name;
+    note.innerHTML = `<strong>Contenido en desarrollo</strong><span>${message}</span>`;
+    return note;
+  }
+
+  function applyElementStates() {
+    document.querySelectorAll("[data-feature]").forEach((element) => {
+      const name = element.dataset.feature;
+      const feature = getFeature(name);
+      const state = getEffectiveState(name);
+
+      if (!feature) return;
+
+      element.hidden = state === "off";
+      element.dataset.featureState = state;
+
+      if (state !== "preview") return;
+
+      if (element.matches("nav a, footer a, .ma-menu a")) {
+        element.appendChild(createBadge(name));
+      }
+
+      if (element.matches("section")) {
+        const container = element.querySelector(".ma-container, .container");
+        if (container) {
+          container.prepend(
+            createPreviewNote(
+              name,
+              feature.previewMessage ||
+                "Este módulo todavía utiliza contenido de demostración.",
+            ),
+          );
+        }
+      }
+    });
+  }
+
+  function renderUnavailablePage(name) {
+    const feature = getFeature(name);
+    const main = document.querySelector("main");
+    const unavailable = document.createElement("section");
+    unavailable.className = "mq-feature-unavailable";
+    unavailable.dataset.featureGenerated = name;
+    unavailable.innerHTML = `
+        <div class="container">
+          <span class="mq-feature-kicker">Módulo desactivado</span>
+          <h1>${feature.label}</h1>
+          <p>Esta función todavía no está disponible. Se activará cuando sus contenidos y dependencias estén validados.</p>
+          <a class="btn" href="index.html">Volver al inicio</a>
+        </div>`;
+
+    if (main) {
+      main.hidden = true;
+      main.dataset.featurePageHidden = "true";
+      main.before(unavailable);
+    } else {
+      document.body.appendChild(unavailable);
+    }
+  }
+
+  function renderPageState() {
+    const name = getCurrentPageFeature();
+    if (!name) return;
+
+    const feature = getFeature(name);
+    const state = getEffectiveState(name);
+    document.body.dataset.pageFeatureState = state;
+
+    if (state === "off") {
+      renderUnavailablePage(name);
+      return;
+    }
+
+    if (state === "preview") {
+      const target =
+        document.querySelector(".page-hero .container") ||
+        document.querySelector("main .container");
+      if (target) {
+        target.prepend(
+          createPreviewNote(
+            name,
+            feature.previewMessage ||
+              "Este módulo todavía utiliza contenido de demostración.",
+          ),
+        );
+      }
+
+      document.querySelectorAll('a[href="#"]').forEach((link) => {
+        link.setAttribute("aria-disabled", "true");
+        link.classList.add("mq-feature-disabled-action");
+        link.textContent = "Próximamente";
+        link.addEventListener("click", (event) => event.preventDefault());
+      });
+    }
+  }
+
+  function getReport() {
+    return Object.entries(config.features).map(([name, feature]) => ({
+      feature: name,
+      label: feature.label,
+      configuredState: feature.state,
+      effectiveState: getEffectiveState(name),
+      missingDependencies: getMissingDependencies(name),
+    }));
+  }
+
+  function apply() {
+    clearGeneratedIndicators();
+    markConfiguredElements();
+    applyElementStates();
+    renderPageState();
+  }
+
+  window.MAQELEC_FEATURES = {
+    apply,
+    getFeature,
+    getState: getEffectiveState,
+    getMissingDependencies,
+    getReport,
+    setState(name, state) {
+      if (!getFeature(name) || !validStates.has(state)) return false;
+      config.features[name].state = state;
+      apply();
+      return true;
+    },
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", apply, { once: true });
+  } else {
+    apply();
+  }
+})();
