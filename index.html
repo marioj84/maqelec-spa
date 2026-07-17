@@ -3,1370 +3,205 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAQELEC SpA | Soluciones industriales</title>
+    <meta
+      name="description"
+      content="MAQELEC: maquinaria, repuestos y servicios industriales con importación, puesta en marcha y soporte técnico en Chile."
+    />
+    <title>MAQELEC | Maquinaria, repuestos y servicios industriales</title>
     <link rel="icon" href="favicon.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="site-shell.css?v=20260717-2" />
-    <link rel="stylesheet" href="feature-manager.css" />
-    <script src="site-config.js"></script>
-    <script src="site-shell.js" defer></script>
-    <script src="feature-manager.js" defer></script>
+    <link rel="stylesheet" href="site-shell.css?v=20260717-3" />
+    <link rel="stylesheet" href="feature-manager.css?v=20260717-1" />
+    <link rel="stylesheet" href="catalog.css?v=20260717-1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --mq-blue: #0f568d;
-        --mq-blue-dark: #0b4778;
-        --mq-navy: #071d33;
-        --mq-yellow: #f5b400;
-        --mq-yellow-dark: #e4a700;
-        --mq-bg: #f3f5f7;
-        --mq-card: #ffffff;
-        --mq-line: #dce3ea;
-        --mq-text: #06172a;
-        --mq-muted: #4d6175;
-        --mq-green: #03c766;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body.jao-inspired {
-        margin: 0;
-        background: var(--mq-bg);
-        color: var(--mq-text);
-        font-family:
-          "Inter",
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        line-height: 1.55;
-        overflow-x: hidden;
-      }
-      body.jao-inspired a {
-        text-decoration: none;
-        color: inherit;
-      }
-      body.jao-inspired img {
-        max-width: 100%;
-        display: block;
-      }
-      .ma-container {
-        width: min(1110px, calc(100% - 28px));
-        margin: 0 auto;
-      }
-      .ma-topbar {
-        background: #eef2f5;
-        border-bottom: 1px solid var(--mq-line);
-        font-size: 13px;
-        color: #0e253b;
-      }
-      .ma-topbar .ma-container {
-        min-height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-      }
-      .ma-contact-line {
-        display: flex;
-        gap: 28px;
-        align-items: center;
-        white-space: nowrap;
-        font-weight: 600;
-      }
-      .ma-header {
-        background: #fff;
-        border-bottom: 1px solid var(--mq-line);
-        position: sticky;
-        top: 0;
-        z-index: 80;
-        box-shadow: 0 8px 20px rgba(7, 29, 51, 0.04);
-      }
-      .ma-header-main {
-        height: 80px;
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        gap: 22px;
-        align-items: center;
-      }
-      .ma-logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        min-width: 110px;
-      }
-      .ma-logo img {
-        height: 52px;
-        width: auto;
-        object-fit: contain;
-      }
-      .ma-search {
-        height: 42px;
-        display: flex;
-        align-items: center;
-        border: 1.5px solid var(--mq-blue);
-        border-radius: 5px;
-        overflow: hidden;
-        background: #fff;
-        min-width: 0;
-      }
-      .ma-search input {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        padding: 0 18px;
-        font:
-          500 14px/1 "Inter",
-          sans-serif;
-        outline: none;
-        color: var(--mq-text);
-      }
-      .ma-search button {
-        height: 100%;
-        border: 0;
-        background: var(--mq-blue);
-        color: #fff;
-        padding: 0 24px;
-        font-weight: 900;
-        cursor: pointer;
-      }
-      .ma-icons {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .ma-icons a {
-        width: 34px;
-        height: 34px;
-        border-radius: 999px;
-        border: 1px solid var(--mq-line);
-        display: grid;
-        place-items: center;
-        background: #fff;
-      }
-      .ma-icons img {
-        width: 21px;
-        height: 21px;
-        object-fit: contain;
-      }
-      .ma-nav {
-        background: var(--mq-blue);
-        box-shadow: 0 8px 14px rgba(7, 29, 51, 0.12);
-      }
-      .ma-nav-inner {
-        height: 44px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        position: relative;
-      }
-      .ma-service-selector {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-      }
-      .ma-category-btn {
-        height: 36px;
-        min-width: 240px;
-        padding: 0 18px;
-        border: 0;
-        border-radius: 6px;
-        background: #fff;
-        color: var(--mq-text);
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        font-weight: 900;
-        font-size: 14px;
-        cursor: pointer;
-      }
-      .ma-service-dropdown {
-        position: absolute;
-        top: 42px;
-        left: 0;
-        width: 286px;
-        background: #fff;
-        border: 1px solid var(--mq-line);
-        border-radius: 0 0 12px 12px;
-        box-shadow: 0 18px 34px rgba(7, 29, 51, 0.18);
-        padding: 8px;
-        display: none;
-        z-index: 120;
-      }
-      .ma-service-dropdown.open {
-        display: block;
-      }
-      .ma-service-dropdown a {
-        display: block;
-        padding: 12px 13px;
-        border-radius: 9px;
-        color: var(--mq-text) !important;
-        background: #fff;
-        border-bottom: 1px solid #eef2f5;
-      }
-      .ma-service-dropdown a:last-child {
-        border-bottom: 0;
-      }
-      .ma-service-dropdown a:hover {
-        background: #f3f7fb;
-      }
-      .ma-service-dropdown strong {
-        display: block;
-        font-size: 13px;
-        line-height: 1.1;
-        color: var(--mq-blue-dark);
-      }
-      .ma-service-dropdown span {
-        display: block;
-        margin-top: 4px;
-        font-size: 12px;
-        color: var(--mq-muted);
-        font-weight: 600;
-      }
-      .ma-menu {
-        display: flex;
-        align-items: center;
-        gap: 2px;
-        flex: 1;
-      }
-      .ma-menu a {
-        height: 44px;
-        display: inline-flex;
-        align-items: center;
-        padding: 0 14px;
-        color: #fff !important;
-        font-size: 13px;
-        font-weight: 800;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
-      }
-      .ma-menu a:hover {
-        background: rgba(255, 255, 255, 0.13);
-        color: #fff !important;
-      }
-      .ma-social-mini {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-left: auto;
-      }
-      .ma-social-mini a {
-        width: 24px;
-        height: 24px;
-        display: grid;
-        place-items: center;
-        color: #fff !important;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 1;
-      }
-      .ma-social-mini img {
-        width: 20px;
-        height: 20px;
-        object-fit: contain;
-        filter: brightness(0) invert(1);
-      }
-      .ma-hero {
-        padding: 20px 0 22px;
-        background: #eef1f4;
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-      }
-      .ma-hero-grid {
-        display: grid;
-        grid-template-columns: 2fr 0.98fr;
-        gap: 14px;
-        min-height: 336px;
-      }
-      .ma-hero-card,
-      .ma-side-card {
-        position: relative;
-        border-radius: 12px;
-        overflow: hidden;
-        background: #111;
-        isolation: isolate;
-        box-shadow: 0 10px 24px rgba(7, 29, 51, 0.12);
-      }
-      .ma-hero-card {
-        min-height: 336px;
-        padding: 44px 58px;
-        display: flex;
-        align-items: center;
-        background-image:
-          linear-gradient(90deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.22)),
-          url("Imagen5.png");
-        background-size: cover;
-        background-position: center;
-      }
-      .ma-hero-card:before,
-      .ma-side-card:before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-          circle at 12% 18%,
-          rgba(255, 255, 255, 0.12),
-          transparent 26%
-        );
-        z-index: -1;
-      }
-      .ma-eyebrow {
-        display: block;
-        color: var(--mq-yellow);
-        text-transform: uppercase;
-        font-weight: 900;
-        letter-spacing: 0.28em;
-        font-size: 12px;
-        margin-bottom: 10px;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-      }
-      .ma-hero h1 {
-        font-family: "Archivo", sans-serif;
-        color: #fff;
-        font-size: clamp(2.5rem, 5vw, 4.7rem);
-        line-height: 0.94;
-        margin: 0 0 18px;
-        max-width: 720px;
-        text-shadow: 0 3px 14px rgba(0, 0, 0, 0.38);
-        letter-spacing: -0.045em;
-        text-transform: none;
-      }
-      .ma-hero p {
-        color: #fff;
-        font-size: 17px;
-        max-width: 580px;
-        margin: 0 0 24px;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
-      }
-      .ma-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        align-items: center;
-      }
-      .ma-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 45px;
-        border-radius: 10px;
-        padding: 0 24px;
-        background: var(--mq-yellow);
-        color: #06172a;
-        font-weight: 900;
-        font-size: 13px;
-        border: 0;
-        box-shadow: 0 12px 26px rgba(245, 180, 0, 0.24);
-        transition: 0.2s ease;
-        cursor: pointer;
-      }
-      .ma-btn:hover {
-        transform: translateY(-2px);
-        background: var(--mq-yellow-dark);
-      }
-      .ma-btn.blue {
-        background: var(--mq-blue);
-        color: #fff;
-        box-shadow: 0 12px 24px rgba(15, 86, 141, 0.2);
-      }
-      .ma-btn.white {
-        background: #fff;
-        color: var(--mq-blue);
-        box-shadow: none;
-      }
-      .ma-hero-dots {
-        position: absolute;
-        left: 28px;
-        bottom: 18px;
-        display: flex;
-        gap: 7px;
-      }
-      .ma-hero-dots span {
-        width: 10px;
-        height: 10px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.55);
-      }
-      .ma-hero-dots span:first-child {
-        width: 26px;
-        background: var(--mq-yellow);
-      }
-      .ma-side-stack {
-        display: grid;
-        gap: 14px;
-      }
-      .ma-side-card {
-        min-height: 161px;
-        padding: 24px;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: flex-end;
-      }
-      .ma-side-card.one {
-        background-image:
-          linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.16)),
-          url("Imagen2.png");
-      }
-      .ma-side-card.two {
-        background-image:
-          linear-gradient(90deg, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.12)),
-          url("Imagen4.png");
-      }
-      .ma-side-card h3 {
-        font-family: "Archivo", sans-serif;
-        color: #fff;
-        font-size: 27px;
-        line-height: 1;
-        margin: 0 0 8px;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-      }
-      .ma-side-card p {
-        color: #fff;
-        margin: 0;
-        font-size: 14px;
-        font-weight: 600;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
-      }
-      .ma-band {
-        background: #eef1f4;
-        padding: 24px 0 70px;
-      }
-      .ma-band h2,
-      .ma-section-title h2 {
-        font-family: "Archivo", sans-serif;
-        font-size: 20px;
-        margin: 0 0 18px;
-        color: var(--mq-text);
-        letter-spacing: -0.015em;
-        text-transform: none;
-      }
-      .ma-cap-grid {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 18px;
-      }
-      .ma-cap-card {
-        height: 64px;
-        border: 1px solid var(--mq-line);
-        border-radius: 10px;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 10px 14px;
-        font-weight: 900;
-        color: #254f7a;
-        box-shadow: 0 6px 14px rgba(7, 29, 51, 0.035);
-      }
-      .ma-section {
-        background: #fff;
-        padding: 72px 0;
-        border-top: 1px solid var(--mq-line);
-      }
-      .ma-section.alt {
-        background: #f6f8fa;
-      }
-      .ma-section-title {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 30px;
-        margin-bottom: 30px;
-      }
-      .ma-section-title h2 {
-        font-size: clamp(2rem, 3.4vw, 3rem);
-        line-height: 1.02;
-        max-width: 680px;
-      }
-      .ma-section-title p {
-        margin: 0;
-        color: var(--mq-muted);
-        max-width: 470px;
-        font-size: 15px;
-      }
-      .ma-services {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
-      }
-      .ma-service-card {
-        background: #fff;
-        border: 1px solid var(--mq-line);
-        border-radius: 14px;
-        overflow: hidden;
-        box-shadow: 0 8px 18px rgba(7, 29, 51, 0.05);
-        transition: 0.2s ease;
-      }
-      .ma-service-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 14px 30px rgba(7, 29, 51, 0.09);
-      }
-      .ma-service-card img {
-        width: 100%;
-        height: 148px;
-        object-fit: cover;
-      }
-      .ma-service-card div {
-        padding: 18px;
-      }
-      .ma-service-card h3 {
-        font-family: "Archivo", sans-serif;
-        font-size: 21px;
-        line-height: 1;
-        margin: 0 0 8px;
-        color: var(--mq-text);
-      }
-      .ma-service-card p {
-        margin: 0 0 14px;
-        color: var(--mq-muted);
-        font-size: 14px;
-      }
-      .ma-link {
-        display: inline-flex;
-        color: var(--mq-blue);
-        font-weight: 900;
-        font-size: 13px;
-      }
-      .ma-trust-grid {
-        display: grid;
-        grid-template-columns: 1.08fr 0.92fr;
-        gap: 42px;
-        align-items: center;
-      }
-      .ma-pill {
-        display: inline-flex;
-        align-items: center;
-        border-radius: 999px;
-        background: var(--mq-yellow);
-        color: #fff;
-        padding: 9px 16px;
-        font-size: 12px;
-        font-weight: 900;
-        margin-bottom: 18px;
-      }
-      .ma-trust h2 {
-        font-family: "Archivo", sans-serif;
-        font-size: clamp(2.2rem, 4.2vw, 3.5rem);
-        line-height: 0.98;
-        margin: 0 0 18px;
-        text-transform: none;
-        letter-spacing: -0.04em;
-      }
-      .ma-trust p {
-        color: var(--mq-muted);
-        font-size: 16px;
-        max-width: 590px;
-      }
-      .ma-checks {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin: 26px 0;
-      }
-      .ma-checks span {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        background: #f6f8fa;
-        border: 1px solid #edf1f5;
-        border-radius: 9px;
-        padding: 11px 14px;
-        font-weight: 800;
-        font-size: 14px;
-      }
-      .ma-checks span:before {
-        content: "✓";
-        font-weight: 900;
-        color: var(--mq-blue);
-      }
-      .ma-quote-box {
-        background: #f8fafc;
-        border: 1px solid var(--mq-line);
-        border-radius: 20px;
-        padding: 32px;
-        box-shadow: 0 12px 34px rgba(7, 29, 51, 0.045);
-      }
-      .ma-quote-box h3 {
-        font-family: "Archivo", sans-serif;
-        font-size: 24px;
-        margin: 0 0 8px;
-      }
-      .ma-quote-box p {
-        color: var(--mq-muted);
-        margin: 0 0 24px;
-      }
-      .ma-quote-box .ma-btn {
-        width: 100%;
-      }
-      .ma-projects {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 18px;
-      }
-      .ma-project-main,
-      .ma-project-list article {
-        border-radius: 16px;
-        border: 1px solid var(--mq-line);
-        background: #fff;
-        overflow: hidden;
-      }
-      .ma-project-main img {
-        height: 330px;
-        width: 100%;
-        object-fit: cover;
-      }
-      .ma-project-main div {
-        padding: 20px;
-      }
-      .ma-project-main h3,
-      .ma-project-list h3 {
-        font-family: "Archivo", sans-serif;
-        margin: 0 0 7px;
-        font-size: 26px;
-      }
-      .ma-project-main p,
-      .ma-project-list p {
-        margin: 0;
-        color: var(--mq-muted);
-      }
-      .ma-project-list {
-        display: grid;
-        gap: 14px;
-      }
-      .ma-project-list article {
-        display: grid;
-        grid-template-columns: 126px 1fr;
-        align-items: center;
-      }
-      .ma-project-list img {
-        height: 100%;
-        min-height: 118px;
-        width: 126px;
-        object-fit: cover;
-      }
-      .ma-project-list div {
-        padding: 14px;
-      }
-      .ma-project-list h3 {
-        font-size: 19px;
-      }
-      .ma-cta {
-        background: linear-gradient(
-          135deg,
-          var(--mq-blue),
-          var(--mq-blue-dark)
-        );
-        color: #fff;
-        padding: 52px 0;
-      }
-      .ma-cta-box {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 24px;
-        align-items: center;
-      }
-      .ma-cta h2 {
-        font-family: "Archivo", sans-serif;
-        font-size: clamp(2rem, 3.6vw, 3.2rem);
-        line-height: 1;
-        margin: 0 0 10px;
-        text-transform: none;
-      }
-      .ma-cta p {
-        margin: 0;
-        color: #dceaf6;
-        max-width: 720px;
-      }
-      .ma-footer {
-        background: var(--mq-blue);
-        color: #fff;
-        padding: 38px 0 20px;
-      }
-      .ma-footer-grid {
-        display: grid;
-        grid-template-columns: 1.1fr repeat(3, 1fr);
-        gap: 54px;
-      }
-      .ma-footer img {
-        height: 36px;
-        width: auto;
-        margin-bottom: 12px;
-        background: #fff;
-        padding: 4px;
-      }
-      .ma-footer p,
-      .ma-footer a {
-        display: block;
-        color: #dbeaf7;
-        font-size: 13px;
-        margin: 7px 0;
-      }
-      .ma-footer h4 {
-        font-size: 14px;
-        margin: 0 0 14px;
-        color: #fff;
-      }
-      .ma-copy {
-        border-top: 1px solid rgba(255, 255, 255, 0.18);
-        margin-top: 32px;
-        padding-top: 14px;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.62);
-        font-size: 12px;
-      }
-      .ma-whatsapp {
-        position: fixed;
-        right: 20px;
-        bottom: 18px;
-        z-index: 90;
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        border-radius: 999px;
-        background: #03c766;
-        color: #fff;
-        padding: 12px 18px;
-        font-size: 13px;
-        font-weight: 900;
-        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-      }
-      .ma-whatsapp img {
-        width: 22px;
-        height: 22px;
-      }
-      .ma-mobile-toggle {
-        display: none;
-        border: 0;
-        background: #fff;
-        color: var(--mq-blue);
-        font-weight: 900;
-        border-radius: 8px;
-        padding: 10px 12px;
-      }
-      @media (max-width: 980px) {
-        .ma-topbar .ma-container {
-          justify-content: center;
-          text-align: center;
-        }
-        .ma-contact-line {
-          display: none;
-        }
-        .ma-header-main {
-          grid-template-columns: 1fr auto;
-        }
-        .ma-search {
-          grid-column: 1/-1;
-          order: 3;
-        }
-        .ma-nav-inner {
-          height: auto;
-          min-height: 50px;
-          flex-wrap: wrap;
-          padding: 7px 0;
-        }
-        .ma-mobile-toggle {
-          display: inline-flex;
-        }
-        .ma-service-selector {
-          flex: 1;
-        }
-        .ma-category-btn {
-          min-width: 0;
-          width: 100%;
-        }
-        .ma-service-dropdown {
-          top: 42px;
-          width: 100%;
-        }
-        .ma-menu {
-          display: none;
-          flex-direction: column;
-          align-items: stretch;
-          width: 100%;
-          background: var(--mq-blue-dark);
-          border-radius: 10px;
-          overflow: hidden;
-        }
-        .ma-menu.open {
-          display: flex;
-        }
-        .ma-menu a {
-          width: 100%;
-          height: 42px;
-          color: #fff !important;
-        }
-        .ma-social-mini {
-          display: none;
-        }
-        .ma-hero-grid,
-        .ma-trust-grid,
-        .ma-projects,
-        .ma-cta-box {
-          grid-template-columns: 1fr;
-        }
-        .ma-hero-card {
-          padding: 36px 30px;
-        }
-        .ma-cap-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-        .ma-services {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .ma-footer-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .ma-project-main img {
-          height: 260px;
-        }
-      }
-      @media (max-width: 620px) {
-        .ma-container {
-          width: min(100% - 22px, 1110px);
-        }
-        .ma-topbar {
-          font-size: 11px;
-        }
-        .ma-header-main {
-          height: auto;
-          padding: 10px 0;
-        }
-        .ma-logo img {
-          height: 45px;
-        }
-        .ma-icons {
-          display: none;
-        }
-        .ma-search button {
-          padding: 0 14px;
-        }
-        .ma-service-selector {
-          width: 100%;
-          min-width: 100%;
-        }
-        .ma-hero {
-          padding-top: 12px;
-        }
-        .ma-hero-card {
-          min-height: 430px;
-          padding: 34px 22px;
-          background-position: center;
-        }
-        .ma-hero h1 {
-          font-size: 2.7rem;
-        }
-        .ma-side-card {
-          min-height: 185px;
-        }
-        .ma-cap-grid,
-        .ma-services {
-          grid-template-columns: 1fr 1fr;
-          gap: 10px;
-        }
-        .ma-cap-card {
-          font-size: 12px;
-        }
-        .ma-section {
-          padding: 54px 0;
-        }
-        .ma-section-title {
-          display: block;
-        }
-        .ma-section-title p {
-          margin-top: 10px;
-        }
-        .ma-project-list article {
-          grid-template-columns: 1fr;
-        }
-        .ma-project-list img {
-          width: 100%;
-          height: 155px;
-        }
-        .ma-footer-grid {
-          grid-template-columns: 1fr;
-        }
-        .ma-whatsapp {
-          right: 12px;
-          bottom: 12px;
-          padding: 11px 14px;
-        }
-        .ma-whatsapp span {
-          display: none;
-        }
-      }
-    </style>
+    <script src="site-config.js?v=20260717-1"></script>
+    <script src="catalog-data.js?v=20260717-1"></script>
+    <script src="site-shell.js?v=20260717-1" defer></script>
+    <script src="catalog.js?v=20260717-1" defer></script>
+    <script src="feature-manager.js?v=20260717-1" defer></script>
   </head>
-  <body class="jao-inspired" data-page-feature="home">
-    <header>
-      <div class="ma-topbar">
-        <div class="ma-container">
-          <span
-            >Soluciones metalmecánicas, suministro industrial y soporte técnico
-            para empresas</span
-          >
-          <div class="ma-contact-line">
-            <a href="tel:+56991514957">+56 9 9151 4957</a>
-            <a href="mailto:contacto@maqelec.cl">contacto@maqelec.cl</a>
-            <a href="contacto.html">Ingresar requerimiento</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="ma-header">
-        <div class="ma-container ma-header-main">
-          <a
-            class="ma-logo"
-            href="index.html"
-            aria-label="Ir al inicio de MAQELEC"
-          >
-            <img src="logo.png" alt="MAQELEC SpA" />
-          </a>
-
-          <form class="ma-search" onsubmit="sendSearchToWhatsapp(event)">
-            <input
-              id="maSearchInput"
-              type="search"
-              placeholder="Buscar servicios, máquinas, repuestos o cotizar por código..."
-              aria-label="Buscar servicios o cotizar"
-            />
-            <button type="submit">Buscar</button>
-          </form>
-
-          <div class="ma-icons">
-            <a
-              href="https://www.instagram.com/maqelec.spa/"
-              target="_blank"
-              aria-label="Instagram MAQELEC"
-              ><img src="logo_instagram.png" alt="Instagram"
-            /></a>
-            <a
-              href="https://wa.me/56991514957"
-              target="_blank"
-              aria-label="WhatsApp MAQELEC"
-              ><img src="logo_wsp.png" alt="WhatsApp"
-            /></a>
-          </div>
-        </div>
-
-        <nav class="ma-nav">
-          <div class="ma-container ma-nav-inner">
-            <div class="ma-service-selector">
-              <button
-                class="ma-category-btn"
-                onclick="toggleServiceDropdown(event)"
-                type="button"
-                aria-expanded="false"
-                aria-controls="serviceDropdown"
-              >
-                <span>☰ &nbsp; BUSCAR POR SERVICIO</span><span>⌄</span>
-              </button>
-              <div class="ma-service-dropdown" id="serviceDropdown">
-                <a href="#servicios"
-                  ><strong>Corte CNC Plasma</strong
-                  ><span>Cortes de precisión en acero y metales.</span></a
-                >
-                <a href="#servicios"
-                  ><strong>Oxicorte</strong
-                  ><span>Soluciones robustas para mayores espesores.</span></a
-                >
-                <a href="#servicios"
-                  ><strong>Torno y mecanizado</strong
-                  ><span>Fabricación y ajuste de piezas.</span></a
-                >
-                <a href="#servicios"
-                  ><strong>Fresado</strong
-                  ><span>Terminaciones y geometrías técnicas.</span></a
-                >
-                <a href="#servicios"
-                  ><strong>Soldadura</strong
-                  ><span>Apoyo metalmecánico y reparación.</span></a
-                >
-                <a href="#servicios"
-                  ><strong>Electricidad industrial</strong
-                  ><span>Instalaciones y soporte técnico.</span></a
-                >
-                <a
-                  href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20quiero%20cotizar%20un%20servicio%20industrial"
-                  target="_blank"
-                  ><strong>Cotizar otro servicio</strong
-                  ><span>Enviar consulta directa por WhatsApp.</span></a
-                >
-              </div>
-            </div>
-            <button
-              class="ma-mobile-toggle"
-              onclick="toggleMenu()"
-              type="button"
-            >
-              Menú
-            </button>
-            <div class="ma-menu" id="navMenu">
-              <a href="index.html">Inicio</a>
-              <a href="#servicios" data-feature="services">Servicios</a>
-              <a href="#capacidades" data-feature="capabilities">Maquinaria</a>
-              <a href="#proyectos" data-feature="projects">Trabajos</a>
-              <a href="seguimiento.html" data-feature="tracking">Seguimiento</a>
-              <a href="manuales.html" data-feature="manuals">Manuales</a>
-              <a href="vip.html" data-feature="technicalCenter"
-                >Centro Técnico</a
-              >
-              <a href="contacto.html" data-feature="contact">Contacto</a>
-            </div>
-            <div class="ma-social-mini">
-              <a
-                href="https://www.instagram.com/maqelec.spa/"
-                target="_blank"
-                aria-label="Instagram"
-                ><img src="logo_instagram.png" alt="Instagram"
-              /></a>
-              <a
-                href="https://wa.me/56991514957"
-                target="_blank"
-                aria-label="WhatsApp"
-                ><img src="logo_wsp.png" alt="WhatsApp"
-              /></a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-
+  <body class="catalog-site" data-page-feature="home">
     <main>
-      <section class="ma-hero">
-        <div class="ma-container ma-hero-grid">
-          <article class="ma-hero-card">
+      <section class="home-hero">
+        <div class="ma-container">
+          <div class="hero-content">
+            <span class="eyebrow">Venta, importación y ejecución técnica</span>
+            <h1>Maquinaria, repuestos y servicios industriales.</h1>
+            <p>
+              Buscamos, importamos e implementamos equipos para tu operación.
+              También suministramos repuestos y ejecutamos trabajos industriales
+              con acompañamiento técnico.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="buscar.html"
+                >Buscar máquina o repuesto</a
+              >
+              <a class="button secondary" href="contacto.html"
+                >Enviar requerimiento</a
+              >
+            </div>
+          </div>
+          <span class="visual-note">Imagen referencial de maqueta</span>
+        </div>
+      </section>
+
+      <section class="route-section" aria-label="Rutas principales">
+        <div class="ma-container route-grid">
+          <a class="route-card" href="maquinaria.html">
+            <span class="route-number">01 · EQUIPOS</span>
+            <h2>Maquinaria</h2>
+            <p>
+              Equipos que podemos suministrar o importar según el proceso y la
+              capacidad que necesitas.
+            </p>
+            <b>Explorar maquinaria →</b>
+          </a>
+          <a class="route-card" href="repuestos.html">
+            <span class="route-number">02 · PRODUCTOS</span>
+            <h2>Repuestos</h2>
+            <p>
+              Búsqueda por código, marca, modelo o fotografía, con suministro
+              local e importación a pedido.
+            </p>
+            <b>Buscar repuestos →</b>
+          </a>
+          <a class="route-card" href="servicios.html">
+            <span class="route-number">03 · EJECUCIÓN</span>
+            <h2>Servicios</h2>
+            <p>
+              Corte, mecanizado, soldadura, electricidad, mantenimiento,
+              instalación y capacitación.
+            </p>
+            <b>Ver servicios →</b>
+          </a>
+        </div>
+      </section>
+
+      <section data-feature="machinery">
+        <div class="ma-container">
+          <div class="section-heading">
             <div>
-              <span class="ma-eyebrow">MAQELEC SpA</span>
-              <h1>Soluciones industriales listas para operar.</h1>
+              <span class="eyebrow">Maquinaria destacada</span>
+              <h2>Equipos según tu operación</h2>
               <p>
-                Corte, mecanizado, suministro, mantención e instalaciones para
-                empresas que necesitan respuesta rápida, orden técnico y
-                continuidad operacional.
+                Esta primera carga muestra las familias de equipos que MAQELEC
+                puede cotizar. Las fichas técnicas definitivas se activarán a
+                medida que se valide cada modelo.
               </p>
-              <div class="ma-actions">
-                <a
-                  class="ma-btn"
-                  href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20necesito%20cotizar%20una%20soluci%C3%B3n%20industrial"
-                  target="_blank"
-                  >Solicitar cotización</a
-                >
-                <a class="ma-btn white" href="#servicios">Ver servicios</a>
-              </div>
             </div>
-            <div class="ma-hero-dots" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-          </article>
-
-          <aside class="ma-side-stack">
-            <a class="ma-side-card one" href="vip.html">
-              <div>
-                <span class="ma-eyebrow">Centro técnico</span>
-                <h3>Soporte por equipo y documentación</h3>
-                <p>Manuales, videos y asistencia técnica.</p>
-              </div>
-            </a>
-            <a
-              class="ma-side-card two"
-              href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20quiero%20cotizar%20fabricaci%C3%B3n%2C%20corte%20o%20mecanizado"
-              target="_blank"
-            >
-              <div>
-                <span class="ma-eyebrow">Cotización directa</span>
-                <h3>Envía plano, foto o requerimiento</h3>
-                <p>Te orientamos por WhatsApp.</p>
-              </div>
-            </a>
-          </aside>
+            <a class="button secondary" href="maquinaria.html">Ver catálogo</a>
+          </div>
+          <div class="catalog-grid" data-featured-machines></div>
         </div>
       </section>
 
-      <section class="ma-band" id="capacidades" data-feature="capabilities">
+      <section class="trust-section">
         <div class="ma-container">
-          <h2>Capacidades principales</h2>
-          <div class="ma-cap-grid">
-            <div class="ma-cap-card">Corte CNC</div>
-            <div class="ma-cap-card">Oxicorte</div>
-            <div class="ma-cap-card">Torno</div>
-            <div class="ma-cap-card">Fresado</div>
-            <div class="ma-cap-card">Soldadura</div>
-            <div class="ma-cap-card">Electricidad</div>
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Acompañamiento integral</span>
+              <h2>Más que entregar un equipo</h2>
+            </div>
+          </div>
+          <div class="trust-grid">
+            <div class="trust-item">
+              <b>Importación directa</b
+              ><span>Búsqueda y configuración según requerimiento.</span>
+            </div>
+            <div class="trust-item">
+              <b>Entrega coordinada</b
+              ><span>Proceso puerta a puerta según alcance acordado.</span>
+            </div>
+            <div class="trust-item">
+              <b>Puesta en marcha</b
+              ><span>Instalación, configuración y pruebas iniciales.</span>
+            </div>
+            <div class="trust-item">
+              <b>Capacitación y soporte</b
+              ><span>Acompañamiento para operar y mantener la solución.</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="ma-section" id="servicios" data-feature="services">
+      <section>
         <div class="ma-container">
-          <div class="ma-section-title">
-            <h2>Servicios para resolver requerimientos industriales.</h2>
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Servicios industriales</span>
+              <h2>También ejecutamos el trabajo</h2>
+              <p>
+                Si todavía no necesitas comprar una máquina, MAQELEC puede
+                atender el requerimiento como servicio industrial.
+              </p>
+            </div>
+            <a class="button secondary" href="servicios.html">Ver servicios</a>
+          </div>
+          <div class="catalog-grid" data-featured-services></div>
+        </div>
+      </section>
+
+      <section class="trust-section" data-feature="projects">
+        <div class="ma-container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Trabajos y proyectos</span>
+              <h2>El resultado debe poder verse</h2>
+              <p>
+                La estructura ya está preparada para incorporar fotografías,
+                alcance y resultados de trabajos reales sin rediseñar la web.
+              </p>
+            </div>
+            <a class="button secondary" href="proyectos.html">Ver proyectos</a>
+          </div>
+          <div class="project-grid" data-featured-projects></div>
+        </div>
+      </section>
+
+      <section class="request-section">
+        <div class="ma-container request-grid">
+          <div>
+            <span class="eyebrow">Comencemos por el requerimiento</span>
+            <h2>¿Tienes una máquina, repuesto o trabajo en mente?</h2>
             <p>
-              Una estructura simple: identifica la necesidad, envía el detalle y
-              recibe orientación para cotizar con mayor rapidez.
+              Indica el equipo, proceso, código o problema. Ordenaremos la
+              solicitud para responder con una alternativa concreta.
             </p>
           </div>
-          <div class="ma-services">
-            <a
-              class="ma-service-card"
-              href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20quiero%20cotizar%20corte%20CNC%20plasma%20u%20oxicorte"
-              target="_blank"
-            >
-              <img src="Imagen5.png" alt="Corte CNC plasma y oxicorte" />
-              <div>
-                <h3>Corte CNC</h3>
-                <p>
-                  Corte plasma y oxicorte para distintos espesores metálicos.
-                </p>
-                <span class="ma-link">Cotizar esta línea →</span>
-              </div>
-            </a>
-            <a
-              class="ma-service-card"
-              href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20quiero%20cotizar%20torno%20o%20mecanizado"
-              target="_blank"
-            >
-              <img src="Imagen4.png" alt="Torno y mecanizado" />
-              <div>
-                <h3>Mecanizado</h3>
-                <p>
-                  Torno, fresado y fabricación de piezas según requerimiento.
-                </p>
-                <span class="ma-link">Cotizar esta línea →</span>
-              </div>
-            </a>
-            <a
-              class="ma-service-card"
-              href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20quiero%20cotizar%20instalaciones%20el%C3%A9ctricas"
-              target="_blank"
-            >
-              <img
-                src="Imagen3.png"
-                alt="Instalaciones eléctricas industriales"
+          <form class="requirement-form" data-requirement-form>
+            <label class="filter-label">
+              <span>Tipo</span>
+              <select name="type" required>
+                <option value="una máquina">Maquinaria</option>
+                <option value="un repuesto">Repuesto</option>
+                <option value="un servicio industrial">Servicio</option>
+              </select>
+            </label>
+            <label class="filter-label">
+              <span>Empresa</span>
+              <input
+                type="text"
+                name="company"
+                placeholder="Nombre de empresa"
               />
-              <div>
-                <h3>Electricidad</h3>
-                <p>
-                  Instalaciones, apoyo técnico y soluciones eléctricas
-                  industriales.
-                </p>
-                <span class="ma-link">Cotizar esta línea →</span>
-              </div>
-            </a>
-            <a
-              class="ma-service-card"
-              href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20quiero%20cotizar%20suministro%20industrial"
-              target="_blank"
-            >
-              <img src="Imagen2.png" alt="Suministro industrial" />
-              <div>
-                <h3>Suministro</h3>
-                <p>Herramientas, insumos, EPP y abastecimiento multirrubro.</p>
-                <span class="ma-link">Cotizar esta línea →</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="ma-section alt ma-trust">
-        <div class="ma-container ma-trust-grid">
-          <div>
-            <span class="ma-pill">RESPALDO MAQELEC</span>
-            <h2>Cotiza con información clara y respuesta técnica.</h2>
-            <p>
-              Cuéntanos qué necesitas fabricar, reparar, instalar o suministrar.
-              Mientras mejor venga el requerimiento, más rápida y precisa puede
-              ser la evaluación.
-            </p>
-            <div class="ma-checks">
-              <span>Plano o fotografía</span>
-              <span>Medidas y material</span>
-              <span>Comuna y plazo</span>
-              <span>Documentación requerida</span>
-            </div>
-            <a class="ma-btn blue" href="contacto.html"
-              >Ingresar requerimiento</a
-            >
-          </div>
-          <aside class="ma-quote-box">
-            <h3>¿Ya tienes un requerimiento?</h3>
-            <p>
-              Envíanos el detalle por WhatsApp y te orientamos para avanzar con
-              la cotización.
-            </p>
-            <a
-              class="ma-btn"
-              href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20tengo%20un%20requerimiento.%20Necesito%20cotizar%3A%20"
-              target="_blank"
-              >Enviar por WhatsApp</a
-            >
-          </aside>
-        </div>
-      </section>
-
-      <section class="ma-section" id="proyectos" data-feature="projects">
-        <div class="ma-container">
-          <div class="ma-section-title">
-            <h2>Trabajos y soluciones destacadas.</h2>
-            <p>
-              La estética es limpia, pero el foco sigue siendo industrial:
-              máquinas, piezas, procesos y resultados visibles.
-            </p>
-          </div>
-          <div class="ma-projects">
-            <article class="ma-project-main">
-              <img src="Imagen1.png" alt="Proveedor estratégico industrial" />
-              <div>
-                <h3>Proveedor estratégico</h3>
-                <p>
-                  Centralizamos requerimientos para compras, mantención y
-                  operación con un punto de contacto claro.
-                </p>
-              </div>
-            </article>
-            <div class="ma-project-list">
-              <article>
-                <img src="Imagen5.png" alt="Equipo CNC" />
-                <div>
-                  <h3>Equipos y corte</h3>
-                  <p>Soluciones configurables para redes 220 V y 380 V.</p>
-                </div>
-              </article>
-              <article>
-                <img src="Imagen4.png" alt="Mecanizado de piezas" />
-                <div>
-                  <h3>Piezas a medida</h3>
-                  <p>
-                    Apoyo en fabricación, reparación y terminaciones metálicas.
-                  </p>
-                </div>
-              </article>
-              <article>
-                <img src="Imagen2.png" alt="Suministro industrial" />
-                <div>
-                  <h3>Abastecimiento</h3>
-                  <p>Productos e insumos para continuidad operacional.</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="ma-cta">
-        <div class="ma-container ma-cta-box">
-          <div>
-            <h2>¿Necesitas cotizar ahora?</h2>
-            <p>
-              Escríbenos con tu requerimiento, foto, plano, comuna y plazo
-              esperado. Respondemos con foco técnico y comercial.
-            </p>
-          </div>
-          <a
-            class="ma-btn"
-            href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20necesito%20cotizar.%20Mi%20requerimiento%20es%3A%20"
-            target="_blank"
-            >Contacto inmediato</a
-          >
+            </label>
+            <label class="filter-label full">
+              <span>Equipo, código o necesidad</span>
+              <input
+                type="text"
+                name="search"
+                required
+                placeholder="Ej: plasma CNC, código de repuesto o trabajo requerido"
+              />
+            </label>
+            <button class="button primary" type="submit">
+              Enviar requerimiento por WhatsApp
+            </button>
+          </form>
         </div>
       </section>
     </main>
-
-    <footer class="ma-footer">
-      <div class="ma-container">
-        <div class="ma-footer-grid">
-          <div>
-            <img src="logo.png" alt="MAQELEC SpA" />
-            <p>
-              Soluciones industriales para continuidad operativa, suministro,
-              servicios técnicos y apoyo metalmecánico.
-            </p>
-          </div>
-          <div>
-            <h4>Categorías</h4>
-            <a href="#servicios">Corte CNC</a>
-            <a href="#servicios">Mecanizado</a>
-            <a href="#servicios">Electricidad</a>
-            <a href="#servicios">Suministro</a>
-          </div>
-          <div>
-            <h4>Contacto</h4>
-            <a href="tel:+56991514957">📞 +56 9 9151 4957</a>
-            <a href="mailto:contacto@maqelec.cl">✉ contacto@maqelec.cl</a>
-            <p>📍 Santiago, Chile</p>
-          </div>
-          <div>
-            <h4>Cliente</h4>
-            <a href="seguimiento.html">Seguimiento</a>
-            <a href="manuales.html">Manuales</a>
-            <a href="vip.html">Centro Técnico</a>
-          </div>
-        </div>
-        <div class="ma-copy">
-          © 2026 MAQELEC SpA · Todos los derechos reservados
-        </div>
-      </div>
-    </footer>
-
-    <a
-      class="ma-whatsapp"
-      href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20necesito%20ayuda"
-      target="_blank"
-      ><img src="logo_wsp.png" alt="WhatsApp" /><span
-        >Contacto inmediato</span
-      ></a
-    >
-
-    <script>
-      function toggleServiceDropdown(event) {
-        if (event) {
-          event.stopPropagation();
-        }
-        const dropdown = document.getElementById("serviceDropdown");
-        const button = document.querySelector(".ma-category-btn");
-        if (dropdown) {
-          dropdown.classList.toggle("open");
-          if (button) {
-            button.setAttribute(
-              "aria-expanded",
-              dropdown.classList.contains("open") ? "true" : "false",
-            );
-          }
-        }
-      }
-      function toggleMenu() {
-        const menu = document.getElementById("navMenu");
-        if (menu) {
-          menu.classList.toggle("open");
-        }
-      }
-      document.addEventListener("click", function (event) {
-        const dropdown = document.getElementById("serviceDropdown");
-        const selector = document.querySelector(".ma-service-selector");
-        const button = document.querySelector(".ma-category-btn");
-        if (dropdown && selector && !selector.contains(event.target)) {
-          dropdown.classList.remove("open");
-          if (button) {
-            button.setAttribute("aria-expanded", "false");
-          }
-        }
-      });
-      function sendSearchToWhatsapp(event) {
-        event.preventDefault();
-        const input = document.getElementById("maSearchInput");
-        const query =
-          input && input.value.trim()
-            ? input.value.trim()
-            : "Necesito cotizar una solución industrial";
-        const text = encodeURIComponent(
-          "Hola MAQELEC, quiero consultar/cotizar: " + query,
-        );
-        window.open("https://wa.me/56991514957?text=" + text, "_blank");
-      }
-    </script>
   </body>
 </html>
