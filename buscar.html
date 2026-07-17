@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Buscador de maquinaria, repuestos, servicios y proyectos MAQELEC."
+    />
+    <title>Buscar en MAQELEC</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="site-shell.css?v=20260717-3" />
+    <link rel="stylesheet" href="feature-manager.css?v=20260717-1" />
+    <link rel="stylesheet" href="catalog.css?v=20260717-1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="site-config.js?v=20260717-1"></script>
+    <script src="catalog-data.js?v=20260717-1"></script>
+    <script src="site-shell.js?v=20260717-1" defer></script>
+    <script src="catalog.js?v=20260717-1" defer></script>
+    <script src="feature-manager.js?v=20260717-1" defer></script>
+  </head>
+  <body class="catalog-site" data-page-feature="search">
+    <main>
+      <section class="page-intro">
+        <div class="ma-container search-shell">
+          <span class="eyebrow">Buscador MAQELEC</span>
+          <h1>¿Qué necesitas encontrar?</h1>
+          <p>
+            Busca por máquina, proceso, repuesto, código o servicio. Si no
+            existe una ficha publicada, podrás enviarnos el requerimiento
+            directamente.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="ma-container search-shell">
+          <form class="filter-bar" action="buscar.html" method="get">
+            <label class="filter-label"
+              ><span>Máquina, repuesto, servicio o código</span
+              ><input
+                name="q"
+                type="search"
+                data-unified-input
+                placeholder="Ej: plasma CNC, láser 3000 W, mecanizado"
+                autofocus
+            /></label>
+            <button class="button primary" type="submit">Buscar</button>
+          </form>
+          <p data-result-count></p>
+          <div class="search-results" data-unified-results></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
