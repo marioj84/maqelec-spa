@@ -1,1 +1,43 @@
-Y29uc3QgZnMgPSByZXF1aXJlKCJub2RlOmZzIik7CmNvbnN0IHZtID0gcmVxdWlyZSgibm9kZTp2bSIpOwoKY29uc3Qgc291cmNlID0gZnMucmVhZEZpbGVTeW5jKCJzaXRlLWNvbmZpZy5qcyIsICJ1dGY4Iik7CmNvbnN0IGNvbnRleHQgPSB7IHdpbmRvdzoge30gfTsKdm0uY3JlYXRlQ29udGV4dChjb250ZXh0KTsKdm0ucnVuSW5Db250ZXh0KHNvdXJjZSwgY29udGV4dCk7Cgpjb25zdCBjb25maWcgPSBjb250ZXh0LndpbmRvdy5NQVFFTEVDX1NJVEVfQ09ORklHOwpjb25zdCB2YWxpZFN0YXRlcyA9IG5ldyBTZXQoWyJvZmYiLCAicHJldmlldyIsICJsaXZlIl0pOwpjb25zdCBlcnJvcnMgPSBbXTsKCmlmICghY29uZmlnKSB7CiAgZXJyb3JzLnB1c2goIk5vIHNlIHB1ZG8gY2FyZ2FyIE1BUUVMRUNfU0lURV9DT05GSUcuIik7Cn0gZWxzZSB7CiAgT2JqZWN0LmVudHJpZXMoY29uZmlnLmZlYXR1cmVzKS5mb3JFYWNoKChbbmFtZSwgZmVhdHVyZV0pID0+IHsKICAgIGlmICghdmFsaWRTdGF0ZXMuaGFzKGZlYXR1cmUuc3RhdGUpKSB7CiAgICAgIGVycm9ycy5wdXNoKGAke25hbWV9OiBlc3RhZG8gaW52w6FsaWRvIFwiJHtmZWF0dXJlLnN0YXRlfVwiLmApOwogICAgfQoKICAgIChmZWF0dXJlLmRlcGVuZGVuY2llcyB8fCBbXSkuZm9yRWFjaCgoZGVwZW5kZW5jeU5hbWUpID0+IHsKICAgICAgaWYgKCFjb25maWcuZGVwZW5kZW5jaWVzW2RlcGVuZGVuY3lOYW1lXSkgewogICAgICAgIGVycm9ycy5wdXNoKGAke25hbWV9OiBkZXBlbmRlbmNpYSBpbmV4aXN0ZW50ZSBcIiR7ZGVwZW5kZW5jeU5hbWV9XCIuYCk7CiAgICAgIH0KICAgIH0pOwogIH0pOwoKICBPYmplY3QuZW50cmllcyhjb25maWcucGFnZXMpLmZvckVhY2goKFtwYWdlLCBmZWF0dXJlTmFtZV0pID0+IHsKICAgIGlmICghZnMuZXhpc3RzU3luYyhwYWdlKSkgewogICAgICBlcnJvcnMucHVzaChgUMOhZ2luYSBjb25maWd1cmFkYSBpbmV4aXN0ZW50ZTogXCIke3BhZ2V9XCIuYCk7CiAgICB9CiAgICBpZiAoIWNvbmZpZy5mZWF0dXJlc1tmZWF0dXJlTmFtZV0pIHsKICAgICAgZXJyb3JzLnB1c2goYCR7cGFnZX06IGZ1bmNpw7NuIGluZXhpc3RlbnRlIFwiJHtmZWF0dXJlTmFtZX1cIi5gKTsKICAgIH0KICB9KTsKfQoKaWYgKGVycm9ycy5sZW5ndGgpIHsKICBjb25zb2xlLmVycm9yKCJDb25maWd1cmFjacOzbiBkZSBmdW5jaW9uZXMgaW52w6FsaWRhOlxuLSAiICsgZXJyb3JzLmpvaW4oIlxuLSAiKSk7CiAgcHJvY2Vzcy5leGl0KDEpOwp9Cgpjb25zb2xlLmxvZygiQ29uZmlndXJhY2nDs24gZGUgZnVuY2lvbmVzIE1BUUVMRUM6IE9LIik7Cg==
+const fs = require("node:fs");
+const vm = require("node:vm");
+
+const source = fs.readFileSync("site-config.js", "utf8");
+const context = { window: {} };
+vm.createContext(context);
+vm.runInContext(source, context);
+
+const config = context.window.MAQELEC_SITE_CONFIG;
+const validStates = new Set(["off", "preview", "live"]);
+const errors = [];
+
+if (!config) {
+  errors.push("No se pudo cargar MAQELEC_SITE_CONFIG.");
+} else {
+  Object.entries(config.features).forEach(([name, feature]) => {
+    if (!validStates.has(feature.state)) {
+      errors.push(`${name}: estado inválido \"${feature.state}\".`);
+    }
+
+    (feature.dependencies || []).forEach((dependencyName) => {
+      if (!config.dependencies[dependencyName]) {
+        errors.push(`${name}: dependencia inexistente \"${dependencyName}\".`);
+      }
+    });
+  });
+
+  Object.entries(config.pages).forEach(([page, featureName]) => {
+    if (!fs.existsSync(page)) {
+      errors.push(`Página configurada inexistente: \"${page}\".`);
+    }
+    if (!config.features[featureName]) {
+      errors.push(`${page}: función inexistente \"${featureName}\".`);
+    }
+  });
+}
+
+if (errors.length) {
+  console.error("Configuración de funciones inválida:\n- " + errors.join("\n- "));
+  process.exit(1);
+}
+
+console.log("Configuración de funciones MAQELEC: OK");
