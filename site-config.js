@@ -1,1 +1,128 @@
-KGZ1bmN0aW9uICgpIHsKICAidXNlIHN0cmljdCI7CgogIHdpbmRvdy5NQVFFTEVDX1NJVEVfQ09ORklHID0gewogICAgdmVyc2lvbjogIjEuMC4wIiwKICAgIGVudmlyb25tZW50OiAicHJldmlldyIsCiAgICBzdGF0ZXM6IFsib2ZmIiwgInByZXZpZXciLCAibGl2ZSJdLAoKICAgIGRlcGVuZGVuY2llczogewogICAgICAiY29yZS5icmFuZCI6IHsKICAgICAgICByZWFkeTogdHJ1ZSwKICAgICAgICBsYWJlbDogIklkZW50aWRhZCB2aXN1YWwgTUFRRUxFQyIsCiAgICAgIH0sCiAgICAgICJjb3JlLm5hdmlnYXRpb24iOiB7CiAgICAgICAgcmVhZHk6IHRydWUsCiAgICAgICAgbGFiZWw6ICJOYXZlZ2FjacOzbiBjb21wYXJ0aWRhIiwKICAgICAgfSwKICAgICAgImNoYW5uZWwud2hhdHNhcHAiOiB7CiAgICAgICAgcmVhZHk6IHRydWUsCiAgICAgICAgbGFiZWw6ICJDYW5hbCBjb21lcmNpYWwgZGUgV2hhdHNBcHAiLAogICAgICB9LAogICAgICAiY29udGVudC5zZXJ2aWNlcyI6IHsKICAgICAgICByZWFkeTogdHJ1ZSwKICAgICAgICBsYWJlbDogIkNhdMOhbG9nbyBkZSBzZXJ2aWNpb3MiLAogICAgICB9LAogICAgICAiY29udGVudC5yZWFsUHJvamVjdHMiOiB7CiAgICAgICAgcmVhZHk6IGZhbHNlLAogICAgICAgIGxhYmVsOiAiRm90b2dyYWbDrWFzIHkgY2Fzb3MgcmVhbGVzIiwKICAgICAgfSwKICAgICAgIm1lZGlhLnJlYWxWaWRlb3MiOiB7CiAgICAgICAgcmVhZHk6IGZhbHNlLAogICAgICAgIGxhYmVsOiAiVmlkZW9zIGluZHVzdHJpYWxlcyBvcHRpbWl6YWRvcyIsCiAgICAgIH0sCiAgICAgICJjb250ZW50Lm1hbnVhbEZpbGVzIjogewogICAgICAgIHJlYWR5OiBmYWxzZSwKICAgICAgICBsYWJlbDogIk1hbnVhbGVzIGRlc2NhcmdhYmxlcyB2aWdlbnRlcyIsCiAgICAgIH0sCiAgICAgICJpbnRlZ3JhdGlvbi50cmFja2luZyI6IHsKICAgICAgICByZWFkeTogZmFsc2UsCiAgICAgICAgbGFiZWw6ICJGdWVudGUgcmVhbCBkZSBzZWd1aW1pZW50byIsCiAgICAgIH0sCiAgICAgICJzZWN1cml0eS5jdXN0b21lckF1dGgiOiB7CiAgICAgICAgcmVhZHk6IGZhbHNlLAogICAgICAgIGxhYmVsOiAiQXV0ZW50aWNhY2nDs24gc2VndXJhIGRlIGNsaWVudGVzIiwKICAgICAgfSwKICAgICAgImNvbnRlbnQudGVjaG5pY2FsQ2VudGVyIjogewogICAgICAgIHJlYWR5OiBmYWxzZSwKICAgICAgICBsYWJlbDogIkNvbnRlbmlkbyB0w6ljbmljbyBwb3IgY2xpZW50ZSBvIGVxdWlwbyIsCiAgICAgIH0sCiAgICB9LAoKICAgIGZlYXR1cmVzOiB7CiAgICAgIGhvbWU6IHsKICAgICAgICBzdGF0ZTogImxpdmUiLAogICAgICAgIGxhYmVsOiAiSW5pY2lvIiwKICAgICAgICBkZXBlbmRlbmNpZXM6IFsiY29yZS5icmFuZCIsICJjb3JlLm5hdmlnYXRpb24iXSwKICAgICAgfSwKICAgICAgc2VydmljZXM6IHsKICAgICAgICBzdGF0ZTogImxpdmUiLAogICAgICAgIGxhYmVsOiAiU2VydmljaW9zIiwKICAgICAgICBkZXBlbmRlbmNpZXM6IFsiY29udGVudC5zZXJ2aWNlcyIsICJjaGFubmVsLndoYXRzYXBwIl0sCiAgICAgICAgc2VsZWN0b3JzOiBbCiAgICAgICAgICAiI3NlcnZpY2lvcyIsCiAgICAgICAgICAnYVtocmVmPSIjc2VydmljaW9zIl0nLAogICAgICAgICAgJ2FbaHJlZj0iaW5kZXguaHRtbCNzZXJ2aWNpb3MiXScsCiAgICAgICAgXSwKICAgICAgfSwKICAgICAgY2FwYWJpbGl0aWVzOiB7CiAgICAgICAgc3RhdGU6ICJsaXZlIiwKICAgICAgICBsYWJlbDogIk1hcXVpbmFyaWEgeSBjYXBhY2lkYWRlcyIsCiAgICAgICAgZGVwZW5kZW5jaWVzOiBbImNvbnRlbnQuc2VydmljZXMiXSwKICAgICAgICBzZWxlY3RvcnM6IFsiI2NhcGFjaWRhZGVzIiwgJ2FbaHJlZj0iI2NhcGFjaWRhZGVzIl0nXSwKICAgICAgfSwKICAgICAgcHJvamVjdHM6IHsKICAgICAgICBzdGF0ZTogInByZXZpZXciLAogICAgICAgIGxhYmVsOiAiVHJhYmFqb3MgeSBwcm95ZWN0b3MiLAogICAgICAgIGRlcGVuZGVuY2llczogWyJjb250ZW50LnJlYWxQcm9qZWN0cyJdLAogICAgICAgIHNlbGVjdG9yczogWyIjcHJveWVjdG9zIiwgJ2FbaHJlZj0iI3Byb3llY3RvcyJdJ10sCiAgICAgICAgcHJldmlld01lc3NhZ2U6CiAgICAgICAgICAiRXN0YSBzZWNjacOzbiBjb25zZXJ2YSBtYXRlcmlhbCBkZSBtYXF1ZXRhIG1pZW50cmFzIGluY29ycG9yYW1vcyBmb3RvZ3JhZsOtYXMgeSBjYXNvcyByZWFsZXMgZGUgTUFRRUxFQy4iLAogICAgICB9LAogICAgICB2aWRlb3M6IHsKICAgICAgICBzdGF0ZTogIm9mZiIsCiAgICAgICAgbGFiZWw6ICJWaWRlb3MiLAogICAgICAgIGRlcGVuZGVuY2llczogWyJtZWRpYS5yZWFsVmlkZW9zIl0sCiAgICAgICAgc2VsZWN0b3JzOiBbJ1tkYXRhLWZlYXR1cmU9InZpZGVvcyJdJ10sCiAgICAgIH0sCiAgICAgIG1hbnVhbHM6IHsKICAgICAgICBzdGF0ZTogInByZXZpZXciLAogICAgICAgIGxhYmVsOiAiTWFudWFsZXMiLAogICAgICAgIGRlcGVuZGVuY2llczogWyJjb250ZW50Lm1hbnVhbEZpbGVzIl0sCiAgICAgICAgc2VsZWN0b3JzOiBbJ2FbaHJlZj0ibWFudWFsZXMuaHRtbCJdJywgJ1tkYXRhLWZlYXR1cmU9Im1hbnVhbHMiXSddLAogICAgICAgIHByZXZpZXdNZXNzYWdlOgogICAgICAgICAgIkNhdMOhbG9nbyBkZSBkZW1vc3RyYWNpw7NuLiBMYXMgZGVzY2FyZ2FzIHNlIGhhYmlsaXRhcsOhbiBjdWFuZG8gZXhpc3RhbiBkb2N1bWVudG9zIHTDqWNuaWNvcyByZWFsZXMgeSB2aWdlbnRlcy4iLAogICAgICB9LAogICAgICB0cmFja2luZzogewogICAgICAgIHN0YXRlOiAicHJldmlldyIsCiAgICAgICAgbGFiZWw6ICJTZWd1aW1pZW50byIsCiAgICAgICAgZGVwZW5kZW5jaWVzOiBbImludGVncmF0aW9uLnRyYWNraW5nIl0sCiAgICAgICAgc2VsZWN0b3JzOiBbJ2FbaHJlZj0ic2VndWltaWVudG8uaHRtbCJdJywgJ1tkYXRhLWZlYXR1cmU9InRyYWNraW5nIl0nXSwKICAgICAgICBwcmV2aWV3TWVzc2FnZToKICAgICAgICAgICJTaW11bGFjacOzbiB2aXN1YWw6IGxvcyByZXN1bHRhZG9zIGRlIGVzdGEgcMOhZ2luYSBubyBjb25zdWx0YW4gcGVkaWRvcyBuaSBkZXNwYWNob3MgcmVhbGVzLiIsCiAgICAgIH0sCiAgICAgIHRlY2huaWNhbENlbnRlcjogewogICAgICAgIHN0YXRlOiAicHJldmlldyIsCiAgICAgICAgbGFiZWw6ICJDZW50cm8gVMOpY25pY28iLAogICAgICAgIGRlcGVuZGVuY2llczogWyJzZWN1cml0eS5jdXN0b21lckF1dGgiLCAiY29udGVudC50ZWNobmljYWxDZW50ZXIiXSwKICAgICAgICBzZWxlY3RvcnM6IFsnYVtocmVmPSJ2aXAuaHRtbCJdJywgJ1tkYXRhLWZlYXR1cmU9InRlY2huaWNhbENlbnRlciJdJ10sCiAgICAgICAgcHJldmlld01lc3NhZ2U6CiAgICAgICAgICAiRGVtb3N0cmFjacOzbiB2aXN1YWw6IGVzdGUgYWNjZXNvIG5vIGNvbnN0aXR1eWUgYXV0ZW50aWNhY2nDs24gbmkgcHJvdGVnZSBjb250ZW5pZG8gcHJpdmFkbyByZWFsLiIsCiAgICAgIH0sCiAgICAgIGNvbnRhY3Q6IHsKICAgICAgICBzdGF0ZTogImxpdmUiLAogICAgICAgIGxhYmVsOiAiQ29udGFjdG8iLAogICAgICAgIGRlcGVuZGVuY2llczogWyJjaGFubmVsLndoYXRzYXBwIl0sCiAgICAgICAgc2VsZWN0b3JzOiBbJ2FbaHJlZj0iY29udGFjdG8uaHRtbCJdJywgJ1tkYXRhLWZlYXR1cmU9ImNvbnRhY3QiXSddLAogICAgICB9LAogICAgfSwKCiAgICBwYWdlczogewogICAgICAiaW5kZXguaHRtbCI6ICJob21lIiwKICAgICAgImNvbnRhY3RvLmh0bWwiOiAiY29udGFjdCIsCiAgICAgICJtYW51YWxlcy5odG1sIjogIm1hbnVhbHMiLAogICAgICAic2VndWltaWVudG8uaHRtbCI6ICJ0cmFja2luZyIsCiAgICAgICJ2aXAuaHRtbCI6ICJ0ZWNobmljYWxDZW50ZXIiLAogICAgfSwKICB9Owp9KSgpOwo=
+(function () {
+  "use strict";
+
+  window.MAQELEC_SITE_CONFIG = {
+    version: "1.0.0",
+    environment: "preview",
+    states: ["off", "preview", "live"],
+
+    dependencies: {
+      "core.brand": {
+        ready: true,
+        label: "Identidad visual MAQELEC",
+      },
+      "core.navigation": {
+        ready: true,
+        label: "Navegación compartida",
+      },
+      "channel.whatsapp": {
+        ready: true,
+        label: "Canal comercial de WhatsApp",
+      },
+      "content.services": {
+        ready: true,
+        label: "Catálogo de servicios",
+      },
+      "content.realProjects": {
+        ready: false,
+        label: "Fotografías y casos reales",
+      },
+      "media.realVideos": {
+        ready: false,
+        label: "Videos industriales optimizados",
+      },
+      "content.manualFiles": {
+        ready: false,
+        label: "Manuales descargables vigentes",
+      },
+      "integration.tracking": {
+        ready: false,
+        label: "Fuente real de seguimiento",
+      },
+      "security.customerAuth": {
+        ready: false,
+        label: "Autenticación segura de clientes",
+      },
+      "content.technicalCenter": {
+        ready: false,
+        label: "Contenido técnico por cliente o equipo",
+      },
+    },
+
+    features: {
+      home: {
+        state: "live",
+        label: "Inicio",
+        dependencies: ["core.brand", "core.navigation"],
+      },
+      services: {
+        state: "live",
+        label: "Servicios",
+        dependencies: ["content.services", "channel.whatsapp"],
+        selectors: [
+          "#servicios",
+          'a[href="#servicios"]',
+          'a[href="index.html#servicios"]',
+        ],
+      },
+      capabilities: {
+        state: "live",
+        label: "Maquinaria y capacidades",
+        dependencies: ["content.services"],
+        selectors: ["#capacidades", 'a[href="#capacidades"]'],
+      },
+      projects: {
+        state: "preview",
+        label: "Trabajos y proyectos",
+        dependencies: ["content.realProjects"],
+        selectors: ["#proyectos", 'a[href="#proyectos"]'],
+        previewMessage:
+          "Esta sección conserva material de maqueta mientras incorporamos fotografías y casos reales de MAQELEC.",
+      },
+      videos: {
+        state: "off",
+        label: "Videos",
+        dependencies: ["media.realVideos"],
+        selectors: ['[data-feature="videos"]'],
+      },
+      manuals: {
+        state: "preview",
+        label: "Manuales",
+        dependencies: ["content.manualFiles"],
+        selectors: ['a[href="manuales.html"]', '[data-feature="manuals"]'],
+        previewMessage:
+          "Catálogo de demostración. Las descargas se habilitarán cuando existan documentos técnicos reales y vigentes.",
+      },
+      tracking: {
+        state: "preview",
+        label: "Seguimiento",
+        dependencies: ["integration.tracking"],
+        selectors: ['a[href="seguimiento.html"]', '[data-feature="tracking"]'],
+        previewMessage:
+          "Simulación visual: los resultados de esta página no consultan pedidos ni despachos reales.",
+      },
+      technicalCenter: {
+        state: "preview",
+        label: "Centro Técnico",
+        dependencies: ["security.customerAuth", "content.technicalCenter"],
+        selectors: ['a[href="vip.html"]', '[data-feature="technicalCenter"]'],
+        previewMessage:
+          "Demostración visual: este acceso no constituye autenticación ni protege contenido privado real.",
+      },
+      contact: {
+        state: "live",
+        label: "Contacto",
+        dependencies: ["channel.whatsapp"],
+        selectors: ['a[href="contacto.html"]', '[data-feature="contact"]'],
+      },
+    },
+
+    pages: {
+      "index.html": "home",
+      "contacto.html": "contact",
+      "manuales.html": "manuals",
+      "seguimiento.html": "tracking",
+      "vip.html": "technicalCenter",
+    },
+  };
+})();
