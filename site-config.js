@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_SITE_CONFIG = {
-    version: "1.0.0",
+    version: "1.1.0",
     environment: "preview",
     states: ["off", "preview", "live"],
 
@@ -22,6 +22,14 @@
       "content.services": {
         ready: true,
         label: "Catálogo de servicios",
+      },
+      "content.machineryCatalog": {
+        ready: false,
+        label: "Fichas técnicas y fotografías validadas de maquinaria",
+      },
+      "content.partsCatalog": {
+        ready: false,
+        label: "Catálogo verificado de repuestos",
       },
       "content.realProjects": {
         ready: false,
@@ -65,17 +73,27 @@
           'a[href="index.html#servicios"]',
         ],
       },
-      capabilities: {
-        state: "live",
-        label: "Maquinaria y capacidades",
-        dependencies: ["content.services"],
-        selectors: ["#capacidades", 'a[href="#capacidades"]'],
+      machinery: {
+        state: "preview",
+        label: "Maquinaria",
+        dependencies: ["content.machineryCatalog", "channel.whatsapp"],
+        selectors: ['a[href="maquinaria.html"]', '[data-feature="machinery"]'],
+        previewMessage:
+          "Las familias de equipos son una base comercial; fotografías, marcas, modelos y fichas definitivas se publicarán solo después de validarlas.",
+      },
+      parts: {
+        state: "preview",
+        label: "Repuestos",
+        dependencies: ["content.partsCatalog", "channel.whatsapp"],
+        selectors: ['a[href="repuestos.html"]', '[data-feature="parts"]'],
+        previewMessage:
+          "El buscador de requerimientos está operativo. El catálogo público se activará ficha por ficha con códigos, compatibilidades y disponibilidad verificadas.",
       },
       projects: {
         state: "preview",
         label: "Trabajos y proyectos",
         dependencies: ["content.realProjects"],
-        selectors: ["#proyectos", 'a[href="#proyectos"]'],
+        selectors: ['a[href="proyectos.html"]', '[data-feature="projects"]'],
         previewMessage:
           "Esta sección conserva material de maqueta mientras incorporamos fotografías y casos reales de MAQELEC.",
       },
@@ -115,10 +133,21 @@
         dependencies: ["channel.whatsapp"],
         selectors: ['a[href="contacto.html"]', '[data-feature="contact"]'],
       },
+      search: {
+        state: "live",
+        label: "Buscador",
+        dependencies: ["core.navigation", "channel.whatsapp"],
+        selectors: ['a[href="buscar.html"]'],
+      },
     },
 
     pages: {
       "index.html": "home",
+      "maquinaria.html": "machinery",
+      "repuestos.html": "parts",
+      "servicios.html": "services",
+      "proyectos.html": "projects",
+      "buscar.html": "search",
       "contacto.html": "contact",
       "manuales.html": "manuals",
       "seguimiento.html": "tracking",
