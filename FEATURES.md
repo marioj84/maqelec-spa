@@ -1,1 +1,90 @@
-IyBTaXN0ZW1hIGRlIGZ1bmNpb25lcyBNQVFFTEVDCgpMYSB3ZWIgdXRpbGl6YSB1biByZWdpc3RybyBjZW50cmFsIHBhcmEgYWN0aXZhciwgbWFudGVuZXIgZW4gZGVtb3N0cmFjacOzbiBvIHJldGlyYXIgbcOzZHVsb3Mgc2luIGVkaXRhciBjYWRhIHDDoWdpbmEgcG9yIHNlcGFyYWRvLgoKIyMgRXN0YWRvcwoKfCBFc3RhZG8gICAgfCBDb21wb3J0YW1pZW50byAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB8CnwgLS0tLS0tLS0tIHwgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gfAp8IGBvZmZgICAgICB8IE9jdWx0YSBhY2Nlc29zLCBzZWNjaW9uZXMgeSBuYXZlZ2FjacOzbi4gVW5hIFVSTCBkaXJlY3RhIG11ZXN0cmEgdW4gYXZpc28gZGUgbcOzZHVsbyBkZXNhY3RpdmFkby4gfAp8IGBwcmV2aWV3YCB8IE1hbnRpZW5lIHZpc2libGUgbGEgbWFxdWV0YSB5IGFncmVnYSB1bmEgYWR2ZXJ0ZW5jaWEgY2xhcmEgZGUgY29udGVuaWRvIGVuIGRlc2Fycm9sbG8uICAgICAgICAgIHwKfCBgbGl2ZWAgICAgfCBQdWJsaWNhIGxhIGZ1bmNpw7NuIMO6bmljYW1lbnRlIGN1YW5kbyB0b2RhcyBzdXMgZGVwZW5kZW5jaWFzIGVzdMOhbiBsaXN0YXMuICAgICAgICAgICAgICAgICAgICAgICB8CgpTaSB1bmEgZnVuY2nDs24gc2UgY29uZmlndXJhIGNvbW8gYGxpdmVgIHBlcm8gYWxndW5hIGRlcGVuZGVuY2lhIHRpZW5lIGByZWFkeTogZmFsc2VgLCBlbCBzaXN0ZW1hIGxhIGJhamEgYXV0b23DoXRpY2FtZW50ZSBhIGBwcmV2aWV3YC4KCiMjIMOBcmJvbCBkZSBkZXBlbmRlbmNpYXMKCmBgYHRleHQKTsO6Y2xlbyBNQVFFTEVDCuKUnOKUgOKUgCBJZGVudGlkYWQgeSBuYXZlZ2FjacOzbgrilIIgICDilJzilIDilIAgSW5pY2lvCuKUgiAgIOKUnOKUgOKUgCBIZWFkZXIgeSBtZW7DugrilIIgICDilJTilIDilIAgRm9vdGVyCuKUnOKUgOKUgCBDb250ZW5pZG8gY29tZXJjaWFsCuKUgiAgIOKUnOKUgOKUgCBTZXJ2aWNpb3MK4pSCICAg4pSc4pSA4pSAIE1hcXVpbmFyaWEgeSBjYXBhY2lkYWRlcwrilIIgICDilJzilIDilIAgVHJhYmFqb3MgeSBwcm95ZWN0b3Mg4pSA4pSAPiBmb3RvcyB5IGNhc29zIHJlYWxlcwrilIIgICDilJTilIDilIAgVmlkZW9zIOKUgOKUgD4gdmlkZW9zIHJlYWxlcyBvcHRpbWl6YWRvcwrilJzilIDilIAgRnVuY2lvbmVzIHBhcmEgY2xpZW50ZXMK4pSCICAg4pSc4pSA4pSAIE1hbnVhbGVzIOKUgOKUgD4gZG9jdW1lbnRvcyB2aWdlbnRlcwrilIIgICDilJzilIDilIAgU2VndWltaWVudG8g4pSA4pSAPiBmdWVudGUgcmVhbCBkZSBlc3RhZG9zCuKUgiAgIOKUlOKUgOKUgCBDZW50cm8gVMOpY25pY28K4pSCICAgICAgIOKUnOKUgOKUgCBhdXRlbnRpY2FjacOzbiBzZWd1cmEK4pSCICAgICAgIOKUlOKUgOKUgCBjb250ZW5pZG8gcG9yIGNsaWVudGUgbyBlcXVpcG8K4pSU4pSA4pSAIENvbnRhY3RvCiAgICDilJTilIDilIAgV2hhdHNBcHAgY29tZXJjaWFsCmBgYAoKIyMgQXJjaGl2b3MKCi0gYHNpdGUtY29uZmlnLmpzYDogZXN0YWRvcywgZGVwZW5kZW5jaWFzLCBzZWxlY3RvcmVzIHkgbWVuc2FqZXMgZGUgY2FkYSBmdW5jacOzbi4KLSBgZmVhdHVyZS1tYW5hZ2VyLmpzYDogYXBsaWNhIGxhcyByZWdsYXMgYSBuYXZlZ2FjacOzbiwgc2VjY2lvbmVzIHkgcMOhZ2luYXMuCi0gYGZlYXR1cmUtbWFuYWdlci5jc3NgOiBpbmRpY2Fkb3JlcyBkZSB2aXN0YSBwcmV2aWEgeSBtw7NkdWxvcyBkZXNhY3RpdmFkb3MuCi0gYHZhbGlkYXRlLWZlYXR1cmVzLmpzYDogY29tcHJ1ZWJhIGVzdGFkb3MsIGRlcGVuZGVuY2lhcyB5IHDDoWdpbmFzIGNvbmZpZ3VyYWRhcy4KCiMjIEFjdGl2YXIgdW5hIGZ1bmNpw7NuCgoxLiBJbmNvcnBvcmFyIHkgdmFsaWRhciBlbCBjb250ZW5pZG8gbyBpbnRlZ3JhY2nDs24gcmVhbC4KMi4gQ2FtYmlhciBhIGByZWFkeTogdHJ1ZWAgdG9kYXMgc3VzIGRlcGVuZGVuY2lhcyBlbiBgc2l0ZS1jb25maWcuanNgLgozLiBDYW1iaWFyIGVsIGVzdGFkbyBkZSBsYSBmdW5jacOzbiBhIGBsaXZlYC4KNC4gUHJvYmFyIG5hdmVnYWNpw7NuLCBhY2Nlc28gZGlyZWN0byB5IHZpc3RhIG3Ds3ZpbCBhbnRlcyBkZSBwdWJsaWNhci4KCkVqZW1wbG86CgpgYGBqcwoiY29udGVudC5tYW51YWxGaWxlcyI6IHsKICByZWFkeTogdHJ1ZSwKICBsYWJlbDogIk1hbnVhbGVzIGRlc2NhcmdhYmxlcyB2aWdlbnRlcyIsCn0sCgptYW51YWxzOiB7CiAgc3RhdGU6ICJsaXZlIiwKICAvLyAuLi4KfSwKYGBgCgojIyBDb25zdWx0YSB0w6ljbmljYQoKRW4gbGEgY29uc29sYSBkZWwgbmF2ZWdhZG9yIHNlIHB1ZWRlIHJldmlzYXIgZWwgZXN0YWRvIGNvbXBsZXRvOgoKYGBganMKTUFRRUxFQ19GRUFUVVJFUy5nZXRSZXBvcnQoKTsKYGBgCgpUYW1iacOpbiBzZSBwdWVkZSBwcm9iYXIgdGVtcG9yYWxtZW50ZSB1biBlc3RhZG8gc2luIG1vZGlmaWNhciBhcmNoaXZvczoKCmBgYGpzCk1BUUVMRUNfRkVBVFVSRVMuc2V0U3RhdGUoIm1hbnVhbHMiLCAib2ZmIik7CmBgYAoKRXN0ZSBjYW1iaW8gZGUgY29uc29sYSBkdXJhIHNvbGFtZW50ZSBoYXN0YSByZWNhcmdhciBsYSBww6FnaW5hLiBMYSBmdWVudGUgb2ZpY2lhbCBzaWVtcHJlIGVzIGBzaXRlLWNvbmZpZy5qc2AuCgpBbnRlcyBkZSBwdWJsaWNhciBjYW1iaW9zIGVuIGxhIGNvbmZpZ3VyYWNpw7NuLCBlamVjdXRhcjoKCmBgYGJhc2gKbm9kZSB2YWxpZGF0ZS1mZWF0dXJlcy5qcwpgYGAKCiMjIEzDrW1pdGUgZGUgc2VndXJpZGFkCgpFbCBzaXN0ZW1hIGNvbnRyb2xhIHZpc2liaWxpZGFkIHkgcHVibGljYWNpw7NuLCBwZXJvIG5vIHN1c3RpdHV5ZSBhdXRlbnRpY2FjacOzbi4gQ29udGVuaWRvIHByaXZhZG8sIGRhdG9zIGRlIGNsaWVudGVzIG8gZXN0YWRvcyByZWFsZXMgbnVuY2EgZGViZW4gaW5jbHVpcnNlIGVuIGVsIEhUTUwgcMO6YmxpY28gbmkgcHJvdGVnZXJzZSDDum5pY2FtZW50ZSBjb24gSmF2YVNjcmlwdC4K
+# Sistema de funciones MAQELEC
+
+La web utiliza un registro central para activar, mantener en demostración o retirar módulos sin editar cada página por separado.
+
+## Estados
+
+| Estado    | Comportamiento                                                                                  |
+| --------- | ----------------------------------------------------------------------------------------------- |
+| `off`     | Oculta accesos, secciones y navegación. Una URL directa muestra un aviso de módulo desactivado. |
+| `preview` | Mantiene visible la maqueta y agrega una advertencia clara de contenido en desarrollo.          |
+| `live`    | Publica la función únicamente cuando todas sus dependencias están listas.                       |
+
+Si una función se configura como `live` pero alguna dependencia tiene `ready: false`, el sistema la baja automáticamente a `preview`.
+
+## Árbol de dependencias
+
+```text
+Núcleo MAQELEC
+├── Identidad y navegación
+│   ├── Inicio
+│   ├── Header y menú
+│   └── Footer
+├── Contenido comercial
+│   ├── Servicios
+│   ├── Maquinaria y capacidades
+│   ├── Trabajos y proyectos ──> fotos y casos reales
+│   └── Videos ──> videos reales optimizados
+├── Funciones para clientes
+│   ├── Manuales ──> documentos vigentes
+│   ├── Seguimiento ──> fuente real de estados
+│   └── Centro Técnico
+│       ├── autenticación segura
+│       └── contenido por cliente o equipo
+└── Contacto
+    └── WhatsApp comercial
+```
+
+## Archivos
+
+- `site-config.js`: estados, dependencias, selectores y mensajes de cada función.
+- `feature-manager.js`: aplica las reglas a navegación, secciones y páginas.
+- `feature-manager.css`: indicadores de vista previa y módulos desactivados.
+- `validate-features.js`: comprueba estados, dependencias y páginas configuradas.
+
+## Activar una función
+
+1. Incorporar y validar el contenido o integración real.
+2. Cambiar a `ready: true` todas sus dependencias en `site-config.js`.
+3. Cambiar el estado de la función a `live`.
+4. Probar navegación, acceso directo y vista móvil antes de publicar.
+
+Ejemplo:
+
+```js
+"content.manualFiles": {
+  ready: true,
+  label: "Manuales descargables vigentes",
+},
+
+manuals: {
+  state: "live",
+  // ...
+},
+```
+
+## Consulta técnica
+
+En la consola del navegador se puede revisar el estado completo:
+
+```js
+MAQELEC_FEATURES.getReport();
+```
+
+También se puede probar temporalmente un estado sin modificar archivos:
+
+```js
+MAQELEC_FEATURES.setState("manuals", "off");
+```
+
+Este cambio de consola dura solamente hasta recargar la página. La fuente oficial siempre es `site-config.js`.
+
+Antes de publicar cambios en la configuración, ejecutar:
+
+```bash
+node validate-features.js
+```
+
+## Límite de seguridad
+
+El sistema controla visibilidad y publicación, pero no sustituye autenticación. Contenido privado, datos de clientes o estados reales nunca deben incluirse en el HTML público ni protegerse únicamente con JavaScript.
