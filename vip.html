@@ -1,1 +1,160 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Centro Técnico | MAQELEC</title><link rel="icon" href="favicon.png"><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"></head><body><header class="header"><div class="container nav"><a class="brand" href="index.html"><img src="logo.png" class="brand-logo" alt="MAQELEC"></a><div class="nav-actions"><button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú"><span></span></button><nav class="nav-links" id="navMenu"><a href="index.html">Home</a><a href="index.html#servicios">Servicios</a><a href="seguimiento.html"><span class="nav-icon">▰</span> Seguimiento</a><a href="manuales.html">Manuales</a><a href="vip.html" class="btn-tech">Centro Técnico</a><a href="contacto.html">Contacto</a><a class="btn" href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20necesito%20cotizar%20una%20soluci%C3%B3n%20industrial" target="_blank">Cotizar</a></nav><a class="social-link" href="https://www.instagram.com/maqelec.spa/" target="_blank"><img src="logo_instagram.png" alt="Instagram"></a><a class="social-link" href="https://wa.me/56991514957" target="_blank"><img src="logo_wsp.png" alt="WhatsApp"></a></div></div></header><main><section class="page-hero"><div class="container"><div class="brand-callout">Acceso privado <strong>Centro Técnico</strong></div><h1>Acceso a clientes</h1><p>Ingresa con tu usuario y contraseña para acceder a contenido técnico exclusivo.</p></div></section><section><div class="container"><div class="tracking-card"><h3>Ingreso cliente</h3><div class="vip-login-grid"><input id="user" placeholder="Usuario"><input id="pass" type="password" placeholder="Contraseña"></div><button class="btn" style="margin-top:12px" onclick="loginVip()">Ingresar</button><p class="vip-login-note">Demo: usuario <b>cliente</b> | clave <b>maqelec</b></p></div><div id="panelVip" class="tracking-result" style="display:none"><div class="tracking-status-head"><div><span class="kicker">Producto registrado</span><h2>Cortadora CNC de láminas de acero</h2></div></div><div class="module-grid" style="margin-top:28px"><div class="module-card"><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:24px"><iframe src="https://www.youtube.com/embed/-QhfN_IHEtI" style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen></iframe></div></div><div class="module-content"><h2>Contenido técnico exclusivo</h2><p>Material especializado del equipo: operación, mantenimiento y soporte.</p></div></div></div></div></section></main><footer><div class="container footer-grid"><div><img src="logo.png" class="footer-logo"><p>Proveedor industrial para continuidad operativa.</p></div></div></footer><script>function toggleMenu(){document.getElementById('navMenu').classList.toggle('open');}function loginVip(){const u=document.getElementById('user').value;const p=document.getElementById('pass').value;if(u==='cliente'&&p==='maqelec'){document.getElementById('panelVip').style.display='block';document.getElementById('panelVip').scrollIntoView({behavior:'smooth'});}else{alert('Credenciales incorrectas (demo)');}}</script></body></html>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centro Técnico | MAQELEC</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="feature-manager.css" />
+    <script src="site-config.js"></script>
+    <script src="feature-manager.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-page-feature="technicalCenter">
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="index.html"
+          ><img src="logo.png" class="brand-logo" alt="MAQELEC"
+        /></a>
+        <div class="nav-actions">
+          <button
+            class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="Abrir menú"
+          >
+            <span></span>
+          </button>
+          <nav class="nav-links" id="navMenu">
+            <a href="index.html">Home</a
+            ><a href="index.html#servicios">Servicios</a
+            ><a href="seguimiento.html"
+              ><span class="nav-icon">▰</span> Seguimiento</a
+            ><a href="manuales.html">Manuales</a
+            ><a href="vip.html" class="btn-tech">Centro Técnico</a
+            ><a href="contacto.html">Contacto</a
+            ><a
+              class="btn"
+              href="https://wa.me/56991514957?text=Hola%20MAQELEC%2C%20necesito%20cotizar%20una%20soluci%C3%B3n%20industrial"
+              target="_blank"
+              >Cotizar</a
+            >
+          </nav>
+          <a
+            class="social-link"
+            href="https://www.instagram.com/maqelec.spa/"
+            target="_blank"
+            ><img src="logo_instagram.png" alt="Instagram" /></a
+          ><a
+            class="social-link"
+            href="https://wa.me/56991514957"
+            target="_blank"
+            ><img src="logo_wsp.png" alt="WhatsApp"
+          /></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="brand-callout">
+            Acceso privado <strong>Centro Técnico</strong>
+          </div>
+          <h1>Acceso a clientes</h1>
+          <p>
+            Ingresa con tu usuario y contraseña para acceder a contenido técnico
+            exclusivo.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="tracking-card">
+            <h3>Ingreso cliente</h3>
+            <div class="vip-login-grid">
+              <input id="user" placeholder="Usuario" /><input
+                id="pass"
+                type="password"
+                placeholder="Contraseña"
+              />
+            </div>
+            <button class="btn" style="margin-top: 12px" onclick="loginVip()">
+              Ingresar
+            </button>
+            <p class="vip-login-note">
+              Demo: usuario <b>cliente</b> | clave <b>maqelec</b>
+            </p>
+          </div>
+          <div id="panelVip" class="tracking-result" style="display: none">
+            <div class="tracking-status-head">
+              <div>
+                <span class="kicker">Producto registrado</span>
+                <h2>Cortadora CNC de láminas de acero</h2>
+              </div>
+            </div>
+            <div class="module-grid" style="margin-top: 28px">
+              <div class="module-card">
+                <div
+                  style="
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    height: 0;
+                    overflow: hidden;
+                    border-radius: 24px;
+                  "
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/-QhfN_IHEtI"
+                    style="
+                      position: absolute;
+                      inset: 0;
+                      width: 100%;
+                      height: 100%;
+                      border: 0;
+                    "
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="module-content">
+                <h2>Contenido técnico exclusivo</h2>
+                <p>
+                  Material especializado del equipo: operación, mantenimiento y
+                  soporte.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <img src="logo.png" class="footer-logo" />
+          <p>Proveedor industrial para continuidad operativa.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("open");
+      }
+      function loginVip() {
+        const u = document.getElementById("user").value;
+        const p = document.getElementById("pass").value;
+        if (u === "cliente" && p === "maqelec") {
+          document.getElementById("panelVip").style.display = "block";
+          document
+            .getElementById("panelVip")
+            .scrollIntoView({ behavior: "smooth" });
+        } else {
+          alert("Credenciales incorrectas (demo)");
+        }
+      }
+    </script>
+  </body>
+</html>
