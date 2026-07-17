@@ -41,6 +41,12 @@ Núcleo MAQELEC
 - `feature-manager.js`: aplica las reglas a navegación, secciones y páginas.
 - `feature-manager.css`: indicadores de vista previa y módulos desactivados.
 - `validate-features.js`: comprueba estados, dependencias y páginas configuradas.
+- `site-shell.js`: genera el encabezado, navegación, footer y acceso a WhatsApp compartidos.
+- `site-shell.css`: centraliza tipografías, colores, estructura responsive y estilo de páginas internas.
+
+## Estructura visual compartida
+
+Las páginas conservan únicamente su contenido principal. Al cargar, `site-shell.js` reemplaza los encabezados y footers antiguos por una única estructura común. Para cambiar el menú, buscador, datos de contacto o footer se debe editar ese archivo una sola vez; no se deben volver a copiar esos componentes dentro de cada página.
 
 ## Activar una función
 
