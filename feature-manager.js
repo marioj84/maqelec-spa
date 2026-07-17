@@ -150,7 +150,10 @@
 
     if (state === "preview") {
       const target =
+        document.querySelector(".page-intro .ma-container") ||
+        document.querySelector(".page-hero .ma-container") ||
         document.querySelector(".page-hero .container") ||
+        document.querySelector("main .ma-container") ||
         document.querySelector("main .container");
       if (target) {
         target.prepend(
