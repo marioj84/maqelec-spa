@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Servicios de corte, mecanizado, soldadura, electricidad, mantenimiento y puesta en marcha de MAQELEC."
+    />
+    <title>Servicios industriales | MAQELEC</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="site-shell.css?v=20260717-3" />
+    <link rel="stylesheet" href="feature-manager.css?v=20260717-1" />
+    <link rel="stylesheet" href="catalog.css?v=20260717-1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="site-config.js?v=20260717-1"></script>
+    <script src="catalog-data.js?v=20260717-1"></script>
+    <script src="site-shell.js?v=20260717-1" defer></script>
+    <script src="catalog.js?v=20260717-1" defer></script>
+    <script src="feature-manager.js?v=20260717-1" defer></script>
+  </head>
+  <body class="catalog-site" data-page-feature="services">
+    <main>
+      <section class="page-intro">
+        <div class="ma-container">
+          <span class="eyebrow">Ejecución técnica</span>
+          <h1>Servicios industriales</h1>
+          <p>
+            Atendemos trabajos de fabricación, reparación, mantenimiento,
+            electricidad e implementación. Puedes contratar el trabajo aunque no
+            compres una máquina.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="ma-container">
+          <div class="filter-bar">
+            <label class="filter-label"
+              ><span>Buscar por trabajo o proceso</span
+              ><input
+                type="search"
+                data-service-filter
+                placeholder="Ej: corte, torno, soldadura, electricidad"
+            /></label>
+            <a class="button primary" href="contacto.html"
+              >Solicitar evaluación</a
+            >
+          </div>
+          <div class="catalog-grid" data-service-grid></div>
+          <div class="empty-state" data-service-empty hidden>
+            <strong>No encontramos ese servicio.</strong>
+            <p>
+              Describe el problema o trabajo: revisaremos si podemos ejecutarlo
+              directamente o coordinar una solución.
+            </p>
+            <a class="button primary" href="contacto.html">Enviar consulta</a>
+          </div>
+        </div>
+      </section>
+      <section class="request-section">
+        <div class="ma-container request-grid">
+          <div>
+            <span class="eyebrow">Información útil</span>
+            <h2>Para cotizar más rápido</h2>
+            <p>
+              Comparte medidas, material, cantidad, plano, fotografías,
+              ubicación y plazo requerido. Si no tienes todos los datos,
+              comenzamos por lo disponible.
+            </p>
+          </div>
+          <form class="requirement-form" data-requirement-form>
+            <input type="hidden" name="type" value="un servicio industrial" />
+            <label class="filter-label"
+              ><span>Empresa</span
+              ><input
+                type="text"
+                name="company"
+                placeholder="Nombre de empresa"
+            /></label>
+            <label class="filter-label"
+              ><span>Área</span
+              ><select name="area">
+                <option>Corte</option>
+                <option>Mecanizado</option>
+                <option>Soldadura</option>
+                <option>Electricidad</option>
+                <option>Mantenimiento</option>
+                <option>Instalación o capacitación</option>
+              </select></label
+            >
+            <label class="filter-label full"
+              ><span>Trabajo requerido</span
+              ><input
+                type="text"
+                name="search"
+                required
+                placeholder="Describe brevemente el trabajo, cantidad y plazo"
+            /></label>
+            <button class="button primary" type="submit">
+              Solicitar evaluación
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

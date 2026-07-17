@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Búsqueda y suministro de repuestos industriales por código, marca, modelo o fotografía."
+    />
+    <title>Repuestos industriales | MAQELEC</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="site-shell.css?v=20260717-3" />
+    <link rel="stylesheet" href="feature-manager.css?v=20260717-1" />
+    <link rel="stylesheet" href="catalog.css?v=20260717-1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="site-config.js?v=20260717-1"></script>
+    <script src="catalog-data.js?v=20260717-1"></script>
+    <script src="site-shell.js?v=20260717-1" defer></script>
+    <script src="catalog.js?v=20260717-1" defer></script>
+    <script src="feature-manager.js?v=20260717-1" defer></script>
+  </head>
+  <body class="catalog-site" data-page-feature="parts">
+    <main>
+      <section class="page-intro">
+        <div class="ma-container">
+          <span class="eyebrow">Suministro local e importación</span>
+          <h1>Repuestos industriales</h1>
+          <p>
+            Buscamos repuestos por código, marca, modelo, equipo o fotografía.
+            El catálogo se irá publicando únicamente con fichas validadas;
+            mientras tanto, la búsqueda funciona mediante requerimiento directo.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="ma-container parts-shell">
+          <div>
+            <span class="eyebrow">Familias de búsqueda</span>
+            <h2>¿Qué necesitas localizar?</h2>
+            <p>
+              No mostraremos precios ficticios ni stock sin confirmar. Cada
+              solicitud se revisa para indicar compatibilidad, plazo y modalidad
+              de suministro.
+            </p>
+            <div class="category-list">
+              <span>Consumibles de corte</span
+              ><span>Componentes eléctricos</span
+              ><span>Componentes mecánicos</span
+              ><span>Automatización y control</span
+              ><span>Repuestos por código o modelo</span>
+            </div>
+          </div>
+          <form class="requirement-form" data-requirement-form>
+            <input type="hidden" name="type" value="un repuesto industrial" />
+            <label class="filter-label"
+              ><span>Empresa</span
+              ><input
+                type="text"
+                name="company"
+                placeholder="Nombre de empresa"
+            /></label>
+            <label class="filter-label"
+              ><span>Tipo de dato</span
+              ><select name="reference">
+                <option>Código de repuesto</option>
+                <option>Marca y modelo</option>
+                <option>Descripción del componente</option>
+                <option>Tengo una fotografía</option>
+              </select></label
+            >
+            <label class="filter-label full"
+              ><span>Código, marca, modelo o detalle</span
+              ><input
+                type="text"
+                name="search"
+                required
+                placeholder="Escribe toda la información visible en la pieza o equipo"
+            /></label>
+            <button class="button primary" type="submit">
+              Solicitar búsqueda de repuesto
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="request-section">
+        <div class="ma-container">
+          <div class="empty-state">
+            <strong>Catálogo público en preparación</strong>
+            <p>
+              Esta sección se activará ficha por ficha cuando existan
+              fotografías, códigos, compatibilidades y disponibilidad
+              verificadas.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Maquinaria industrial disponible para suministro o importación con apoyo técnico de MAQELEC."
+    />
+    <title>Maquinaria industrial | MAQELEC</title>
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="site-shell.css?v=20260717-3" />
+    <link rel="stylesheet" href="feature-manager.css?v=20260717-1" />
+    <link rel="stylesheet" href="catalog.css?v=20260717-1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="site-config.js?v=20260717-1"></script>
+    <script src="catalog-data.js?v=20260717-1"></script>
+    <script src="site-shell.js?v=20260717-1" defer></script>
+    <script src="catalog.js?v=20260717-1" defer></script>
+    <script src="feature-manager.js?v=20260717-1" defer></script>
+  </head>
+  <body class="catalog-site" data-page-feature="machinery">
+    <main>
+      <section class="page-intro">
+        <div class="ma-container">
+          <span class="eyebrow">Venta e importación</span>
+          <h1>Maquinaria industrial</h1>
+          <p>
+            Equipos configurados según proceso, producción y condiciones de
+            operación, con alternativas de suministro, importación, puesta en
+            marcha y capacitación.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="ma-container">
+          <div class="filter-bar">
+            <label class="filter-label">
+              <span>Buscar por equipo, proceso o característica</span>
+              <input
+                type="search"
+                data-machine-filter
+                placeholder="Ej: láser 3000 W, plasma CNC, oxicorte"
+              />
+            </label>
+            <a class="button primary" href="contacto.html"
+              >Solicitar cotización</a
+            >
+          </div>
+          <div class="catalog-grid" data-machine-grid></div>
+          <div class="empty-state" data-machine-empty hidden>
+            <strong>No encontramos una coincidencia publicada.</strong>
+            <p>
+              Podemos buscar e importar otros equipos. Envíanos el proceso,
+              capacidad o modelo que necesitas.
+            </p>
+            <a class="button primary" href="contacto.html"
+              >Enviar requerimiento</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="request-section">
+        <div class="ma-container request-grid">
+          <div>
+            <span class="eyebrow">Selección técnica</span>
+            <h2>La cotización comienza por la aplicación</h2>
+            <p>
+              Cuéntanos material, espesor, formato, producción esperada y
+              energía disponible. Con esos datos podemos orientar una
+              configuración.
+            </p>
+          </div>
+          <form class="requirement-form" data-requirement-form>
+            <input type="hidden" name="type" value="una máquina industrial" />
+            <label class="filter-label"
+              ><span>Empresa</span
+              ><input
+                type="text"
+                name="company"
+                placeholder="Nombre de empresa"
+            /></label>
+            <label class="filter-label"
+              ><span>Proceso</span
+              ><select name="process">
+                <option>Corte láser</option>
+                <option>Plasma CNC</option>
+                <option>Oxicorte</option>
+                <option>Otro equipo</option>
+              </select></label
+            >
+            <label class="filter-label full"
+              ><span>Detalle</span
+              ><input
+                type="text"
+                name="search"
+                required
+                placeholder="Material, espesor, formato, capacidad o modelo"
+            /></label>
+            <button class="button primary" type="submit">
+              Consultar configuración
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
