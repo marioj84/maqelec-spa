@@ -1,4 +1,4 @@
-# Sistema de funciones MAQELEC
+# Sistema de funciones y catálogo MAQELEC
 
 La web utiliza un registro central para activar, mantener en demostración o retirar módulos sin editar cada página por separado.
 
@@ -21,8 +21,9 @@ Núcleo MAQELEC
 │   ├── Header y menú
 │   └── Footer
 ├── Contenido comercial
+│   ├── Maquinaria ──> fichas, fotos y modelos validados
+│   ├── Repuestos ──> códigos, compatibilidad y disponibilidad
 │   ├── Servicios
-│   ├── Maquinaria y capacidades
 │   ├── Trabajos y proyectos ──> fotos y casos reales
 │   └── Videos ──> videos reales optimizados
 ├── Funciones para clientes
@@ -43,6 +44,30 @@ Núcleo MAQELEC
 - `validate-features.js`: comprueba estados, dependencias y páginas configuradas.
 - `site-shell.js`: genera el encabezado, navegación, footer y acceso a WhatsApp compartidos.
 - `site-shell.css`: centraliza tipografías, colores, estructura responsive y estilo de páginas internas.
+- `catalog-data.js`: fuente de datos estática para maquinaria, repuestos, servicios y proyectos.
+- `catalog.js`: renderiza fichas, filtros, buscador y solicitudes por WhatsApp.
+- `catalog.css`: sistema visual de Inicio y páginas comerciales.
+
+## Modelo de datos y futura migración a WordPress
+
+La versión de GitHub Pages no necesita base de datos. Lee registros estructurados desde `catalog-data.js`, lo que permite validar navegación y experiencia sin servidor. El archivo nunca debe contener información privada.
+
+| GitHub                           | WordPress                        | Uso                                         |
+| -------------------------------- | -------------------------------- | ------------------------------------------- |
+| `machinery`                      | Tipo de contenido `maquinaria`   | Equipos para venta o importación            |
+| `parts`                          | Tipo de contenido `repuesto`     | Repuestos con código y compatibilidad       |
+| `services`                       | Tipo de contenido `servicio`     | Trabajos que MAQELEC ejecuta                |
+| `projects`                       | Tipo de contenido `proyecto`     | Casos y evidencia de trabajos reales        |
+| `category`, `modality`, `status` | Taxonomías/campos personalizados | Filtros, disponibilidad y control editorial |
+
+Cada registro utiliza un `id` estable, un `slug` cuando corresponde y campos de presentación. Durante la migración, estos datos se importarán a WordPress; la interfaz podrá reconstruirse sin cambiar la estructura comercial aprobada.
+
+## Regla editorial
+
+- `live`: información confirmada que puede presentarse como oferta vigente.
+- `preview`: estructura o familia comercial pendiente de fotos, modelo o ficha definitiva.
+- Nunca publicar precios, stock, compatibilidades o códigos sin validación.
+- Las imágenes actuales de servicios y proyectos son referenciales de maqueta y están marcadas visiblemente.
 
 ## Estructura visual compartida
 
