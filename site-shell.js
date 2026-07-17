@@ -13,12 +13,18 @@
       : "";
   }
 
+  function activeFor(features) {
+    return features.includes(currentFeature())
+      ? ' class="is-active" aria-current="page"'
+      : "";
+  }
+
   function headerTemplate() {
     return `
       <header class="mq-site-header">
         <div class="ma-topbar">
           <div class="ma-container">
-            <span>Soluciones metalmecánicas, suministro industrial y soporte técnico para empresas</span>
+            <span>Maquinaria, repuestos y servicios industriales con acompañamiento técnico</span>
             <div class="ma-contact-line">
               <a href="tel:+56991514957">+56 9 9151 4957</a>
               <a href="mailto:contacto@maqelec.cl">contacto@maqelec.cl</a>
@@ -34,7 +40,7 @@
             </a>
 
             <form class="ma-search" data-site-search>
-              <input type="search" placeholder="Buscar servicios, máquinas, repuestos o cotizar por código..." aria-label="Buscar servicios o cotizar">
+              <input name="q" type="search" placeholder="Buscar máquina, repuesto, servicio o código..." aria-label="Buscar en MAQELEC">
               <button type="submit">Buscar</button>
             </form>
 
@@ -52,27 +58,22 @@
             <div class="ma-container ma-nav-inner">
               <div class="ma-service-selector">
                 <button class="ma-category-btn" data-service-toggle type="button" aria-expanded="false" aria-controls="serviceDropdown">
-                  <span>☰ &nbsp; BUSCAR POR SERVICIO</span><span aria-hidden="true">⌄</span>
+                  <span>☰ &nbsp; EXPLORAR CATÁLOGO</span><span aria-hidden="true">⌄</span>
                 </button>
                 <div class="ma-service-dropdown" id="serviceDropdown">
-                  <a href="index.html#servicios"><strong>Corte CNC Plasma</strong><span>Cortes de precisión en acero y metales.</span></a>
-                  <a href="index.html#servicios"><strong>Oxicorte</strong><span>Soluciones robustas para mayores espesores.</span></a>
-                  <a href="index.html#servicios"><strong>Torno y mecanizado</strong><span>Fabricación y ajuste de piezas.</span></a>
-                  <a href="index.html#servicios"><strong>Fresado</strong><span>Terminaciones y geometrías técnicas.</span></a>
-                  <a href="index.html#servicios"><strong>Soldadura</strong><span>Apoyo metalmecánico y reparación.</span></a>
-                  <a href="index.html#servicios"><strong>Electricidad industrial</strong><span>Instalaciones y soporte técnico.</span></a>
+                  <a href="maquinaria.html"><strong>Maquinaria</strong><span>Equipos para suministro o importación.</span></a>
+                  <a href="repuestos.html"><strong>Repuestos</strong><span>Búsqueda por código, marca o modelo.</span></a>
+                  <a href="servicios.html"><strong>Servicios</strong><span>Trabajos industriales ejecutados por MAQELEC.</span></a>
                 </div>
               </div>
 
               <button class="ma-mobile-toggle" data-menu-toggle type="button" aria-expanded="false" aria-controls="navMenu">Menú</button>
               <div class="ma-menu" id="navMenu">
                 <a href="index.html"${activeAttribute("home")}>Inicio</a>
-                <a href="index.html#servicios" data-feature="services">Servicios</a>
-                <a href="index.html#capacidades" data-feature="capabilities">Maquinaria</a>
-                <a href="index.html#proyectos" data-feature="projects">Trabajos</a>
-                <a href="seguimiento.html" data-feature="tracking"${activeAttribute("tracking")}>Seguimiento</a>
-                <a href="manuales.html" data-feature="manuals"${activeAttribute("manuals")}>Manuales</a>
-                <a href="vip.html" data-feature="technicalCenter"${activeAttribute("technicalCenter")}>Centro Técnico</a>
+                <a href="maquinaria.html" data-feature="machinery"${activeFor(["machinery"])}>Maquinaria</a>
+                <a href="repuestos.html" data-feature="parts"${activeFor(["parts"])}>Repuestos</a>
+                <a href="servicios.html" data-feature="services"${activeFor(["services"])}>Servicios</a>
+                <a href="proyectos.html" data-feature="projects"${activeFor(["projects"])}>Proyectos</a>
                 <a href="contacto.html" data-feature="contact"${activeAttribute("contact")}>Contacto</a>
               </div>
 
@@ -97,14 +98,14 @@
           <div class="ma-footer-grid">
             <div>
               <img src="logo.png" alt="MAQELEC SpA">
-              <p>Soluciones industriales para continuidad operativa, suministro, servicios técnicos y apoyo metalmecánico.</p>
+              <p>Maquinaria, repuestos y servicios industriales con apoyo desde la selección hasta la puesta en marcha.</p>
             </div>
             <div>
               <h4>Categorías</h4>
-              <a href="index.html#servicios" data-feature="services">Corte CNC</a>
-              <a href="index.html#servicios" data-feature="services">Mecanizado</a>
-              <a href="index.html#servicios" data-feature="services">Electricidad</a>
-              <a href="index.html#servicios" data-feature="services">Suministro</a>
+              <a href="maquinaria.html" data-feature="machinery">Maquinaria</a>
+              <a href="repuestos.html" data-feature="parts">Repuestos</a>
+              <a href="servicios.html" data-feature="services">Servicios</a>
+              <a href="proyectos.html" data-feature="projects">Proyectos</a>
             </div>
             <div>
               <h4>Contacto</h4>
@@ -117,6 +118,7 @@
               <a href="seguimiento.html" data-feature="tracking">Seguimiento</a>
               <a href="manuales.html" data-feature="manuals">Manuales</a>
               <a href="vip.html" data-feature="technicalCenter">Centro Técnico</a>
+              <a href="buscar.html">Buscar en el sitio</a>
             </div>
           </div>
           <div class="ma-copy">© 2026 MAQELEC SpA · Todos los derechos reservados</div>
@@ -181,12 +183,9 @@
     search?.addEventListener("submit", (event) => {
       event.preventDefault();
       const query = search.querySelector("input").value.trim();
-      const message = query || "Necesito cotizar una solución industrial";
-      window.open(
-        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hola MAQELEC, quiero consultar/cotizar: ${message}`)}`,
-        "_blank",
-        "noopener,noreferrer",
-      );
+      window.location.href = query
+        ? `buscar.html?q=${encodeURIComponent(query)}`
+        : "buscar.html";
     });
 
     document.addEventListener("click", (event) => {
