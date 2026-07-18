@@ -9,18 +9,18 @@
     />
     <title>Maquinaria industrial | MAQELEC</title>
     <link rel="icon" href="favicon.png" />
-    <link rel="stylesheet" href="site-shell.css?v=20260717-3" />
-    <link rel="stylesheet" href="feature-manager.css?v=20260717-1" />
-    <link rel="stylesheet" href="catalog.css?v=20260717-2" />
+    <link rel="stylesheet" href="site-shell.css?v=20260718-1" />
+    <link rel="stylesheet" href="feature-manager.css?v=20260718-1" />
+    <link rel="stylesheet" href="catalog.css?v=20260718-2" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <script src="site-config.js?v=20260718-1"></script>
     <script src="catalog-data.js?v=20260717-1"></script>
-    <script src="site-shell.js?v=20260717-1" defer></script>
+    <script src="site-shell.js?v=20260718-1" defer></script>
     <script src="catalog.js?v=20260717-1" defer></script>
-    <script src="feature-manager.js?v=20260718-1" defer></script>
+    <script src="feature-manager.js?v=20260718-2" defer></script>
   </head>
   <body class="catalog-site" data-page-feature="machinery">
     <main>
@@ -43,8 +43,23 @@
               <input
                 type="search"
                 data-machine-filter
+                list="machineSuggestions"
+                autocomplete="off"
                 placeholder="Ej: láser 3000 W, plasma CNC, oxicorte"
               />
+              <datalist id="machineSuggestions">
+                <option value="Corte láser"></option>
+                <option value="Equipo de corte láser fibra 1500 W"></option>
+                <option value="Equipo de corte láser fibra 3000 W"></option>
+                <option value="Plasma CNC"></option>
+                <option value="Sistema de corte plasma CNC"></option>
+                <option value="Oxicorte"></option>
+                <option value="Sistema industrial de oxicorte"></option>
+                <option value="Otro equipo industrial"></option>
+              </datalist>
+              <small class="filter-help"
+                >Escribe libremente o selecciona una de las sugerencias.</small
+              >
             </label>
             <a class="button primary" href="contacto.html"
               >Solicitar cotización</a
