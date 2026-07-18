@@ -66,6 +66,19 @@ if (!catalog) {
       `IDs de catálogo duplicados: ${[...new Set(duplicateIds)].join(", ")}.`,
     );
   }
+
+  ["services", "projects"].forEach((collection) => {
+    (catalog[collection] || []).forEach((item, index) => {
+      const media = [item.image, ...(item.gallery || []).map((entry) => entry.src)]
+        .filter(Boolean)
+        .filter((path) => !/^https?:\/\//.test(path));
+      media.forEach((path) => {
+        if (!fs.existsSync(path)) {
+          errors.push(`${collection}[${index}]: imagen inexistente \"${path}\".`);
+        }
+      });
+    });
+  });
 }
 
 if (errors.length) {

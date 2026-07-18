@@ -67,7 +67,8 @@ Cada registro utiliza un `id` estable, un `slug` cuando corresponde y campos de 
 - `live`: información confirmada que puede presentarse como oferta vigente.
 - `preview`: estructura o familia comercial pendiente de fotos, modelo o ficha definitiva.
 - Nunca publicar precios, stock, compatibilidades o códigos sin validación.
-- Las imágenes actuales de servicios y proyectos son referenciales de maqueta y están marcadas visiblemente.
+- Las imágenes reales se identifican como `mediaType: "real"`; las imágenes de maqueta que aún permanezcan se marcan visiblemente como referenciales.
+- La sección de proyectos está activa con casos reales de punzonado y corte hidráulico, esmerilado, mecanizado, fabricación soldada y piezas metálicas.
 
 ## Estructura visual compartida
 

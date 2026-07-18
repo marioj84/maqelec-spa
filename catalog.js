@@ -62,13 +62,17 @@
   }
 
   function serviceCard(item) {
+    const mediaLabel =
+      item.mediaType === "real"
+        ? '<span class="real-media-label">Trabajo real</span>'
+        : '<span>Imagen referencial de maqueta</span>';
     return `
       <article class="catalog-card service-card" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary].join(" "),
       )}">
         <div class="service-image">
-          <img src="${escapeHTML(item.image)}" alt="" loading="lazy">
-          <span>Imagen referencial de maqueta</span>
+          <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy">
+          ${mediaLabel}
         </div>
         <div class="catalog-card-body">
           <div class="card-meta"><span>${escapeHTML(item.category)}</span></div>
@@ -97,13 +101,22 @@
   }
 
   function projectCard(item) {
+    const gallery = (item.gallery || [])
+      .map(
+        (image) =>
+          `<img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt || "")}" loading="lazy">`,
+      )
+      .join("");
     return `
-      <article class="project-card" data-searchable="${escapeHTML(
+      <article class="project-card${gallery ? " project-card-featured" : ""}" data-searchable="${escapeHTML(
         [item.title, item.type, item.summary].join(" "),
       )}">
-        <img src="${escapeHTML(item.image)}" alt="" loading="lazy">
-        <div>
-          <span class="status-pill">Caso de demostración</span>
+        <div class="project-media">
+          <img class="project-main-image" src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy">
+          ${gallery ? `<div class="project-gallery">${gallery}</div>` : ""}
+        </div>
+        <div class="project-copy">
+          <span class="status-pill">Trabajo real</span>
           <small>${escapeHTML(item.type)}</small>
           <h3>${escapeHTML(item.title)}</h3>
           <p>${escapeHTML(item.summary)}</p>

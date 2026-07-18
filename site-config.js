@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_SITE_CONFIG = {
-    version: "1.1.0",
+    version: "1.2.0",
     environment: "preview",
     states: ["off", "preview", "live"],
 
@@ -32,7 +32,7 @@
         label: "Catálogo verificado de repuestos",
       },
       "content.realProjects": {
-        ready: false,
+        ready: true,
         label: "Fotografías y casos reales",
       },
       "media.realVideos": {
@@ -92,13 +92,11 @@
           "El buscador de requerimientos está operativo. El catálogo público se activará ficha por ficha con códigos, compatibilidades y disponibilidad verificadas.",
       },
       projects: {
-        state: "preview",
+        state: "live",
         label: "Trabajos y proyectos",
         navBadge: false,
         dependencies: ["content.realProjects"],
         selectors: ['a[href="proyectos.html"]', '[data-feature="projects"]'],
-        previewMessage:
-          "Esta sección conserva material de maqueta mientras incorporamos fotografías y casos reales de MAQELEC.",
       },
       videos: {
         state: "off",
