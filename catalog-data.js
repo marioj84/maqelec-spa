@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_CATALOG = {
-    schemaVersion: "1.5.0",
+    schemaVersion: "1.6.0",
     lastUpdated: "2026-07-18",
 
     machinery: [
@@ -482,15 +482,15 @@
       {
         id: "srv-esmerilado",
         slug: "esmerilado-y-terminaciones",
-        name: "Esmerilado y terminaciones",
+        name: "Esmerilado, pulido y terminaciones",
         category: "Terminaciones",
-        image: "assets/trabajos-reales/esmerilado-piezas-operacion.webp",
+        image: "assets/trabajos-reales/esmerilado-pulido-detalle-hd.webp",
         imageAlt:
-          "Operario realizando esmerilado de piezas metálicas con proyección de chispas",
+          "Operario realizando el pulido y esmerilado de una pieza metálica con proyección controlada de chispas",
         mediaType: "real",
         status: "live",
         summary:
-          "Desbaste, limpieza de bordes y preparación de piezas metálicas después del corte o antes de su armado.",
+          "Desbaste, pulido, limpieza de bordes y preparación de piezas metálicas después del corte o antes de su armado.",
       },
       {
         id: "srv-mecanizado",
@@ -523,7 +523,7 @@
         slug: "electricidad-industrial",
         name: "Electricidad industrial",
         category: "Soporte",
-        image: "Imagen5.png",
+        presentation: "text",
         status: "live",
         summary:
           "Instalaciones, diagnóstico y soporte eléctrico para equipos y operaciones industriales.",
@@ -533,7 +533,7 @@
         slug: "mantenimiento-industrial",
         name: "Mantenimiento industrial",
         category: "Soporte",
-        image: "Imagen6.png",
+        presentation: "text",
         status: "live",
         summary:
           "Apoyo preventivo y correctivo para recuperar continuidad y reducir detenciones.",
@@ -543,7 +543,7 @@
         slug: "puesta-en-marcha-y-capacitacion",
         name: "Puesta en marcha y capacitación",
         category: "Implementación",
-        image: "Imagen1.png",
+        presentation: "text",
         status: "live",
         summary:
           "Instalación, configuración inicial, pruebas y capacitación para operar nuevos equipos.",
@@ -551,6 +551,38 @@
     ],
 
     projects: [
+      {
+        id: "proy-pulido-terminacion",
+        title: "Pulido y terminación de piezas metálicas",
+        type: "Esmerilado y terminaciones",
+        image: "assets/trabajos-reales/esmerilado-pulido-banner-hd.webp",
+        imageAlt:
+          "Pulido real de una pieza metálica con esmeril angular y proyección de chispas",
+        gallery: [
+          {
+            src: "assets/trabajos-reales/esmerilado-pulido-detalle-hd.webp",
+            alt: "Detalle en alta definición del operario, el esmeril y la pieza sujeta en la prensa",
+          },
+          {
+            src: "assets/trabajos-reales/esmerilado-piezas-chispas.webp",
+            alt: "Piezas cortadas en primer plano durante el proceso de terminación",
+          },
+          {
+            src: "assets/trabajos-reales/esmerilado-piezas-taller.webp",
+            alt: "Contexto de trabajo y uso de elementos de protección durante el esmerilado",
+          },
+        ],
+        processSteps: [
+          "Revisión de la geometría y del estado de los bordes después del corte",
+          "Sujeción segura de la pieza y selección del disco de desbaste o terminación",
+          "Eliminación controlada de rebabas, aristas y excedentes de material",
+          "Pulido de superficies y preparación para armado, soldadura o entrega",
+          "Inspección visual y dimensional del acabado obtenido",
+        ],
+        status: "live",
+        summary:
+          "Proceso real de desbaste y pulido para retirar rebabas, suavizar aristas y preparar piezas cortadas antes del armado o la entrega. Las imágenes muestran la pieza sujeta, el trabajo con esmeril angular y la terminación progresiva del borde.",
+      },
       {
         id: "proy-corte-plasma-cnc",
         title: "Corte de planchas en mesa plasma CNC",
@@ -799,6 +831,10 @@
           {
             src: "assets/trabajos-reales/esmerilado-piezas-operacion.webp",
             alt: "Operario esmerilando y terminando piezas metálicas en el taller",
+          },
+          {
+            src: "assets/trabajos-reales/esmerilado-pulido-detalle-hd.webp",
+            alt: "Detalle en alta definición del pulido de una pieza metálica sujeta en prensa",
           },
           {
             src: "assets/trabajos-reales/esmerilado-piezas-taller.webp",

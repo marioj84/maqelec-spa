@@ -452,6 +452,34 @@ body.catalog-site .home-hero::after {
   min-height: 86px;
 }
 
+.service-card-text {
+  min-height: 250px;
+  border-style: dashed;
+  background:
+    radial-gradient(circle at 100% 0, rgba(9, 126, 188, 0.08), transparent 38%),
+    #fff;
+}
+
+.service-card-text .catalog-card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-text .catalog-card-body p {
+  min-height: 0;
+}
+
+.service-card-text .text-link {
+  margin-top: auto;
+}
+
+.catalog-note {
+  margin: 20px 0 0;
+  color: var(--catalog-muted);
+  font-size: 0.78rem;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1314,7 +1342,16 @@ body.commerce-home .commercial-showcase {
 }
 
 .promo-main > img {
-  object-position: center 52%;
+  object-position: center 46%;
+}
+
+.promo-main .promo-shade {
+  background: linear-gradient(
+    90deg,
+    rgba(10, 35, 45, 0.74) 0%,
+    rgba(10, 35, 45, 0.3) 48%,
+    rgba(10, 35, 45, 0.02) 78%
+  );
 }
 
 .promo-card:hover > img {

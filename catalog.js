@@ -73,10 +73,22 @@
   }
 
   function serviceCard(item) {
+    const hasRealPhoto = item.mediaType === "real" && item.image;
+    if (!hasRealPhoto) {
+      return `
+        <article class="catalog-card service-card service-card-text" data-searchable="${escapeHTML(
+          [item.name, item.category, item.summary].join(" "),
+        )}">
+          <div class="catalog-card-body">
+            <div class="card-meta"><span>${escapeHTML(item.category)}</span><span>Disponible a consulta</span></div>
+            <h3>${escapeHTML(item.name)}</h3>
+            <p>${escapeHTML(item.summary)}</p>
+            <a class="text-link" href="${whatsappLink(`Hola MAQELEC, necesito cotizar el servicio: ${item.name}`)}" target="_blank" rel="noopener noreferrer">Consultar servicio →</a>
+          </div>
+        </article>`;
+    }
     const mediaLabel =
-      item.mediaType === "real"
-        ? '<span class="real-media-label">Trabajo real</span>'
-        : '<span>Imagen referencial de maqueta</span>';
+      '<span class="real-media-label">Trabajo real</span>';
     return `
       <article class="catalog-card service-card" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary].join(" "),
