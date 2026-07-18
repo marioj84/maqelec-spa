@@ -68,7 +68,7 @@ Cada registro utiliza un `id` estable, un `slug` cuando corresponde y campos de 
 - `preview`: estructura o familia comercial pendiente de fotos, modelo o ficha definitiva.
 - Nunca publicar precios, stock, compatibilidades o códigos sin validación.
 - Las imágenes reales se identifican como `mediaType: "real"`; las imágenes de maqueta que aún permanezcan se marcan visiblemente como referenciales.
-- La sección de proyectos está activa con casos reales de punzonado y corte hidráulico, esmerilado, mecanizado, fabricación soldada y piezas metálicas.
+- La sección de proyectos está activa con casos reales de punzonado y corte hidráulico, torneado y cilindrado, esmerilado, mecanizado, fabricación soldada y piezas metálicas.
 
 ## Estructura visual compartida
 
