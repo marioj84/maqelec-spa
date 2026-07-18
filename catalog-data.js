@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_CATALOG = {
-    schemaVersion: "1.7.0",
+    schemaVersion: "2.0.0",
     lastUpdated: "2026-07-18",
 
     machinery: [
@@ -559,16 +559,6 @@
           "Fabricación y reparación de estructuras, carros, tolvas y componentes industriales mediante corte, mecanizado, armado y soldadura.",
       },
       {
-        id: "srv-mantenimiento",
-        slug: "mantenimiento-industrial",
-        name: "Mantenimiento industrial",
-        category: "Soporte",
-        presentation: "text",
-        status: "live",
-        summary:
-          "Apoyo preventivo y correctivo para recuperar continuidad y reducir detenciones.",
-      },
-      {
         id: "srv-puesta-marcha",
         slug: "puesta-en-marcha-y-capacitacion",
         name: "Puesta en marcha y capacitación",
@@ -576,6 +566,7 @@
         image: "assets/trabajos-reales/plasma-cnc-operador.webp",
         imageAlt: "Operador supervisando una máquina CNC durante pruebas y puesta en marcha",
         mediaType: "real",
+        imagePosition: "center 72%",
         status: "live",
         summary:
           "Instalación, configuración inicial, pruebas y capacitación para operar nuevos equipos.",
@@ -873,7 +864,7 @@
         id: "proy-piezas-metalicas",
         title: "Fabricación de piezas metálicas",
         type: "Corte y fabricación",
-        image: "assets/trabajos-reales/piezas-metalicas-fabricadas.webp",
+        image: "assets/trabajos-reales/piezas-componentes-pallet-hd.webp",
         imageAlt:
           "Piezas metálicas terminadas con distintas geometrías, perforaciones y tamaños",
         gallery: [
