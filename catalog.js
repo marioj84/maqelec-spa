@@ -349,11 +349,15 @@
     const operations = (item.operations || [])
       .map((operation) => `<li>${escapeHTML(operation)}</li>`)
       .join("");
-    const specs = item.technicalSpecs
+    const primarySpecs = item.technicalSpecs.slice(0, 6);
+    const additionalSpecs = item.technicalSpecs.slice(6);
+    const renderSpecs = (specItems) => specItems
       .map(
         (spec) => `<div class="spec-row"><dt>${escapeHTML(spec.label)}</dt><dd>${escapeHTML(spec.value)}</dd></div>`,
       )
       .join("");
+    const specs = renderSpecs(primarySpecs);
+    const moreSpecs = renderSpecs(additionalSpecs);
     const services = (item.includedServices || [])
       .map((service) => `<li>${escapeHTML(service)}</li>`)
       .join("");
@@ -431,7 +435,14 @@
             <p>${escapeHTML(item.source?.note || "Valores referenciales sujetos a confirmación.")}</p>
             ${item.source ? `<a class="source-link" href="${escapeHTML(item.source.url)}" target="_blank" rel="noopener noreferrer">Consultar ${escapeHTML(item.source.name)} ↗</a>` : ""}
           </div>
-          <dl class="machine-spec-table">${specs}</dl>
+          <div class="machine-spec-content">
+            <dl class="machine-spec-table">${specs}</dl>
+            ${additionalSpecs.length ? `
+              <details class="machine-spec-more">
+                <summary>Ver ficha técnica completa <span>${additionalSpecs.length} datos adicionales</span></summary>
+                <dl class="machine-spec-table">${moreSpecs}</dl>
+              </details>` : ""}
+          </div>
         </div>
       </section>
 

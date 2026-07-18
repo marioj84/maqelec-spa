@@ -1067,7 +1067,7 @@ body.catalog-site .page-intro h1 {
 
 .machine-detail-section {
   scroll-margin-top: 64px;
-  padding: 78px 0 !important;
+  padding: 58px 0 !important;
   background: #fff;
 }
 
@@ -1144,6 +1144,40 @@ body.catalog-site .page-intro h1 {
   border-radius: 12px;
 }
 
+.machine-spec-content {
+  min-width: 0;
+}
+
+.machine-spec-more {
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid var(--catalog-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.machine-spec-more summary {
+  padding: 13px 16px;
+  color: var(--catalog-blue);
+  cursor: pointer;
+  font-size: .82rem;
+  font-weight: 900;
+  list-style-position: inside;
+}
+
+.machine-spec-more summary span {
+  margin-left: 6px;
+  color: var(--catalog-muted);
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.machine-spec-more .machine-spec-table {
+  border: 0;
+  border-top: 1px solid var(--catalog-line);
+  border-radius: 0;
+}
+
 .spec-row {
   display: grid;
   grid-template-columns: minmax(180px, 0.9fr) minmax(0, 1.1fr);
@@ -1160,7 +1194,7 @@ body.catalog-site .page-intro h1 {
 .spec-row dt,
 .spec-row dd {
   margin: 0;
-  padding: 14px 17px;
+  padding: 11px 15px;
   font-size: 0.84rem;
 }
 
@@ -1327,7 +1361,7 @@ body.catalog-site .page-intro h1 {
   }
 
   .machine-detail-section {
-    padding: 58px 0 !important;
+    padding: 42px 0 !important;
   }
 }
 
@@ -1355,11 +1389,20 @@ body.catalog-site .page-intro h1 {
   }
 
   .machine-gallery-main {
-    height: 310px;
+    height: 280px;
   }
 
   .machine-key-facts {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 16px 0;
+  }
+
+  .machine-key-facts div {
+    padding: 11px;
+  }
+
+  .machine-key-facts strong {
+    font-size: 1.04rem;
   }
 
   .spec-row {
@@ -1533,7 +1576,7 @@ body.commerce-home .promo-small .promo-content h2 {
 }
 
 body.commerce-home .solution-band {
-  padding: 38px 0 42px !important;
+  padding: 28px 0 32px !important;
   background: #f7f9fa;
 }
 
@@ -1548,14 +1591,16 @@ body.commerce-home .solution-band h2 {
 .solution-rail {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 14px;
+  gap: 10px;
 }
 
 .solution-rail a {
-  min-height: 78px;
-  display: grid;
-  place-items: center;
-  padding: 14px;
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px;
   border: 1px solid #e0e6e9;
   border-radius: 11px;
   background: #fff;
@@ -1565,6 +1610,45 @@ body.commerce-home .solution-band h2 {
   font-weight: 900;
   text-align: center;
   transition: 0.2s ease;
+}
+
+.solution-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #eaf4f8;
+  color: var(--catalog-blue);
+  font-size: .92rem;
+}
+
+.solution-rail a:nth-child(2) .solution-icon,
+.solution-rail a:nth-child(4) .solution-icon {
+  background: #eef6ee;
+  color: var(--catalog-green);
+}
+
+.solution-rail .solution-featured {
+  border-color: var(--catalog-blue);
+  background: var(--catalog-navy);
+  color: #fff;
+}
+
+.solution-rail .solution-featured .solution-icon {
+  background: var(--catalog-green);
+  color: #fff;
+}
+
+.solution-rail .solution-quote {
+  border-color: rgba(61, 152, 63, .5);
+  color: var(--catalog-green-dark);
+}
+
+.solution-rail .solution-quote .solution-icon {
+  background: var(--catalog-green);
+  color: #fff;
 }
 
 .solution-rail a:hover {
@@ -1580,25 +1664,26 @@ body.commerce-home .service-shortcuts {
 }
 
 body.commerce-home .owner-support {
-  padding: 64px 0 !important;
+  padding: 40px 0 !important;
   background: #edf3f6;
 }
 
 .owner-support-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr);
-  gap: 64px;
+  grid-template-columns: minmax(0, .9fr) minmax(460px, 1.1fr);
+  gap: 40px;
   align-items: center;
 }
 
-.owner-support h2 { margin: 8px 0 16px; max-width: 700px; color: var(--catalog-ink); font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.02; }
-.owner-support p { max-width: 680px; color: var(--catalog-muted); line-height: 1.7; }
+.owner-support h2 { margin: 6px 0 12px; max-width: 700px; color: var(--catalog-ink); font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.04; }
+.owner-support p { max-width: 680px; margin: 0; color: var(--catalog-muted); font-size: .9rem; line-height: 1.55; }
 .owner-support .button { margin-top: 12px; }
-.support-steps { margin: 0; padding: 0; display: grid; gap: 10px; list-style: none; }
-.support-steps li { display: grid; grid-template-columns: 50px 1fr; gap: 14px; padding: 18px; border: 1px solid #d9e4e8; border-radius: 12px; background: #fff; }
+.support-steps { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; list-style: none; }
+.support-steps li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 12px 13px; border: 1px solid #d9e4e8; border-radius: 12px; background: #fff; }
 .support-steps b { color: var(--catalog-blue); font-size: 1.1rem; }
 .support-steps strong, .support-steps span { display: block; }
-.support-steps span { margin-top: 3px; color: var(--catalog-muted); font-size: .82rem; }
+.support-steps strong { font-size: .84rem; }
+.support-steps span { margin-top: 2px; color: var(--catalog-muted); font-size: .72rem; line-height: 1.35; }
 
 @media (max-width: 820px) {
   .owner-support-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -1761,12 +1846,12 @@ body.commerce-home .machine-teaser-copy h3 {
 }
 
 .shortcut-grid a {
-  min-height: 94px;
+  min-height: 82px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 18px;
-  padding: 20px;
+  padding: 16px;
   border: 1px solid var(--catalog-line);
   border-radius: 11px;
   background: #fff;
@@ -1814,6 +1899,10 @@ body.commerce-home .commercial-cta-box h2 {
 }
 
 @media (max-width: 980px) {
+  .solution-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .promo-grid {
     height: auto;
     grid-template-columns: 1fr;
@@ -1829,7 +1918,6 @@ body.commerce-home .commercial-cta-box h2 {
     grid-template-rows: 1fr;
   }
 
-  .solution-rail,
   .machine-rail {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1845,16 +1933,16 @@ body.commerce-home .commercial-cta-box h2 {
   }
 
   .promo-main {
-    min-height: 360px;
+    min-height: 310px;
   }
 
   .promo-side {
     min-height: 0;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .promo-small {
-    min-height: 220px;
+    min-height: 165px;
   }
 
   .promo-content {
@@ -1866,9 +1954,72 @@ body.commerce-home .commercial-cta-box h2 {
   }
 
   .solution-rail,
-  .machine-rail,
-  .shortcut-grid {
+  .machine-rail {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  body.commerce-home .solution-band,
+  body.commerce-home .machine-window,
+  body.commerce-home .service-shortcuts {
+    padding: 28px 0 !important;
+  }
+
+  .solution-rail a {
+    min-height: 58px;
+    padding: 8px;
+    font-size: .72rem;
+  }
+
+  .solution-icon {
+    width: 25px;
+    height: 25px;
+    flex-basis: 25px;
+  }
+
+  .machine-teaser-visual {
+    height: 100px;
+    padding: 11px;
+  }
+
+  .machine-teaser-copy {
+    min-height: 120px;
+    padding: 12px;
+  }
+
+  body.commerce-home .machine-teaser-copy h3 {
+    margin: 6px 0 10px;
+    font-size: .84rem;
+  }
+
+  .shortcut-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .shortcut-grid a {
+    min-height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    padding: 9px 6px;
+    text-align: center;
+  }
+
+  .shortcut-grid span { font-size: .72rem; line-height: 1.25; }
+  .shortcut-grid b { display: none; }
+
+  body.commerce-home .owner-support {
+    padding: 30px 0 !important;
+  }
+
+  .owner-support-grid { gap: 20px; }
+  .support-steps { gap: 7px; }
+  .support-steps li { grid-template-columns: 24px 1fr; gap: 7px; padding: 9px; }
+  .support-steps span { font-size: .66rem; }
+
+  body.commerce-home .commercial-cta {
+    padding: 28px 0 !important;
   }
 
   .compact-heading,
@@ -1880,9 +2031,8 @@ body.commerce-home .commercial-cta-box h2 {
 
 @media (max-width: 480px) {
   .solution-rail,
-  .machine-rail,
-  .shortcut-grid {
-    grid-template-columns: 1fr;
+  .machine-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .commercial-cta-box .section-actions {
