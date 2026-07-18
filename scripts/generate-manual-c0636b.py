@@ -2,6 +2,8 @@
 """Genera la guía preliminar MAQELEC para el torno C0636B."""
 
 from pathlib import Path
+import shutil
+import subprocess
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
@@ -26,6 +28,7 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output" / "pdf" / "guia-preliminar-c0636b-maqelec.pdf"
+RAW_OUTPUT = OUTPUT.with_name("guia-preliminar-c0636b-maqelec-source.pdf")
 LOGO = ROOT / "logo.png"
 PHOTO_GENERAL = ROOT / "assets" / "trabajos-reales" / "torno-convencional-vista-general.webp"
 PHOTO_PROCESS = ROOT / "assets" / "trabajos-reales" / "torneado-cilindrado-operacion.webp"
@@ -618,7 +621,7 @@ def main():
         bottomPadding=2 * mm,
     )
     doc = ManualDoc(
-        str(OUTPUT),
+        str(RAW_OUTPUT),
         pagesize=A4,
         title="Guía preliminar de operación y mantenimiento C0636B",
         author="MAQELEC SpA",
@@ -627,6 +630,25 @@ def main():
     )
     doc.addPageTemplates([PageTemplate(id="manual", frames=[frame], onPage=header_footer)])
     doc.build(build_story())
+    ghostscript = shutil.which("gs")
+    if ghostscript:
+        subprocess.run(
+            [
+                ghostscript,
+                "-sDEVICE=pdfwrite",
+                "-dCompatibilityLevel=1.4",
+                "-dPDFSETTINGS=/ebook",
+                "-dNOPAUSE",
+                "-dQUIET",
+                "-dBATCH",
+                f"-sOutputFile={OUTPUT}",
+                str(RAW_OUTPUT),
+            ],
+            check=True,
+        )
+        RAW_OUTPUT.unlink()
+    else:
+        RAW_OUTPUT.replace(OUTPUT)
     print(OUTPUT)
 
 
