@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_CATALOG = {
-    schemaVersion: "1.1.0",
+    schemaVersion: "1.2.0",
     lastUpdated: "2026-07-18",
 
     machinery: [
@@ -21,11 +21,192 @@
         summary:
           "Equipo combinado que MAQELEC utiliza en trabajos reales de punzonado, corte y preparación de perfiles, y que también suministra con instalación y soporte.",
         specs: [
-          "Modelo visible en el equipo: Q35Y-20",
-          "Estaciones de trabajo a ambos lados",
-          "Punzones y matrices intercambiables",
+          "Fuerza nominal de punzonado: 90 t",
+          "Espesor máximo de punzonado: 20 mm",
+          "Diámetro máximo de perforación: 30 mm",
           "Instalación, puesta en marcha y soporte técnico",
         ],
+        gallery: [
+          {
+            src: "assets/trabajos-reales/punzonadora-cizalla-vista-general.webp",
+            alt: "Vista general de la punzonadora y cizalla hidráulica combinada Q35Y-20",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-doble-estacion.webp",
+            alt: "Operación simultánea en las dos estaciones laterales de la Q35Y-20",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-punzonado-primer-plano.webp",
+            alt: "Detalle del punzón hidráulico trabajando sobre una placa metálica",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-punzones-matrices.webp",
+            alt: "Punzones y matrices intercambiables de diferentes diámetros",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-estacion-cizalla.webp",
+            alt: "Estación central para corte de ángulos, perfiles y barras",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-modelo.webp",
+            alt: "Identificación visible del modelo Q35Y-20",
+          },
+        ],
+        keyFacts: [
+          { value: "90 t", label: "Presión nominal" },
+          { value: "20 mm", label: "Punzonado máximo" },
+          { value: "30 mm", label: "Perforación máxima" },
+          { value: "5,5 kW", label: "Motor principal" },
+        ],
+        description: [
+          "La Q35Y-20 reúne punzonado, cizallado, entallado y corte de perfiles en una sola plataforma hidráulica. MAQELEC trabaja con este equipo en el taller, por lo que puede mostrar procesos reales y orientar la selección desde la experiencia de uso.",
+          "El equipo puede suministrarse o importarse según la configuración requerida. El servicio puede incluir instalación, puesta en marcha, capacitación inicial y soporte técnico.",
+        ],
+        operations: [
+          "Punzonado de placas con punzones y matrices intercambiables",
+          "Cizallado de planchas y barras planas",
+          "Corte de perfiles angulares, redondos y cuadrados",
+          "Entallado y preparación de piezas para fabricación",
+          "Trabajo desde estaciones ubicadas a ambos lados del equipo",
+        ],
+        technicalSpecs: [
+          { label: "Modelo de referencia", value: "Q35Y-20" },
+          { label: "Presión nominal", value: "90 t" },
+          { label: "Espesor máximo de punzonado", value: "20 mm" },
+          { label: "Diámetro máximo de perforación", value: "30 mm" },
+          { label: "Resistencia máxima de placa", value: "≤ 450 N/mm²" },
+          { label: "Capacidad de cizallado", value: "20 × 330 mm / 10 × 480 mm" },
+          { label: "Recorrido", value: "80 mm" },
+          { label: "Frecuencia", value: "12 golpes/min" },
+          { label: "Profundidad de garganta", value: "355 mm" },
+          { label: "Motor principal", value: "5,5 kW" },
+          { label: "Barra redonda", value: "Ø 50 mm" },
+          { label: "Barra cuadrada", value: "50 × 50 mm" },
+          { label: "Ángulo a 90°", value: "140 × 140 × 12 mm" },
+          { label: "Ángulo a 45°", value: "50 × 50 × 5 mm" },
+          { label: "Perfil T a 90°", value: "140 × 140 × 12 mm" },
+          { label: "Perfil T a 45°", value: "70 × 70 × 10 mm" },
+          { label: "Perfil I", value: "160 × 86 × 6 mm" },
+          { label: "Canal", value: "160 × 60 × 6,5 mm" },
+          { label: "Dimensiones referenciales", value: "1860 × 800 × 1990 mm" },
+        ],
+        includedServices: [
+          "Selección de configuración según material y proceso",
+          "Suministro local o gestión de importación",
+          "Instalación y puesta en marcha",
+          "Capacitación de operación y cambio de herramientas",
+          "Soporte técnico y gestión de repuestos",
+        ],
+        projectId: "proy-punzonado-hidraulico",
+        source: {
+          name: "Ficha técnica HARSLE Q35Y-20",
+          url: "https://www.harsle.com/es/product/combined-punching-and-shearing-machine/",
+          note: "Valores referenciales del fabricante. La configuración y capacidad final deben confirmarse en la cotización.",
+        },
+      },
+      {
+        id: "maq-c0636b",
+        slug: "torno-convencional-c0636b",
+        name: "Torno convencional C0636B",
+        category: "Mecanizado y torneado",
+        modality: "ambas",
+        image:
+          "assets/trabajos-reales/torno-convencional-vista-general.webp",
+        imageAlt:
+          "Torno convencional C0636B utilizado por MAQELEC en trabajos reales de mecanizado",
+        mediaType: "real",
+        status: "live",
+        summary:
+          "Torno paralelo para cilindrado, refrentado, roscado y fabricación de piezas. MAQELEC trabaja con este modelo y también puede suministrarlo con instalación y soporte.",
+        specs: [
+          "Volteo sobre bancada: 360 mm",
+          "Distancia entre centros: 1000 mm",
+          "Velocidad del husillo: 70–2000 rpm",
+          "Instalación, puesta en marcha y soporte técnico",
+        ],
+        gallery: [
+          {
+            src: "assets/trabajos-reales/torno-convencional-vista-general.webp",
+            alt: "Vista general del torno convencional C0636B",
+          },
+          {
+            src: "assets/trabajos-reales/torneado-cilindrado-operacion.webp",
+            alt: "Herramienta ejecutando cilindrado exterior con lubricación",
+          },
+          {
+            src: "assets/trabajos-reales/torno-pieza-hexagonal-montaje.webp",
+            alt: "Pieza de perfil hexagonal montada en el plato del torno",
+          },
+          {
+            src: "assets/trabajos-reales/torno-pieza-en-giro.webp",
+            alt: "Pieza metálica en rotación durante el torneado",
+          },
+          {
+            src: "assets/trabajos-reales/torno-c0636b-panel-control.webp",
+            alt: "Panel de control identificado como C0636B",
+          },
+          {
+            src: "assets/trabajos-reales/torno-operador-mecanizado.webp",
+            alt: "Operador trabajando en el torno convencional",
+          },
+        ],
+        keyFacts: [
+          { value: "360 mm", label: "Volteo sobre bancada" },
+          { value: "1000 mm", label: "Entre centros" },
+          { value: "70–2000", label: "rpm" },
+          { value: "1,5 kW", label: "Motor principal" },
+        ],
+        description: [
+          "El C0636B es un torno convencional para mecanizar piezas que giran sobre su eje. Permite realizar cilindrado, refrentado, roscado, perforado, moleteado, corte y terminaciones de precisión.",
+          "Su construcción incorpora guías templadas y rectificadas, husillo apoyado en rodamientos de precisión, caja de avances y escote desmontable para admitir diámetros mayores. MAQELEC lo utiliza en procesos reales y puede suministrar el equipo con acompañamiento técnico.",
+        ],
+        operations: [
+          "Cilindrado exterior e interior",
+          "Refrentado y terminación de caras",
+          "Roscado métrico e imperial",
+          "Perforado, mandrinado y escariado",
+          "Ranurado, corte y moleteado",
+          "Fabricación y recuperación de ejes, bujes y componentes",
+        ],
+        technicalSpecs: [
+          { label: "Modelo de referencia", value: "C0636B" },
+          { label: "Distancia entre centros", value: "1000 mm" },
+          { label: "Volteo máximo sobre bancada", value: "360 mm" },
+          { label: "Volteo sobre carro transversal", value: "212 mm" },
+          { label: "Volteo en escote", value: "491 mm" },
+          { label: "Ancho de bancada", value: "187 mm" },
+          { label: "Velocidades del husillo", value: "8 pasos, 70–2000 rpm" },
+          { label: "Diámetro interior del husillo", value: "38 mm; opción 51 mm" },
+          { label: "Nariz del husillo", value: "D4; D5 con opción de 51 mm" },
+          { label: "Cono del husillo", value: "MT5; MT6 con opción de 51 mm" },
+          { label: "Altura de centros", value: "178 mm" },
+          { label: "Roscas métricas", value: "0,4–7 mm / 26 pasos" },
+          { label: "Roscas imperiales", value: "4–56 TPI / 34 pasos" },
+          { label: "Recorrido del carro compuesto", value: "90 mm" },
+          { label: "Recorrido del carro transversal", value: "170 mm" },
+          { label: "Avance longitudinal", value: "0,052–1,392 mm/vuelta" },
+          { label: "Diámetro de la caña del contrapunto", value: "32 mm" },
+          { label: "Recorrido del contrapunto", value: "100 mm" },
+          { label: "Cono del contrapunto", value: "MT3" },
+          { label: "Motor del husillo", value: "1,5 kW" },
+          { label: "Bomba de refrigerante", value: "40 W" },
+          { label: "Sección de herramienta", value: "16 × 16 mm" },
+          { label: "Dimensiones de embalaje", value: "1935 × 750 × 1500 mm" },
+          { label: "Peso neto / bruto", value: "600 / 700 kg" },
+        ],
+        includedServices: [
+          "Selección de accesorios y configuración eléctrica",
+          "Suministro local o gestión de importación",
+          "Instalación, nivelación y puesta en marcha",
+          "Capacitación inicial de operación",
+          "Soporte técnico y gestión de repuestos",
+        ],
+        projectId: "proy-torneado-cilindrado",
+        source: {
+          name: "Ficha técnica WMT C0636B",
+          url: "https://cncwmt.com/product/c0636b/",
+          note: "La apertura del husillo y otros componentes dependen de la configuración. Confirmar la variante final antes de cotizar.",
+        },
       },
       {
         id: "maq-laser-fibra-1500",
