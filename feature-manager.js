@@ -76,7 +76,7 @@
     const note = document.createElement("div");
     note.className = "mq-feature-note";
     note.dataset.featureGenerated = name;
-    note.innerHTML = `<strong>Contenido en desarrollo</strong><span>${message}</span>`;
+    note.innerHTML = `<strong>En preparación</strong><span>${message}</span>`;
     return note;
   }
 
