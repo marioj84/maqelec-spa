@@ -12,6 +12,26 @@
   --mq-muted: #4d6175;
 }
 
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--mq-blue);
+  font-weight: 900;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid #4ab5e6;
+  outline-offset: 3px;
+}
+
 body:not([data-shell-ready]) > header {
   visibility: hidden;
 }
@@ -146,7 +166,7 @@ body {
 }
 
 .ma-nav {
-  background: linear-gradient(90deg, #1f566c, #116e96);
+  background: var(--mq-blue);
   box-shadow: 0 8px 14px rgba(7, 29, 51, 0.12);
 }
 

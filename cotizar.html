@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cotiza maquinaria, servicios o piezas industriales con acompañamiento técnico directo de MAQELEC." />
+    <title>Cotizar maquinaria o trabajo industrial | MAQELEC</title>
+    <link rel="canonical" href="https://maqelec.cl/cotizar.html" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="site-shell.css?v=20260718-4" />
+    <link rel="stylesheet" href="feature-manager.css?v=20260718-1" />
+    <link rel="stylesheet" href="catalog.css?v=20260718-10" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="site-config.js?v=20260718-5"></script>
+    <script src="catalog-data.js?v=20260718-13"></script>
+    <script src="site-shell.js?v=20260718-5" defer></script>
+    <script src="quote.js?v=20260718-2" defer></script>
+    <script src="feature-manager.js?v=20260718-2" defer></script>
+  </head>
+  <body class="catalog-site" data-page-feature="contact">
+    <main id="mainContent">
+      <section class="page-intro">
+        <div class="ma-container">
+          <span class="eyebrow">Cotización guiada</span>
+          <h1>Cuéntanos qué necesitas resolver.</h1>
+          <p>Patricio Palma revisará personalmente el requerimiento para orientar equipo, proceso, instalación y soporte.</p>
+        </div>
+      </section>
+      <section class="quote-section">
+        <div class="ma-container quote-layout">
+          <form class="guided-quote" data-guided-quote>
+            <div class="quote-step"><span>1</span><div><strong>Tipo de requerimiento</strong><small>Selecciona el punto de partida.</small></div></div>
+            <fieldset class="quote-options">
+              <legend class="sr-only">Tipo de requerimiento</legend>
+              <label><input type="radio" name="type" value="Maquinaria" checked><span>Maquinaria</span></label>
+              <label><input type="radio" name="type" value="Servicio"><span>Servicio</span></label>
+              <label><input type="radio" name="type" value="Piezas a medida"><span>Piezas a medida</span></label>
+            </fieldset>
+
+            <div class="quote-fields">
+              <label><span>Equipo o proceso</span><select name="subject" data-quote-subject required></select></label>
+              <label><span>Empresa</span><input name="company" autocomplete="organization" placeholder="Nombre de empresa"></label>
+              <label><span>Nombre</span><input name="name" autocomplete="name" required placeholder="Persona de contacto"></label>
+              <label><span>Teléfono</span><input name="phone" inputmode="tel" autocomplete="tel" required placeholder="+56 9..."></label>
+              <label><span>Material</span><input name="material" placeholder="Ej: acero carbono"></label>
+              <label><span>Medidas o espesor</span><input name="dimensions" placeholder="Ej: placa 10 mm"></label>
+              <label><span>Cantidad</span><input name="quantity" placeholder="Unidades o volumen estimado"></label>
+              <label><span>Plazo esperado</span><input name="deadline" placeholder="Fecha o urgencia"></label>
+              <label class="full"><span>Descripción</span><textarea name="details" rows="5" required placeholder="Describe el trabajo, aplicación, energía disponible o condición de instalación."></textarea></label>
+              <label class="full file-field"><span>Plano, foto o ficha técnica</span><input type="file" name="attachment" accept=".pdf,.dxf,.dwg,.jpg,.jpeg,.png,.webp"><small>El archivo no se sube al sitio. Al abrir WhatsApp podrás adjuntarlo de forma privada.</small></label>
+            </div>
+            <button class="button primary" type="submit">Preparar solicitud por WhatsApp</button>
+            <p class="form-status" data-quote-status aria-live="polite"></p>
+          </form>
+          <aside class="quote-assurance">
+            <span>Soporte que sí continúa</span>
+            <h2>De la selección a la primera pieza.</h2>
+            <ul>
+              <li>Evaluación del proceso y la configuración</li>
+              <li>Gestión de suministro o importación</li>
+              <li>Instalación y puesta en marcha</li>
+              <li>Capacitación inicial del operador</li>
+              <li>Contacto técnico directo después de la entrega</li>
+            </ul>
+            <p>Las capacidades finales se confirman con el modelo, accesorios, material y condiciones de instalación de cada proyecto.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

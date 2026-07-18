@@ -42,7 +42,7 @@
       .join("");
     const visual = item.image
       ? `<div class="machine-visual machine-visual-photo">
-          <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy">
+          <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy" decoding="async">
           <span>${item.mediaType === "real" ? "Equipo real" : "Imagen referencial"}</span>
         </div>`
       : `<div class="machine-visual" aria-hidden="true">
@@ -95,7 +95,7 @@
         [item.name, item.category, item.summary].join(" "),
       )}">
         <div class="service-image">
-          <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy">
+          <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy" decoding="async"${item.imagePosition ? ` style="object-position:${escapeHTML(item.imagePosition)}"` : ""}>
           ${mediaLabel}
         </div>
         <div class="catalog-card-body">
@@ -134,18 +134,19 @@
     const gallery = (item.gallery || [])
       .map(
         (image) =>
-          `<img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt || "")}" loading="lazy">`,
+          `<img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt || "")}" loading="lazy" decoding="async">`,
       )
       .join("");
     const steps = (item.processSteps || [])
       .map((step) => `<li>${escapeHTML(step)}</li>`)
       .join("");
+    const caseStudy = projectCaseStudy(item);
     return `
       <article id="${escapeHTML(item.id)}" class="project-card" data-searchable="${escapeHTML(
         [item.title, item.type, item.summary].join(" "),
       )}">
         <div class="project-media">
-          <img class="project-main-image" src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy">
+          <img class="project-main-image" src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy" decoding="async">
           ${gallery ? `<div class="project-gallery">${gallery}</div>` : ""}
         </div>
         <div class="project-copy">
@@ -153,9 +154,27 @@
           <small>${escapeHTML(item.type)}</small>
           <h3>${escapeHTML(item.title)}</h3>
           <p>${escapeHTML(item.summary)}</p>
-          ${steps ? `<ol class="project-steps">${steps}</ol>` : ""}
+          <dl class="case-study-summary">
+            <div><dt>Necesidad</dt><dd>${escapeHTML(caseStudy.need)}</dd></div>
+            <div><dt>Equipos</dt><dd>${escapeHTML(caseStudy.equipment)}</dd></div>
+            <div><dt>Resultado</dt><dd>${escapeHTML(caseStudy.result)}</dd></div>
+          </dl>
+          ${steps ? `<details class="project-process"><summary>Ver proceso paso a paso</summary><ol class="project-steps">${steps}</ol></details>` : ""}
         </div>
       </article>`;
+  }
+
+  function projectCaseStudy(item) {
+    const studies = {
+      "proy-pulido-terminacion": { need: "Eliminar rebabas y dejar bordes seguros para armado o entrega.", equipment: "Esmeril angular y herramientas de terminación.", result: "Piezas limpias, uniformes y listas para la siguiente etapa." },
+      "proy-corte-plasma-cnc": { need: "Obtener geometrías repetibles desde una plancha metálica.", equipment: "Mesa plasma CNC con control automático de altura F1621.", result: "Cortes programados y piezas identificadas para fabricación." },
+      "proy-punzonado-hidraulico": { need: "Perforar, recortar y preparar material con distintas geometrías.", equipment: "Punzonadora y cizalla hidráulica combinada Q35Y-20.", result: "Piezas preparadas para mecanizado, armado o entrega." },
+      "proy-torneado-cilindrado": { need: "Convertir un perfil inicial en una geometría cilíndrica controlada.", equipment: "Torno convencional C0636B y sistema de lubricación.", result: "Diámetro exterior mecanizado y terminación uniforme." },
+      "proy-yegua-industrial": { need: "Crear un carro manual resistente para carga y traslado.", equipment: "Corte, torno, soldadura y herramientas de terminación.", result: "Yegua industrial armada, pintada y lista para trabajo." },
+      "proy-tolva-tractor": { need: "Fabricar una solución de arrastre adaptada a un tractor.", equipment: "Plasma CNC, torno, soldadura y control geométrico.", result: "Tolva estructural a medida, preparada para montaje y operación." },
+      "proy-piezas-metalicas": { need: "Producir lotes de componentes en diferentes formas y medidas.", equipment: "Plasma, punzonado, mecanizado y terminación.", result: "Piezas clasificadas y listas para integración o despacho." }
+    };
+    return studies[item.id] || { need: "Resolver un requerimiento metalmecánico específico.", equipment: "Equipos seleccionados según material y geometría.", result: "Trabajo fabricado y verificado para su aplicación." };
   }
 
   function videoCard(item) {
@@ -293,6 +312,23 @@
     document.title = `${item.name} | MAQELEC`;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.content = item.summary;
+    const schema = document.createElement("script");
+    schema.type = "application/ld+json";
+    schema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: item.name,
+      description: item.summary,
+      image: (item.gallery || []).map((image) => new URL(image.src, window.location.href).href),
+      model: item.slug,
+      seller: { "@type": "Organization", name: "MAQELEC SpA", url: "https://maqelec.cl/" },
+      additionalProperty: (item.technicalSpecs || []).map((spec) => ({
+        "@type": "PropertyValue",
+        name: spec.label,
+        value: spec.value
+      }))
+    });
+    document.head.appendChild(schema);
 
     const gallery = (item.gallery || [{ src: item.image, alt: item.imageAlt }])
       .map(
@@ -321,9 +357,7 @@
     const services = (item.includedServices || [])
       .map((service) => `<li>${escapeHTML(service)}</li>`)
       .join("");
-    const quoteUrl = whatsappLink(
-      `Hola MAQELEC, quiero cotizar el equipo ${item.name}. Necesito información sobre configuración, entrega e instalación.`,
-    );
+    const quoteUrl = `cotizar.html?tipo=maquinaria&equipo=${encodeURIComponent(item.id)}`;
 
     mount.innerHTML = `
       <section class="machine-detail-hero">
@@ -349,7 +383,7 @@
                 <p>Configuramos la propuesta según proceso, material, energía disponible, accesorios y condiciones de instalación.</p>
               </div>
               <div class="hero-actions">
-                <a class="button primary" href="${quoteUrl}" target="_blank" rel="noopener noreferrer">Cotizar este equipo</a>
+                <a class="button primary" href="${quoteUrl}">Cotizar este equipo</a>
                 ${item.projectId ? `<a class="button secondary" href="proyectos.html#${escapeHTML(item.projectId)}">Ver trabajo real</a>` : ""}
                 ${item.manualUrl ? `<a class="button secondary" href="${escapeHTML(item.manualUrl)}" target="_blank" rel="noopener noreferrer">Descargar guía preliminar</a>` : ""}
               </div>

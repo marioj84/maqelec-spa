@@ -21,6 +21,7 @@
 
   function headerTemplate() {
     return `
+      <a class="skip-link" href="#mainContent">Saltar al contenido</a>
       <header class="mq-site-header">
         <div class="ma-topbar">
           <div class="ma-container">
@@ -28,7 +29,7 @@
             <div class="ma-contact-line">
               <a href="tel:+56991514957">+56 9 9151 4957</a>
               <a href="mailto:contacto@maqelec.cl">contacto@maqelec.cl</a>
-              <a href="contacto.html">Ingresar requerimiento</a>
+              <a href="cotizar.html">Ingresar requerimiento</a>
             </div>
           </div>
         </div>
@@ -72,7 +73,7 @@
                 <a href="maquinaria.html" data-feature="machinery"${activeFor(["machinery"])}>Maquinaria</a>
                 <a href="servicios.html" data-feature="services"${activeFor(["services"])}>Servicios</a>
                 <a href="proyectos.html" data-feature="projects"${activeFor(["projects"])}>Proyectos</a>
-                <a href="contacto.html" data-feature="contact"${activeAttribute("contact")}>Contacto</a>
+                <a href="cotizar.html" data-feature="contact"${activeAttribute("contact")}>Cotizar</a>
               </div>
 
             </div>
@@ -95,6 +96,7 @@
               <a href="maquinaria.html" data-feature="machinery">Maquinaria</a>
               <a href="servicios.html" data-feature="services">Servicios</a>
               <a href="proyectos.html" data-feature="projects">Proyectos</a>
+              <a href="cotizar.html">Cotizar</a>
             </div>
             <div>
               <h4>Contacto</h4>
@@ -123,6 +125,8 @@
   }
 
   function replaceShell() {
+    const main = document.querySelector("main");
+    if (main && !main.id) main.id = "mainContent";
     const headerMount = document.createElement("div");
     headerMount.dataset.siteHeader = "";
     headerMount.innerHTML = headerTemplate();
@@ -203,6 +207,55 @@
   function render() {
     replaceShell();
     bindInteractions();
+    injectStructuredData();
+  }
+
+  function injectStructuredData() {
+    if (document.querySelector("[data-maqelec-schema]")) return;
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.dataset.maqelecSchema = "";
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "MAQELEC SpA",
+      url: "https://maqelec.cl/",
+      logo: "https://maqelec.cl/logo.png",
+      telephone: "+56991514957",
+      email: "contacto@maqelec.cl",
+      areaServed: "CL",
+      founder: { "@type": "Person", name: "Patricio Palma" },
+      contactPoint: [{
+        "@type": "ContactPoint",
+        telephone: "+56991514957",
+        contactType: "ventas y soporte técnico",
+        areaServed: "CL",
+        availableLanguage: "es"
+      }]
+    });
+    document.head.appendChild(script);
+
+    const cleanPath = window.location.pathname
+      .replace(/^\/maqelec-spa(?=\/|$)/, "")
+      .replace(/\/index\.html$/, "/") || "/";
+    const machineQuery = cleanPath.endsWith("/maquina.html") && new URLSearchParams(window.location.search).get("id")
+      ? `?id=${encodeURIComponent(new URLSearchParams(window.location.search).get("id"))}`
+      : "";
+    const productionUrl = new URL(`${cleanPath}${machineQuery}`, "https://maqelec.cl").href;
+    if (!document.querySelector('link[rel="canonical"]')) {
+      const canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      canonical.href = productionUrl;
+      document.head.appendChild(canonical);
+    }
+    const description = document.querySelector('meta[name="description"]')?.content || "Maquinaria y servicios industriales MAQELEC.";
+    [["og:title", document.title], ["og:description", description], ["og:url", productionUrl], ["og:image", "https://maqelec.cl/logo.png"], ["og:locale", "es_CL"]].forEach(([property, content]) => {
+      if (document.querySelector(`meta[property="${property}"]`)) return;
+      const meta = document.createElement("meta");
+      meta.setAttribute("property", property);
+      meta.content = content;
+      document.head.appendChild(meta);
+    });
   }
 
   if (document.readyState === "loading") {
