@@ -35,7 +35,7 @@ body {
 }
 
 .ma-topbar {
-  background: #eef2f5;
+  background: #f7f9fa;
   border-bottom: 1px solid var(--mq-line);
   color: #0e253b;
   font-size: 13px;
@@ -72,6 +72,7 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 22px;
+  transition: height 0.22s ease;
 }
 
 .ma-logo {
@@ -84,6 +85,7 @@ body {
   width: auto;
   height: 52px;
   object-fit: contain;
+  transition: height 0.22s ease;
 }
 
 .ma-search {
@@ -96,6 +98,7 @@ body {
   border: 1.5px solid var(--mq-electric);
   border-radius: 5px;
   box-shadow: 0 0 0 3px rgba(9, 126, 188, 0.07);
+  transition: height 0.22s ease;
 }
 
 .ma-search input {
@@ -143,7 +146,7 @@ body {
 }
 
 .ma-nav {
-  background: var(--mq-blue);
+  background: linear-gradient(90deg, #1f566c, #116e96);
   box-shadow: 0 8px 14px rgba(7, 29, 51, 0.12);
 }
 
@@ -357,10 +360,14 @@ body:not(.jao-inspired) main > section {
 }
 
 body:not(.jao-inspired) .page-hero {
-  padding: 72px 0 60px;
+  padding: 52px 0 44px;
   background:
-    radial-gradient(circle at 88% 15%, rgba(9, 126, 188, 0.1), transparent 28%),
-    linear-gradient(180deg, #f7f9fb, #eef3f6);
+    radial-gradient(
+      circle at 88% 15%,
+      rgba(9, 126, 188, 0.06),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #ffffff, #f8fafb);
 }
 
 body:not(.jao-inspired) .page-hero::before {
@@ -376,9 +383,9 @@ body:not(.jao-inspired) main h3 {
 
 body:not(.jao-inspired) .page-hero h1 {
   color: var(--mq-text);
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
-  line-height: 0.98;
-  letter-spacing: -0.05em;
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
 body:not(.jao-inspired) .page-hero p {
@@ -533,6 +540,20 @@ body:not(.jao-inspired) .btn:hover {
 .contact-aside p,
 .module-content p {
   color: var(--mq-muted);
+}
+
+@media (min-width: 981px) {
+  body.mq-scrolled .ma-header-main {
+    height: 64px;
+  }
+
+  body.mq-scrolled .ma-logo img {
+    height: 42px;
+  }
+
+  body.mq-scrolled .ma-search {
+    height: 38px;
+  }
 }
 
 @media (max-width: 1400px) {
