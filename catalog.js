@@ -324,6 +324,7 @@
               <div class="hero-actions">
                 <a class="button primary" href="${quoteUrl}" target="_blank" rel="noopener noreferrer">Cotizar este equipo</a>
                 ${item.projectId ? `<a class="button secondary" href="proyectos.html#${escapeHTML(item.projectId)}">Ver trabajo real</a>` : ""}
+                ${item.manualUrl ? `<a class="button secondary" href="${escapeHTML(item.manualUrl)}" target="_blank" rel="noopener noreferrer">Descargar guía preliminar</a>` : ""}
               </div>
             </div>
           </div>
@@ -336,6 +337,7 @@
           <a href="#operaciones">Operaciones</a>
           <a href="#especificaciones">Especificaciones</a>
           <a href="#acompanamiento">Venta y soporte</a>
+          ${item.manualUrl ? `<a href="${escapeHTML(item.manualUrl)}" target="_blank" rel="noopener noreferrer">Manual PDF</a>` : ""}
         </div>
       </section>
 
