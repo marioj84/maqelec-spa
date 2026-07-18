@@ -73,8 +73,8 @@
   }
 
   function serviceCard(item) {
-    const hasRealPhoto = item.mediaType === "real" && item.image;
-    if (!hasRealPhoto) {
+    const hasPhoto = Boolean(item.image);
+    if (!hasPhoto) {
       return `
         <article class="catalog-card service-card service-card-text" data-searchable="${escapeHTML(
           [item.name, item.category, item.summary].join(" "),
@@ -87,8 +87,9 @@
           </div>
         </article>`;
     }
-    const mediaLabel =
-      '<span class="real-media-label">Trabajo real</span>';
+    const mediaLabel = item.mediaType === "real"
+      ? '<span class="real-media-label">Trabajo real</span>'
+      : '<span class="real-media-label">Imagen referencial</span>';
     return `
       <article class="catalog-card service-card" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary].join(" "),
@@ -140,7 +141,7 @@
       .map((step) => `<li>${escapeHTML(step)}</li>`)
       .join("");
     return `
-      <article id="${escapeHTML(item.id)}" class="project-card${gallery ? " project-card-featured" : ""}" data-searchable="${escapeHTML(
+      <article id="${escapeHTML(item.id)}" class="project-card" data-searchable="${escapeHTML(
         [item.title, item.type, item.summary].join(" "),
       )}">
         <div class="project-media">
@@ -153,6 +154,20 @@
           <h3>${escapeHTML(item.title)}</h3>
           <p>${escapeHTML(item.summary)}</p>
           ${steps ? `<ol class="project-steps">${steps}</ol>` : ""}
+        </div>
+      </article>`;
+  }
+
+  function videoCard(item) {
+    return `
+      <article class="process-video-card">
+        <video controls playsinline preload="metadata" poster="${escapeHTML(item.poster)}">
+          <source src="${escapeHTML(item.src)}" type="video/mp4">
+          Tu navegador no puede reproducir este video.
+        </video>
+        <div>
+          <small>${escapeHTML(item.type)}</small>
+          <h3>${escapeHTML(item.title)}</h3>
         </div>
       </article>`;
   }
@@ -238,7 +253,7 @@
     if (count)
       count.textContent = query
         ? `${matches.length} resultado(s) para “${query}”`
-        : "Explora el catálogo o escribe una máquina, repuesto, servicio o código.";
+        : "Explora el catálogo o escribe una máquina, servicio o proceso.";
 
     mount.innerHTML = matches.length
       ? matches
@@ -251,7 +266,7 @@
           </a>`,
           )
           .join("")
-      : `<div class="empty-state"><strong>No encontramos una ficha publicada.</strong><p>Puede tratarse de un repuesto por código o de un equipo que todavía no está cargado. Envíanos el dato y lo buscamos.</p><a class="button primary" href="${whatsappLink(`Hola MAQELEC, necesito buscar: ${query}`)}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a></div>`;
+      : `<div class="empty-state"><strong>No encontramos una ficha publicada.</strong><p>Puede tratarse de un equipo o servicio que todavía no está cargado. Envíanos el dato y lo revisamos.</p><a class="button primary" href="${whatsappLink(`Hola MAQELEC, necesito buscar: ${query}`)}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a></div>`;
   }
 
   function renderMachineDetail() {
@@ -451,6 +466,7 @@
     renderCollection("[data-service-grid]", data.services, serviceCard);
     renderCollection("[data-featured-services]", data.services, serviceCard, 3);
     renderCollection("[data-project-grid]", data.projects, projectCard);
+    renderCollection("[data-process-videos]", data.videos || [], videoCard);
     renderCollection("[data-featured-projects]", data.projects, projectCard, 2);
     filterGrid(
       "[data-machine-filter]",

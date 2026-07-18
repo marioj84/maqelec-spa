@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_SITE_CONFIG = {
-    version: "1.5.0",
+    version: "1.6.0",
     environment: "preview",
     states: ["off", "preview", "live"],
 
@@ -36,7 +36,7 @@
         label: "Fotografías y casos reales",
       },
       "media.realVideos": {
-        ready: false,
+        ready: true,
         label: "Videos industriales optimizados",
       },
       "content.manualFiles": {
@@ -81,7 +81,7 @@
         selectors: ['a[href="maquinaria.html"]', '[data-feature="machinery"]'],
       },
       parts: {
-        state: "preview",
+        state: "off",
         label: "Repuestos",
         navBadge: false,
         dependencies: ["content.partsCatalog", "channel.whatsapp"],
@@ -97,7 +97,7 @@
         selectors: ['a[href="proyectos.html"]', '[data-feature="projects"]'],
       },
       videos: {
-        state: "off",
+        state: "live",
         label: "Videos",
         dependencies: ["media.realVideos"],
         selectors: ['[data-feature="videos"]'],
