@@ -79,6 +79,21 @@ if (!catalog) {
       });
     });
   });
+
+  const projectIds = new Set((catalog.projects || []).map((item) => item.id));
+  (catalog.machinery || []).forEach((item, index) => {
+    if (item.technicalSpecs && !fs.existsSync("maquina.html")) {
+      errors.push("Las fichas técnicas requieren la página maquina.html.");
+    }
+    if (item.technicalSpecs && !item.source?.url) {
+      errors.push(`machinery[${index}]: la ficha técnica no indica su fuente.`);
+    }
+    if (item.projectId && !projectIds.has(item.projectId)) {
+      errors.push(
+        `machinery[${index}]: proyecto relacionado inexistente "${item.projectId}".`,
+      );
+    }
+  });
 }
 
 if (errors.length) {

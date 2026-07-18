@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_SITE_CONFIG = {
-    version: "1.3.0",
+    version: "1.4.0",
     environment: "preview",
     states: ["off", "preview", "live"],
 
@@ -143,6 +143,7 @@
     pages: {
       "index.html": "home",
       "maquinaria.html": "machinery",
+      "maquina.html": "machinery",
       "repuestos.html": "parts",
       "servicios.html": "services",
       "proyectos.html": "projects",
