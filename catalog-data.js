@@ -3,7 +3,7 @@
 
   window.MAQELEC_CATALOG = {
     schemaVersion: "1.1.0",
-    lastUpdated: "2026-07-17",
+    lastUpdated: "2026-07-18",
 
     machinery: [
       {
@@ -215,6 +215,40 @@
         status: "live",
         summary:
           "Trabajo real con una punzonadora y cizalla hidráulica combinada para realizar perforaciones, cortes y formas mediante matrices intercambiables.",
+      },
+      {
+        id: "proy-torneado-cilindrado",
+        title: "Cilindrado de piezas en torno convencional",
+        type: "Mecanizado y torneado",
+        image:
+          "assets/trabajos-reales/torneado-cilindrado-operacion.webp",
+        imageAlt:
+          "Herramienta de corte mecanizando el exterior de una pieza metálica en rotación",
+        gallery: [
+          {
+            src: "assets/trabajos-reales/torno-pieza-hexagonal-montaje.webp",
+            alt: "Conjunto de piezas hexagonales montado y sujeto en el plato del torno",
+          },
+          {
+            src: "assets/trabajos-reales/torno-pieza-en-giro.webp",
+            alt: "Pieza metálica girando durante el proceso de torneado exterior",
+          },
+          {
+            src: "assets/trabajos-reales/torno-operador-mecanizado.webp",
+            alt: "Operario trabajando en un torno convencional con sus elementos de protección",
+          },
+          {
+            src: "assets/trabajos-reales/torno-c0636b-panel-control.webp",
+            alt: "Panel de controles del torno convencional identificado visualmente como C0636B",
+          },
+          {
+            src: "assets/trabajos-reales/torno-convencional-vista-general.webp",
+            alt: "Vista general del torno convencional utilizado para el mecanizado",
+          },
+        ],
+        status: "live",
+        summary:
+          "Transformación del perfil exterior de piezas metálicas mediante giro controlado, avance de la herramienta de corte y lubricación hasta obtener una geometría cilíndrica.",
       },
       {
         id: "proy-yegua-industrial",
