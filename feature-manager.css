@@ -14,24 +14,26 @@
 }
 
 .mq-feature-note {
-  display: grid;
-  gap: 0.2rem;
-  margin: 0 0 1.35rem;
-  padding: 0.9rem 1rem;
-  border: 1px solid rgba(9, 126, 188, 0.28);
-  border-left: 4px solid #097ebc;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 0.9rem;
+  padding: 0.62rem 0.78rem;
+  border: 1px solid rgba(9, 126, 188, 0.18);
+  border-left: 3px solid #097ebc;
+  border-radius: 7px;
+  background: rgba(248, 251, 252, 0.95);
   color: #1f3b48;
-  box-shadow: 0 8px 24px rgba(31, 59, 72, 0.08);
+  box-shadow: none;
   font-family: Inter, "Space Grotesk", system-ui, sans-serif;
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   line-height: 1.4;
 }
 
 .mq-feature-note strong {
+  flex: 0 0 auto;
   color: #097ebc;
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -80,6 +82,7 @@
   }
 
   .mq-feature-note {
+    display: grid;
     font-size: 0.8rem;
   }
 
