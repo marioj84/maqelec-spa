@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_CATALOG = {
-    schemaVersion: "1.3.0",
+    schemaVersion: "1.4.0",
     lastUpdated: "2026-07-18",
 
     machinery: [
@@ -425,13 +425,13 @@
         slug: "soldadura-y-fabricacion",
         name: "Soldadura y fabricación",
         category: "Fabricación",
-        image: "assets/trabajos-reales/yegua-industrial-fabricacion.webp",
+        image: "assets/trabajos-reales/yegua-soldadura-proceso.webp",
         imageAlt:
-          "Yegua o carro de carga industrial fabricado mediante corte y soldadura",
+          "Operario soldando la estructura de una yegua industrial de carga",
         mediaType: "real",
         status: "live",
         summary:
-          "Reparación, unión y fabricación de componentes para necesidades industriales.",
+          "Fabricación y reparación de estructuras, carros, tolvas y componentes industriales mediante corte, mecanizado, armado y soldadura.",
       },
       {
         id: "srv-electricidad",
@@ -606,24 +606,86 @@
         id: "proy-yegua-industrial",
         title: "Fabricación de yegua industrial",
         type: "Soldadura y fabricación",
-        image: "assets/trabajos-reales/yegua-industrial-fabricacion.webp",
+        image: "assets/trabajos-reales/yegua-industrial-terminada.webp",
         imageAlt:
-          "Yegua o carro de carga industrial fabricado en estructura metálica soldada",
+          "Yegua industrial terminada junto a una tolva metálica fabricada en el taller",
+        gallery: [
+          {
+            src: "assets/trabajos-reales/yegua-industrial-fabricacion.webp",
+            alt: "Estructura inicial de la yegua industrial durante su fabricación",
+          },
+          {
+            src: "assets/trabajos-reales/yegua-soldadura-proceso.webp",
+            alt: "Operario soldando los componentes de la yegua industrial",
+          },
+          {
+            src: "assets/trabajos-reales/yegua-armado-soldadura.webp",
+            alt: "Proceso de armado y soldadura de la base del carro de carga",
+          },
+          {
+            src: "assets/trabajos-reales/yegua-estructura-armada.webp",
+            alt: "Estructura metálica armada de la yegua con su plataforma de carga",
+          },
+          {
+            src: "assets/trabajos-reales/yegua-terminacion-soldadura.webp",
+            alt: "Operario realizando terminaciones sobre la yegua industrial",
+          },
+          {
+            src: "assets/trabajos-reales/yegua-industrial-terminada.webp",
+            alt: "Yegua industrial terminada y lista para uso en carga y traslado",
+          },
+        ],
+        processSteps: [
+          "Definición de dimensiones, capacidad y geometría de la estructura",
+          "Corte de perfiles y placas para la base y el respaldo",
+          "Mecanizado de ejes, pasadores y elementos de unión necesarios",
+          "Armado, punteo y soldadura de la estructura metálica",
+          "Montaje de ruedas, verificación y terminación superficial",
+        ],
         status: "live",
         summary:
-          "Fabricación de un carro de carga —conocido en Chile como yegua— mediante corte, armado y soldadura de su estructura metálica.",
+          "Fabricación completa de un carro manual de carga —conocido en Chile como yegua— integrando corte de perfiles y placas, mecanizado de componentes, armado, soldadura, montaje de ruedas y terminaciones.",
       },
       {
-        id: "proy-estructura-gran-formato",
-        title: "Fabricación de estructura metálica de gran formato",
-        type: "Armado y soldadura",
-        image:
-          "assets/trabajos-reales/estructura-metalica-gran-formato.webp",
+        id: "proy-tolva-tractor",
+        title: "Fabricación de tolva metálica para tractor",
+        type: "Fabricación metalmecánica integral",
+        image: "assets/trabajos-reales/tolva-tractor-vista-frontal.webp",
         imageAlt:
-          "Estructura metálica de gran formato en proceso de armado y soldadura dentro del taller",
+          "Tolva metálica de arrastre para tractor fabricada en el taller",
+        gallery: [
+          {
+            src: "assets/trabajos-reales/tolva-tractor-vista-frontal.webp",
+            alt: "Vista frontal de la tolva metálica y su lanza de conexión al tractor",
+          },
+          {
+            src: "assets/trabajos-reales/tolva-tractor-vista-lateral.webp",
+            alt: "Vista lateral de la estructura reforzada de la tolva",
+          },
+          {
+            src: "assets/trabajos-reales/tolva-tractor-conjunto-taller.webp",
+            alt: "Tolva metálica y yegua industrial terminadas dentro del taller",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-mesa-operacion.webp",
+            alt: "Corte plasma CNC utilizado para preparar placas y componentes metálicos",
+          },
+          {
+            src: "assets/trabajos-reales/torno-pieza-hexagonal-montaje.webp",
+            alt: "Preparación de componentes mecanizados utilizados en procesos de fabricación",
+          },
+        ],
+        processSteps: [
+          "Levantamiento de dimensiones y definición de la estructura de carga",
+          "Corte plasma CNC de planchas, refuerzos y componentes",
+          "Corte y preparación de perfiles para bastidor, costados y lanza",
+          "Mecanizado en torno de pasadores, ejes y uniones requeridas",
+          "Armado, soldadura y control geométrico del conjunto",
+          "Terminación y preparación para montaje del sistema de rodado y conexión",
+        ],
         status: "live",
         summary:
-          "Trabajo de fabricación en taller mediante preparación de material, armado estructural y soldadura de sus componentes.",
+          "Fabricación integral de una tolva o carro metálico de arrastre para tractor. El trabajo combina corte plasma CNC de planchas, preparación de perfiles, mecanizado de componentes en torno, armado estructural y soldadura.",
       },
       {
         id: "proy-piezas-metalicas",
