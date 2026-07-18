@@ -93,7 +93,10 @@
 
       if (state !== "preview") return;
 
-      if (element.matches("nav a, footer a, .ma-menu a")) {
+      if (
+        feature.navBadge !== false &&
+        element.matches("nav a, footer a, .ma-menu a")
+      ) {
         element.appendChild(createBadge(name));
       }
 
