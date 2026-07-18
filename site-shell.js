@@ -169,6 +169,13 @@
     const menu = document.getElementById("navMenu");
     const search = document.querySelector("[data-site-search]");
 
+    const syncScrollState = () => {
+      document.body.classList.toggle("mq-scrolled", window.scrollY > 60);
+    };
+
+    window.addEventListener("scroll", syncScrollState, { passive: true });
+    syncScrollState();
+
     serviceToggle?.addEventListener("click", (event) => {
       event.stopPropagation();
       const open = serviceDropdown.classList.toggle("open");
