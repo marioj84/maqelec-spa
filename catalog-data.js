@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_CATALOG = {
-    schemaVersion: "1.6.0",
+    schemaVersion: "1.7.0",
     lastUpdated: "2026-07-18",
 
     machinery: [
@@ -95,7 +95,7 @@
           "Suministro local o gestión de importación",
           "Instalación y puesta en marcha",
           "Capacitación de operación y cambio de herramientas",
-          "Soporte técnico y gestión de repuestos",
+          "Soporte técnico y gestión de consumibles",
         ],
         projectId: "proy-punzonado-hidraulico",
         source: {
@@ -199,7 +199,7 @@
           "Suministro local o gestión de importación",
           "Instalación, nivelación y puesta en marcha",
           "Capacitación inicial de operación",
-          "Soporte técnico y gestión de repuestos",
+          "Soporte técnico y gestión de consumibles",
         ],
         manualUrl: "output/pdf/guia-preliminar-c0636b-maqelec.pdf",
         manualLabel: "Guía preliminar MAQELEC · PDF",
@@ -287,7 +287,7 @@
           "Suministro local o gestión de importación",
           "Entrega, instalación, nivelación y puesta en marcha",
           "Inducción inicial para operadores",
-          "Soporte técnico y gestión de repuestos",
+          "Soporte técnico y gestión de consumibles",
         ],
         source: {
           name: "Ficha técnica Dintass Motori ZAY7045FG",
@@ -301,6 +301,9 @@
         name: "Equipo de corte láser fibra 1500 W",
         category: "Corte láser",
         modality: "importacion",
+        image: "assets/maquinaria/laser-fibra-mk-s-1500.webp",
+        imageAlt: "Equipo de corte láser fibra MK-S disponible en configuración de 1500 W",
+        mediaType: "reference",
         status: "preview",
         summary:
           "Alternativa para procesos de corte industrial. La configuración final se define según material, formato y producción requerida.",
@@ -316,6 +319,9 @@
         name: "Equipo de corte láser fibra 3000 W",
         category: "Corte láser",
         modality: "importacion",
+        image: "assets/trabajos-reales/corte-laser-fibra-proceso.webp",
+        imageAlt: "Proceso de corte láser de fibra sobre una lámina metálica",
+        mediaType: "reference",
         status: "preview",
         summary:
           "Solución de mayor potencia para proyectos industriales. Se cotiza con importación directa y acompañamiento técnico.",
@@ -323,6 +329,43 @@
           "Potencia base: 3000 W",
           "Configuración a medida",
           "Capacitación disponible",
+        ],
+      },
+      {
+        id: "maq-kit-plasma-completo",
+        slug: "kit-corte-plasma-completo",
+        name: "Kit de corte por plasma completo",
+        category: "Plasma CNC",
+        modality: "importacion",
+        image: "assets/maquinaria/kit-corte-plasma-completo.webp",
+        imageAlt: "Kit de corte por plasma con control CNC, controlador de altura, fuente y compresor",
+        mediaType: "reference",
+        status: "preview",
+        summary:
+          "Conjunto referencial para integrar control CNC, altura de antorcha, fuente plasma y suministro de aire en una solución de corte.",
+        specs: [
+          "Control CNC y control de altura",
+          "Fuente de plasma y antorcha",
+          "Compresor según configuración",
+          "Integración y puesta en marcha disponibles",
+        ],
+      },
+      {
+        id: "maq-compresor-everest-300l",
+        slug: "compresor-everest-300l-3hp",
+        name: "Compresor Everest 300 L / 3 HP",
+        category: "Aire comprimido",
+        modality: "importacion",
+        image: "assets/maquinaria/compresor-everest-300l-3hp.webp",
+        imageAlt: "Compresor industrial Everest de 300 litros y 3 HP",
+        mediaType: "reference",
+        status: "preview",
+        summary:
+          "Compresor industrial recuperado del catálogo anterior de MAQELEC, disponible como referencia para configuraciones de taller.",
+        specs: [
+          "Capacidad indicada: 300 L",
+          "Potencia indicada: 3 HP",
+          "Configuración eléctrica por confirmar",
         ],
       },
       {
@@ -424,21 +467,6 @@
           note: "Los datos publicados corresponden al controlador THC F1621. La mesa, la fuente plasma y su capacidad final deben confirmarse en cada propuesta.",
         },
       },
-      {
-        id: "maq-oxicorte",
-        slug: "sistema-oxicorte",
-        name: "Sistema industrial de oxicorte",
-        category: "Oxicorte",
-        modality: "importacion",
-        status: "preview",
-        summary:
-          "Equipo orientado al corte de mayores espesores. La ficha definitiva se prepara a partir de la aplicación requerida.",
-        specs: [
-          "Configuración según espesor",
-          "Integración CNC disponible",
-          "Asesoría de selección",
-        ],
-      },
     ],
 
     parts: [],
@@ -452,6 +480,18 @@
     ],
 
     services: [
+      {
+        id: "srv-corte-laser",
+        slug: "corte-laser-fibra",
+        name: "Corte láser de fibra",
+        category: "Fabricación",
+        image: "assets/trabajos-reales/corte-laser-fibra-proceso.webp",
+        imageAlt: "Cabezal de corte láser de fibra trabajando sobre una plancha metálica",
+        mediaType: "reference",
+        status: "live",
+        summary:
+          "Corte preciso de piezas y geometrías en lámina metálica, con definición según material, espesor, plano y volumen requerido.",
+      },
       {
         id: "srv-punzonado-hidraulico",
         slug: "punzonado-y-cizallado-hidraulico",
@@ -519,16 +559,6 @@
           "Fabricación y reparación de estructuras, carros, tolvas y componentes industriales mediante corte, mecanizado, armado y soldadura.",
       },
       {
-        id: "srv-electricidad",
-        slug: "electricidad-industrial",
-        name: "Electricidad industrial",
-        category: "Soporte",
-        presentation: "text",
-        status: "live",
-        summary:
-          "Instalaciones, diagnóstico y soporte eléctrico para equipos y operaciones industriales.",
-      },
-      {
         id: "srv-mantenimiento",
         slug: "mantenimiento-industrial",
         name: "Mantenimiento industrial",
@@ -543,10 +573,45 @@
         slug: "puesta-en-marcha-y-capacitacion",
         name: "Puesta en marcha y capacitación",
         category: "Implementación",
-        presentation: "text",
+        image: "assets/trabajos-reales/plasma-cnc-operador.webp",
+        imageAlt: "Operador supervisando una máquina CNC durante pruebas y puesta en marcha",
+        mediaType: "real",
         status: "live",
         summary:
           "Instalación, configuración inicial, pruebas y capacitación para operar nuevos equipos.",
+      },
+    ],
+
+    videos: [
+      {
+        title: "Fabricación de yegua industrial",
+        type: "Armado y soldadura",
+        src: "assets/videos/yegua-fabricacion.mp4",
+        poster: "assets/videos/yegua-fabricacion.webp",
+      },
+      {
+        title: "Punzonado hidráulico",
+        type: "Corte y perforación",
+        src: "assets/videos/punzonado-q35y20.mp4",
+        poster: "assets/videos/punzonado-q35y20.webp",
+      },
+      {
+        title: "Esmerilado de piezas",
+        type: "Pulido y terminación",
+        src: "assets/videos/esmerilado-piezas.mp4",
+        poster: "assets/videos/esmerilado-piezas.webp",
+      },
+      {
+        title: "Torneado de precisión",
+        type: "Mecanizado",
+        src: "assets/videos/torneado-precision.mp4",
+        poster: "assets/videos/torneado-precision.webp",
+      },
+      {
+        title: "Procesos de fabricación",
+        type: "Trabajo integral",
+        src: "assets/videos/procesos-varios.mp4",
+        poster: "assets/videos/procesos-varios.webp",
       },
     ],
 

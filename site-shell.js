@@ -24,7 +24,7 @@
       <header class="mq-site-header">
         <div class="ma-topbar">
           <div class="ma-container">
-            <span>Maquinaria, repuestos y servicios industriales con acompañamiento técnico</span>
+            <span>Maquinaria y servicios industriales con acompañamiento técnico</span>
             <div class="ma-contact-line">
               <a href="tel:+56991514957">+56 9 9151 4957</a>
               <a href="mailto:contacto@maqelec.cl">contacto@maqelec.cl</a>
@@ -40,7 +40,7 @@
             </a>
 
             <form class="ma-search" data-site-search>
-              <input name="q" type="search" placeholder="Buscar máquina, repuesto, servicio o código..." aria-label="Buscar en MAQELEC">
+              <input name="q" type="search" placeholder="Buscar máquina, servicio o proceso..." aria-label="Buscar en MAQELEC">
               <button type="submit">Buscar</button>
             </form>
 
@@ -62,7 +62,6 @@
                 </button>
                 <div class="ma-service-dropdown" id="serviceDropdown">
                   <a href="maquinaria.html"><strong>Maquinaria</strong><span>Equipos para suministro o importación.</span></a>
-                  <a href="repuestos.html"><strong>Repuestos</strong><span>Búsqueda por código, marca o modelo.</span></a>
                   <a href="servicios.html"><strong>Servicios</strong><span>Trabajos industriales ejecutados por MAQELEC.</span></a>
                 </div>
               </div>
@@ -71,20 +70,11 @@
               <div class="ma-menu" id="navMenu">
                 <a href="index.html"${activeAttribute("home")}>Inicio</a>
                 <a href="maquinaria.html" data-feature="machinery"${activeFor(["machinery"])}>Maquinaria</a>
-                <a href="repuestos.html" data-feature="parts"${activeFor(["parts"])}>Repuestos</a>
                 <a href="servicios.html" data-feature="services"${activeFor(["services"])}>Servicios</a>
                 <a href="proyectos.html" data-feature="projects"${activeFor(["projects"])}>Proyectos</a>
                 <a href="contacto.html" data-feature="contact"${activeAttribute("contact")}>Contacto</a>
               </div>
 
-              <div class="ma-social-mini">
-                <a href="https://www.instagram.com/maqelec.spa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  <img src="logo_instagram.png" alt="">
-                </a>
-                <a href="https://wa.me/${whatsappNumber}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                  <img src="logo_wsp.png" alt="">
-                </a>
-              </div>
             </div>
           </nav>
         </div>
@@ -98,12 +88,11 @@
           <div class="ma-footer-grid">
             <div>
               <img src="logo.png" alt="MAQELEC SpA">
-              <p>Maquinaria, repuestos y servicios industriales con apoyo desde la selección hasta la puesta en marcha.</p>
+              <p>Maquinaria y servicios industriales con apoyo desde la selección hasta la puesta en marcha.</p>
             </div>
             <div>
               <h4>Categorías</h4>
               <a href="maquinaria.html" data-feature="machinery">Maquinaria</a>
-              <a href="repuestos.html" data-feature="parts">Repuestos</a>
               <a href="servicios.html" data-feature="services">Servicios</a>
               <a href="proyectos.html" data-feature="projects">Proyectos</a>
             </div>
