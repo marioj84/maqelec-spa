@@ -79,6 +79,23 @@
       </article>`;
   }
 
+  function compactMachineCard(item) {
+    return `
+      <a class="machine-teaser" href="maquinaria.html" data-searchable="${escapeHTML(
+        [item.name, item.category].join(" "),
+      )}">
+        <div class="machine-teaser-visual">
+          <span>${escapeHTML(item.category)}</span>
+          <strong>MAQELEC</strong>
+        </div>
+        <div class="machine-teaser-copy">
+          <small>${escapeHTML(modalityLabel(item.modality))}</small>
+          <h3>${escapeHTML(item.name)}</h3>
+          <b>Consultar equipo →</b>
+        </div>
+      </a>`;
+  }
+
   function projectCard(item) {
     return `
       <article class="project-card" data-searchable="${escapeHTML(
@@ -215,6 +232,12 @@
       data.machinery,
       machineCard,
       3,
+    );
+    renderCollection(
+      "[data-machine-showcase]",
+      data.machinery,
+      compactMachineCard,
+      4,
     );
     renderCollection("[data-service-grid]", data.services, serviceCard);
     renderCollection("[data-featured-services]", data.services, serviceCard, 3);

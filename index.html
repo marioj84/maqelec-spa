@@ -11,195 +11,124 @@
     <link rel="icon" href="favicon.png" />
     <link rel="stylesheet" href="site-shell.css?v=20260717-3" />
     <link rel="stylesheet" href="feature-manager.css?v=20260717-1" />
-    <link rel="stylesheet" href="catalog.css?v=20260717-2" />
+    <link rel="stylesheet" href="catalog.css?v=20260718-1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script src="site-config.js?v=20260717-1"></script>
+    <script src="site-config.js?v=20260718-1"></script>
     <script src="catalog-data.js?v=20260717-1"></script>
     <script src="site-shell.js?v=20260717-1" defer></script>
-    <script src="catalog.js?v=20260717-1" defer></script>
-    <script src="feature-manager.js?v=20260717-1" defer></script>
+    <script src="catalog.js?v=20260718-1" defer></script>
+    <script src="feature-manager.js?v=20260718-1" defer></script>
   </head>
-  <body class="catalog-site" data-page-feature="home">
+  <body class="catalog-site commerce-home" data-page-feature="home">
     <main>
-      <section class="home-hero">
-        <div class="ma-container">
-          <div class="hero-content">
-            <span class="eyebrow">Venta, importación y ejecución técnica</span>
-            <h1>Maquinaria, repuestos y servicios industriales.</h1>
-            <p>
-              Buscamos, importamos e implementamos equipos para tu operación.
-              También suministramos repuestos y ejecutamos trabajos industriales
-              con acompañamiento técnico.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="buscar.html"
-                >Buscar máquina o repuesto</a
-              >
-              <a class="button secondary" href="contacto.html"
-                >Enviar requerimiento</a
-              >
+      <section
+        class="commercial-showcase"
+        aria-label="Oferta principal MAQELEC"
+      >
+        <div class="ma-container promo-grid">
+          <a class="promo-card promo-main" href="maquinaria.html">
+            <img src="Imagen5.png" alt="" />
+            <span class="promo-shade"></span>
+            <div class="promo-content">
+              <small>Venta e importación directa</small>
+              <h1>Maquinaria industrial para tu operación</h1>
+              <p>Selección, importación, puesta en marcha y capacitación.</p>
+              <span class="promo-button">Ver maquinaria</span>
             </div>
-          </div>
-          <span class="visual-note">Imagen referencial de maqueta</span>
-        </div>
-      </section>
-
-      <section class="route-section" aria-label="Rutas principales">
-        <div class="ma-container route-grid">
-          <a class="route-card" href="maquinaria.html">
-            <span class="route-number">01 · EQUIPOS</span>
-            <h2>Maquinaria</h2>
-            <p>
-              Equipos que podemos suministrar o importar según el proceso y la
-              capacidad que necesitas.
-            </p>
-            <b>Explorar maquinaria →</b>
+            <span class="reference-label">Imagen referencial</span>
           </a>
-          <a class="route-card" href="repuestos.html">
-            <span class="route-number">02 · PRODUCTOS</span>
-            <h2>Repuestos</h2>
-            <p>
-              Búsqueda por código, marca, modelo o fotografía, con suministro
-              local e importación a pedido.
-            </p>
-            <b>Buscar repuestos →</b>
-          </a>
-          <a class="route-card" href="servicios.html">
-            <span class="route-number">03 · EJECUCIÓN</span>
-            <h2>Servicios</h2>
-            <p>
-              Corte, mecanizado, soldadura, electricidad, mantenimiento,
-              instalación y capacitación.
-            </p>
-            <b>Ver servicios →</b>
-          </a>
+
+          <div class="promo-side">
+            <a class="promo-card promo-small" href="repuestos.html">
+              <img src="Imagen2.png" alt="" />
+              <span class="promo-shade"></span>
+              <div class="promo-content">
+                <small>Búsqueda y suministro</small>
+                <h2>Repuestos por código, marca o modelo</h2>
+                <p>Stock local o importación a pedido.</p>
+              </div>
+              <span class="reference-label">Imagen referencial</span>
+            </a>
+
+            <a class="promo-card promo-small" href="servicios.html">
+              <img src="Imagen4.png" alt="" />
+              <span class="promo-shade"></span>
+              <div class="promo-content">
+                <small>Ejecución técnica</small>
+                <h2>Servicios industriales</h2>
+                <p>Corte, mecanizado, soldadura y mantenimiento.</p>
+              </div>
+              <span class="reference-label">Imagen referencial</span>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section data-feature="machinery">
+      <section class="solution-band" aria-labelledby="solutionTitle">
         <div class="ma-container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Maquinaria destacada</span>
-              <h2>Equipos según tu operación</h2>
-              <p>
-                Esta primera carga muestra las familias de equipos que MAQELEC
-                puede cotizar. Las fichas técnicas definitivas se activarán a
-                medida que se valide cada modelo.
-              </p>
-            </div>
-            <a class="button secondary" href="maquinaria.html">Ver catálogo</a>
+          <h2 id="solutionTitle">Soluciones para procesos industriales</h2>
+          <div class="solution-rail">
+            <a href="maquinaria.html">Corte láser</a>
+            <a href="maquinaria.html">Plasma CNC</a>
+            <a href="maquinaria.html">Oxicorte</a>
+            <a href="servicios.html">Mecanizado</a>
+            <a href="servicios.html">Electricidad</a>
+            <a href="servicios.html">Mantención</a>
           </div>
-          <div class="catalog-grid" data-featured-machines></div>
         </div>
       </section>
 
-      <section class="trust-section">
+      <section class="machine-window" aria-labelledby="machineTitle">
         <div class="ma-container">
-          <div class="section-heading">
+          <div class="compact-heading">
             <div>
-              <span class="eyebrow">Acompañamiento integral</span>
-              <h2>Más que entregar un equipo</h2>
+              <span>Equipos disponibles para cotizar</span>
+              <h2 id="machineTitle">Maquinaria</h2>
             </div>
+            <a href="maquinaria.html">Ver todas las alternativas →</a>
           </div>
-          <div class="trust-grid">
-            <div class="trust-item">
-              <b>Importación directa</b
-              ><span>Búsqueda y configuración según requerimiento.</span>
-            </div>
-            <div class="trust-item">
-              <b>Entrega coordinada</b
-              ><span>Proceso puerta a puerta según alcance acordado.</span>
-            </div>
-            <div class="trust-item">
-              <b>Puesta en marcha</b
-              ><span>Instalación, configuración y pruebas iniciales.</span>
-            </div>
-            <div class="trust-item">
-              <b>Capacitación y soporte</b
-              ><span>Acompañamiento para operar y mantener la solución.</span>
-            </div>
-          </div>
+          <div class="machine-rail" data-machine-showcase></div>
         </div>
       </section>
 
-      <section>
+      <section class="service-shortcuts" aria-labelledby="serviceTitle">
         <div class="ma-container">
-          <div class="section-heading">
+          <div class="compact-heading">
             <div>
-              <span class="eyebrow">Servicios industriales</span>
-              <h2>También ejecutamos el trabajo</h2>
-              <p>
-                Si todavía no necesitas comprar una máquina, MAQELEC puede
-                atender el requerimiento como servicio industrial.
-              </p>
+              <span>También ejecutamos el trabajo</span>
+              <h2 id="serviceTitle">Servicios</h2>
             </div>
-            <a class="button secondary" href="servicios.html">Ver servicios</a>
+            <a href="servicios.html">Ver todos los servicios →</a>
           </div>
-          <div class="catalog-grid" data-featured-services></div>
+          <div class="shortcut-grid">
+            <a href="servicios.html">
+              <strong>01</strong><span>Corte y fabricación</span><b>→</b>
+            </a>
+            <a href="servicios.html">
+              <strong>02</strong><span>Mecanizado y reparación</span><b>→</b>
+            </a>
+            <a href="servicios.html">
+              <strong>03</strong><span>Instalación y soporte</span><b>→</b>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section class="trust-section" data-feature="projects">
-        <div class="ma-container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Trabajos y proyectos</span>
-              <h2>El resultado debe poder verse</h2>
-              <p>
-                La estructura ya está preparada para incorporar fotografías,
-                alcance y resultados de trabajos reales sin rediseñar la web.
-              </p>
-            </div>
-            <a class="button secondary" href="proyectos.html">Ver proyectos</a>
-          </div>
-          <div class="project-grid" data-featured-projects></div>
-        </div>
-      </section>
-
-      <section class="request-section">
-        <div class="ma-container request-grid">
+      <section class="commercial-cta">
+        <div class="ma-container commercial-cta-box">
           <div>
-            <span class="eyebrow">Comencemos por el requerimiento</span>
-            <h2>¿Tienes una máquina, repuesto o trabajo en mente?</h2>
-            <p>
-              Indica el equipo, proceso, código o problema. Ordenaremos la
-              solicitud para responder con una alternativa concreta.
-            </p>
+            <span>¿Tienes una necesidad específica?</span>
+            <h2>Busca por máquina, repuesto o código.</h2>
           </div>
-          <form class="requirement-form" data-requirement-form>
-            <label class="filter-label">
-              <span>Tipo</span>
-              <select name="type" required>
-                <option value="una máquina">Maquinaria</option>
-                <option value="un repuesto">Repuesto</option>
-                <option value="un servicio industrial">Servicio</option>
-              </select>
-            </label>
-            <label class="filter-label">
-              <span>Empresa</span>
-              <input
-                type="text"
-                name="company"
-                placeholder="Nombre de empresa"
-              />
-            </label>
-            <label class="filter-label full">
-              <span>Equipo, código o necesidad</span>
-              <input
-                type="text"
-                name="search"
-                required
-                placeholder="Ej: plasma CNC, código de repuesto o trabajo requerido"
-              />
-            </label>
-            <button class="button primary" type="submit">
-              Enviar requerimiento por WhatsApp
-            </button>
-          </form>
+          <div class="section-actions">
+            <a class="button primary" href="buscar.html">Buscar en MAQELEC</a>
+            <a class="button light" href="contacto.html"
+              >Enviar requerimiento</a
+            >
+          </div>
         </div>
       </section>
     </main>

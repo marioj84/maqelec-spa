@@ -76,6 +76,7 @@
       machinery: {
         state: "preview",
         label: "Maquinaria",
+        navBadge: false,
         dependencies: ["content.machineryCatalog", "channel.whatsapp"],
         selectors: ['a[href="maquinaria.html"]', '[data-feature="machinery"]'],
         previewMessage:
@@ -84,6 +85,7 @@
       parts: {
         state: "preview",
         label: "Repuestos",
+        navBadge: false,
         dependencies: ["content.partsCatalog", "channel.whatsapp"],
         selectors: ['a[href="repuestos.html"]', '[data-feature="parts"]'],
         previewMessage:
@@ -92,6 +94,7 @@
       projects: {
         state: "preview",
         label: "Trabajos y proyectos",
+        navBadge: false,
         dependencies: ["content.realProjects"],
         selectors: ['a[href="proyectos.html"]', '[data-feature="projects"]'],
         previewMessage:
