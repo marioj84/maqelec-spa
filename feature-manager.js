@@ -64,14 +64,6 @@
       });
   }
 
-  function createBadge(name) {
-    const badge = document.createElement("span");
-    badge.className = "mq-feature-badge";
-    badge.dataset.featureGenerated = name;
-    badge.textContent = "Vista previa";
-    return badge;
-  }
-
   function createPreviewNote(name, message) {
     const note = document.createElement("div");
     note.className = "mq-feature-note";
@@ -92,13 +84,6 @@
       element.dataset.featureState = state;
 
       if (state !== "preview") return;
-
-      if (
-        feature.navBadge !== false &&
-        element.matches("nav a, footer a, .ma-menu a")
-      ) {
-        element.appendChild(createBadge(name));
-      }
 
       if (element.matches("section")) {
         const container = element.querySelector(".ma-container, .container");

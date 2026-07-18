@@ -354,18 +354,21 @@ body {
 .ma-whatsapp {
   position: fixed;
   right: 20px;
-  bottom: 18px;
+  top: 50%;
+  bottom: auto;
   z-index: 90;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 18px;
-  background: var(--mq-green);
+  padding: 14px 20px;
+  border: 2px solid #fff;
+  background: #238c39;
   border-radius: 999px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28), 0 0 0 4px rgba(52, 168, 83, 0.18);
   color: #fff;
   font-size: 13px;
   font-weight: 900;
+  transform: translateY(-50%);
 }
 
 .ma-whatsapp img {
@@ -806,8 +809,9 @@ body:not(.jao-inspired) .btn:hover {
 
   .ma-whatsapp {
     right: 12px;
-    bottom: 12px;
-    padding: 11px 14px;
+    top: 50%;
+    bottom: auto;
+    padding: 12px;
   }
 
   .ma-whatsapp span {
