@@ -93,6 +93,15 @@ if (!catalog) {
         `machinery[${index}]: proyecto relacionado inexistente "${item.projectId}".`,
       );
     }
+    if (
+      item.manualUrl &&
+      !/^https?:\/\//.test(item.manualUrl) &&
+      !fs.existsSync(item.manualUrl)
+    ) {
+      errors.push(
+        `machinery[${index}]: manual inexistente "${item.manualUrl}".`,
+      );
+    }
   });
 }
 

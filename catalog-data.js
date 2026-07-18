@@ -201,6 +201,8 @@
           "Capacitación inicial de operación",
           "Soporte técnico y gestión de repuestos",
         ],
+        manualUrl: "output/pdf/guia-preliminar-c0636b-maqelec.pdf",
+        manualLabel: "Guía preliminar MAQELEC · PDF",
         projectId: "proy-torneado-cilindrado",
         source: {
           name: "Ficha técnica WMT C0636B",

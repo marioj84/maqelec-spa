@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_SITE_CONFIG = {
-    version: "1.4.0",
+    version: "1.5.0",
     environment: "preview",
     states: ["off", "preview", "live"],
 
@@ -40,7 +40,7 @@
         label: "Videos industriales optimizados",
       },
       "content.manualFiles": {
-        ready: false,
+        ready: true,
         label: "Manuales descargables vigentes",
       },
       "integration.tracking": {
@@ -103,12 +103,10 @@
         selectors: ['[data-feature="videos"]'],
       },
       manuals: {
-        state: "preview",
+        state: "live",
         label: "Manuales",
         dependencies: ["content.manualFiles"],
         selectors: ['a[href="manuales.html"]', '[data-feature="manuals"]'],
-        previewMessage:
-          "Catálogo de demostración. Las descargas se habilitarán cuando existan documentos técnicos reales y vigentes.",
       },
       tracking: {
         state: "preview",
