@@ -7,6 +7,27 @@
 
     machinery: [
       {
+        id: "maq-q35y20",
+        slug: "punzonadora-cizalla-hidraulica-q35y20",
+        name: "Punzonadora y cizalla hidráulica combinada Q35Y-20",
+        category: "Punzonado y cizallado",
+        modality: "ambas",
+        image:
+          "assets/trabajos-reales/punzonadora-cizalla-vista-general.webp",
+        imageAlt:
+          "Máquina hidráulica combinada Q35Y-20 operando dentro del taller",
+        mediaType: "real",
+        status: "live",
+        summary:
+          "Equipo combinado que MAQELEC utiliza en trabajos reales de punzonado, corte y preparación de perfiles, y que también suministra con instalación y soporte.",
+        specs: [
+          "Modelo visible en el equipo: Q35Y-20",
+          "Estaciones de trabajo a ambos lados",
+          "Punzones y matrices intercambiables",
+          "Instalación, puesta en marcha y soporte técnico",
+        ],
+      },
+      {
         id: "maq-laser-fibra-1500",
         slug: "corte-laser-fibra-1500w",
         name: "Equipo de corte láser fibra 1500 W",
@@ -188,12 +209,28 @@
           "Vista general de la punzonadora y cizalla hidráulica combinada en el taller",
         gallery: [
           {
-            src: "assets/trabajos-reales/punzonadora-hidraulica-operacion.webp",
-            alt: "Operación de punzonado hidráulico de una pieza metálica",
+            src: "assets/trabajos-reales/q35y20-doble-estacion.webp",
+            alt: "Dos operarios trabajando simultáneamente en las estaciones laterales de la Q35Y-20",
           },
           {
-            src: "assets/trabajos-reales/punzonado-hidraulico-detalle.webp",
-            alt: "Detalle del punzón y la matriz durante el trabajo",
+            src: "assets/trabajos-reales/q35y20-punzones-matrices.webp",
+            alt: "Punzones y matrices intercambiables de diferentes diámetros",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-operador-punzonado.webp",
+            alt: "Operario preparando una pieza en la estación de punzonado hidráulico",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-punzonado-primer-plano.webp",
+            alt: "Detalle del punzón hidráulico trabajando sobre una pieza metálica",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-estacion-cizalla.webp",
+            alt: "Estación lateral de corte, cizallado y preparación de perfiles",
+          },
+          {
+            src: "assets/trabajos-reales/q35y20-modelo.webp",
+            alt: "Identificación visible del modelo Q35Y-20 en la máquina",
           },
           {
             src: "assets/trabajos-reales/equipo-q35y20-frontal.webp",
@@ -201,20 +238,18 @@
           },
           {
             src: "assets/trabajos-reales/estaciones-punzonado-corte.webp",
-            alt: "Detalle de las estaciones de trabajo del equipo combinado",
+            alt: "Detalle de las estaciones de punzonado, corte y entallado",
           },
-          {
-            src: "assets/trabajos-reales/punzonado-hidraulico-vista-frontal.webp",
-            alt: "Vista frontal del punzón hidráulico preparado para trabajar",
-          },
-          {
-            src: "assets/trabajos-reales/equipo-q35y20-identificacion.webp",
-            alt: "Identificación del modelo Q35Y-20 en el equipo combinado",
-          },
+        ],
+        processSteps: [
+          "Recorte inicial del material en la estación de corte o cizallado",
+          "Preparación de un perfil previo con caras planas",
+          "Traslado de la pieza al torno convencional",
+          "Cilindrado exterior hasta obtener el diámetro final",
         ],
         status: "live",
         summary:
-          "Trabajo real con una punzonadora y cizalla hidráulica combinada para realizar perforaciones, cortes y formas mediante matrices intercambiables.",
+          "Trabajo real con la Q35Y-20 en sus distintas estaciones. En este proceso se recortó primero el material para preparar el perfil que después continuó a la etapa de cilindrado en torno.",
       },
       {
         id: "proy-torneado-cilindrado",
@@ -245,6 +280,12 @@
             src: "assets/trabajos-reales/torno-convencional-vista-general.webp",
             alt: "Vista general del torno convencional utilizado para el mecanizado",
           },
+        ],
+        processSteps: [
+          "Recepción de la pieza preparada en la etapa de corte",
+          "Montaje y sujeción del perfil en el plato del torno",
+          "Giro, lubricación y avance controlado de la herramienta",
+          "Terminación cilíndrica del diámetro exterior",
         ],
         status: "live",
         summary:

@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_SITE_CONFIG = {
-    version: "1.2.0",
+    version: "1.3.0",
     environment: "preview",
     states: ["off", "preview", "live"],
 
@@ -24,7 +24,7 @@
         label: "Catálogo de servicios",
       },
       "content.machineryCatalog": {
-        ready: false,
+        ready: true,
         label: "Fichas técnicas y fotografías validadas de maquinaria",
       },
       "content.partsCatalog": {
@@ -74,13 +74,11 @@
         ],
       },
       machinery: {
-        state: "preview",
+        state: "live",
         label: "Maquinaria",
         navBadge: false,
         dependencies: ["content.machineryCatalog", "channel.whatsapp"],
         selectors: ['a[href="maquinaria.html"]', '[data-feature="machinery"]'],
-        previewMessage:
-          "Las familias de equipos son una base comercial; fotografías, marcas, modelos y fichas definitivas se publicarán solo después de validarlas.",
       },
       parts: {
         state: "preview",

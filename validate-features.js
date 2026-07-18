@@ -67,7 +67,7 @@ if (!catalog) {
     );
   }
 
-  ["services", "projects"].forEach((collection) => {
+  ["machinery", "services", "projects"].forEach((collection) => {
     (catalog[collection] || []).forEach((item, index) => {
       const media = [item.image, ...(item.gallery || []).map((entry) => entry.src)]
         .filter(Boolean)
