@@ -40,16 +40,24 @@
     const specs = item.specs
       .map((spec) => `<li>${escapeHTML(spec)}</li>`)
       .join("");
+    const visual = item.image
+      ? `<div class="machine-visual machine-visual-photo">
+          <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy">
+          <span>${item.mediaType === "real" ? "Equipo real" : "Imagen referencial"}</span>
+        </div>`
+      : `<div class="machine-visual" aria-hidden="true">
+          <span>${escapeHTML(item.category)}</span>
+          <strong>MAQELEC</strong>
+        </div>`;
+    const statusLabel =
+      item.status === "live" ? "Equipo real" : "Ficha en preparación";
     return `
       <article class="catalog-card machine-card" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary, ...item.specs].join(" "),
       )}">
-        <div class="machine-visual" aria-hidden="true">
-          <span>${escapeHTML(item.category)}</span>
-          <strong>MAQELEC</strong>
-        </div>
+        ${visual}
         <div class="catalog-card-body">
-          <div class="card-meta"><span>${escapeHTML(item.category)}</span><span class="status-pill">Ficha en preparación</span></div>
+          <div class="card-meta"><span>${escapeHTML(item.category)}</span><span class="status-pill">${statusLabel}</span></div>
           <h3>${escapeHTML(item.name)}</h3>
           <p>${escapeHTML(item.summary)}</p>
           <ul>${specs}</ul>
@@ -84,14 +92,20 @@
   }
 
   function compactMachineCard(item) {
+    const visual = item.image
+      ? `<div class="machine-teaser-visual machine-teaser-photo">
+          <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy">
+          <span>${item.mediaType === "real" ? "Equipo real" : "Imagen referencial"}</span>
+        </div>`
+      : `<div class="machine-teaser-visual" aria-hidden="true">
+          <span>${escapeHTML(item.category)}</span>
+          <strong>MAQELEC</strong>
+        </div>`;
     return `
       <a class="machine-teaser" href="maquinaria.html" data-searchable="${escapeHTML(
         [item.name, item.category].join(" "),
       )}">
-        <div class="machine-teaser-visual">
-          <span>${escapeHTML(item.category)}</span>
-          <strong>MAQELEC</strong>
-        </div>
+        ${visual}
         <div class="machine-teaser-copy">
           <small>${escapeHTML(modalityLabel(item.modality))}</small>
           <h3>${escapeHTML(item.name)}</h3>
@@ -107,6 +121,9 @@
           `<img src="${escapeHTML(image.src)}" alt="${escapeHTML(image.alt || "")}" loading="lazy">`,
       )
       .join("");
+    const steps = (item.processSteps || [])
+      .map((step) => `<li>${escapeHTML(step)}</li>`)
+      .join("");
     return `
       <article class="project-card${gallery ? " project-card-featured" : ""}" data-searchable="${escapeHTML(
         [item.title, item.type, item.summary].join(" "),
@@ -120,6 +137,7 @@
           <small>${escapeHTML(item.type)}</small>
           <h3>${escapeHTML(item.title)}</h3>
           <p>${escapeHTML(item.summary)}</p>
+          ${steps ? `<ol class="project-steps">${steps}</ol>` : ""}
         </div>
       </article>`;
   }

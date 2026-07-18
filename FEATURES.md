@@ -68,6 +68,7 @@ Cada registro utiliza un `id` estable, un `slug` cuando corresponde y campos de 
 - `preview`: estructura o familia comercial pendiente de fotos, modelo o ficha definitiva.
 - Nunca publicar precios, stock, compatibilidades o códigos sin validación.
 - Las imágenes reales se identifican como `mediaType: "real"`; las imágenes de maqueta que aún permanezcan se marcan visiblemente como referenciales.
+- La maquinaria puede combinar fichas `live` de equipos reales con familias `preview` pendientes de validación técnica; MAQELEC puede vender o importar los equipos, utilizarlos para prestar servicios y ofrecer instalación, puesta en marcha y soporte.
 - La sección de proyectos está activa con casos reales de punzonado y corte hidráulico, torneado y cilindrado, esmerilado, mecanizado, fabricación soldada y piezas metálicas.
 
 ## Estructura visual compartida

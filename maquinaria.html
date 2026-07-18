@@ -11,15 +11,15 @@
     <link rel="icon" href="favicon.png" />
     <link rel="stylesheet" href="site-shell.css?v=20260718-1" />
     <link rel="stylesheet" href="feature-manager.css?v=20260718-1" />
-    <link rel="stylesheet" href="catalog.css?v=20260718-4" />
+    <link rel="stylesheet" href="catalog.css?v=20260718-5" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script src="site-config.js?v=20260718-2"></script>
-    <script src="catalog-data.js?v=20260718-4"></script>
+    <script src="site-config.js?v=20260718-3"></script>
+    <script src="catalog-data.js?v=20260718-5"></script>
     <script src="site-shell.js?v=20260718-1" defer></script>
-    <script src="catalog.js?v=20260718-2" defer></script>
+    <script src="catalog.js?v=20260718-3" defer></script>
     <script src="feature-manager.js?v=20260718-2" defer></script>
   </head>
   <body class="catalog-site" data-page-feature="machinery">
@@ -29,9 +29,9 @@
           <span class="eyebrow">Venta e importación</span>
           <h1>Maquinaria industrial</h1>
           <p>
-            Equipos configurados según proceso, producción y condiciones de
-            operación, con alternativas de suministro, importación, puesta en
-            marcha y capacitación.
+            Equipos que MAQELEC puede suministrar o importar y, cuando existe
+            experiencia directa en taller, demostrar mediante trabajos reales,
+            con puesta en marcha, capacitación y soporte.
           </p>
         </div>
       </section>
@@ -45,9 +45,11 @@
                 data-machine-filter
                 list="machineSuggestions"
                 autocomplete="off"
-                placeholder="Ej: láser 3000 W, plasma CNC, oxicorte"
+                placeholder="Ej: Q35Y-20, punzonadora, plasma CNC, oxicorte"
               />
               <datalist id="machineSuggestions">
+                <option value="Q35Y-20"></option>
+                <option value="Punzonadora y cizalla hidráulica"></option>
                 <option value="Corte láser"></option>
                 <option value="Equipo de corte láser fibra 1500 W"></option>
                 <option value="Equipo de corte láser fibra 3000 W"></option>
@@ -101,6 +103,7 @@
             <label class="filter-label"
               ><span>Proceso</span
               ><select name="process">
+                <option>Punzonado y cizallado</option>
                 <option>Corte láser</option>
                 <option>Plasma CNC</option>
                 <option>Oxicorte</option>
