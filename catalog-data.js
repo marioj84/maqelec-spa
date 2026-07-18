@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_CATALOG = {
-    schemaVersion: "1.2.0",
+    schemaVersion: "1.3.0",
     lastUpdated: "2026-07-18",
 
     machinery: [
@@ -242,18 +242,102 @@
       },
       {
         id: "maq-plasma-cnc",
-        slug: "plasma-cnc",
-        name: "Sistema de corte plasma CNC",
+        slug: "mesa-corte-plasma-cnc-thc-f1621",
+        name: "Mesa de corte plasma CNC con THC F1621",
         category: "Plasma CNC",
         modality: "ambas",
-        status: "preview",
+        image: "assets/trabajos-reales/plasma-cnc-vista-general.webp",
+        imageAlt:
+          "Mesa de corte plasma CNC utilizada por MAQELEC con controlador de altura F1621",
+        mediaType: "real",
+        status: "live",
         summary:
-          "Sistema configurable para corte de planchas y fabricación metalmecánica, con alternativas de suministro e importación.",
+          "Sistema CNC para corte automatizado de planchas metálicas. MAQELEC trabaja con esta mesa, presta el servicio de corte y puede suministrar una configuración equivalente con instalación y soporte.",
         specs: [
-          "Configuración 220/380 V",
-          "Mesa y fuente según proyecto",
-          "Soporte de instalación",
+          "Control automático de altura de antorcha F1621",
+          "Seguimiento por tensión de arco",
+          "Mesa, fuente plasma y área útil según proyecto",
+          "Instalación, puesta en marcha y soporte técnico",
         ],
+        gallery: [
+          {
+            src: "assets/trabajos-reales/plasma-cnc-vista-general.webp",
+            alt: "Vista general de la mesa plasma CNC durante un corte real",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-mesa-operacion.webp",
+            alt: "Mesa de corte plasma CNC trabajando sobre una plancha metálica",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-antorcha-corte.webp",
+            alt: "Antorcha de plasma siguiendo una trayectoria programada",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-corte-primer-plano.webp",
+            alt: "Primer plano del arco de plasma realizando un corte recto",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-panel-control.webp",
+            alt: "Control CNC y controlador de altura instalados en la mesa",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-f1621-controlador-altura.webp",
+            alt: "Panel del controlador de altura de antorcha F1621",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-operador.webp",
+            alt: "Operador supervisando el corte plasma CNC",
+          },
+        ],
+        keyFacts: [
+          { value: "F1621", label: "Controlador THC" },
+          { value: "24 VDC", label: "Alimentación THC" },
+          { value: "0–3 A", label: "Salida de motor" },
+          { value: "100 W", label: "Carga THC" },
+        ],
+        description: [
+          "La mesa plasma CNC desplaza la antorcha sobre una trayectoria programada para producir piezas y contornos en planchas metálicas conductoras. El sistema real fotografiado incorpora control numérico, pórtico móvil, fuente plasma y un controlador automático de altura F1621.",
+          "F1621 identifica específicamente el controlador THC, no el modelo completo de la mesa. Este componente mide la tensión del arco y ajusta en tiempo real la separación entre antorcha y material. El área útil, la fuente plasma, el amperaje, los motores y la capacidad de corte deben definirse para cada configuración.",
+        ],
+        operations: [
+          "Corte automatizado de contornos y piezas desde archivo CNC",
+          "Trazados rectos, curvas, perforaciones y geometrías repetibles",
+          "Producción de componentes para fabricación metalmecánica",
+          "Control inicial y seguimiento automático de altura de antorcha",
+          "Preparación de piezas para soldadura, armado y terminaciones",
+        ],
+        technicalSpecs: [
+          { label: "Sistema fotografiado", value: "Mesa de corte plasma CNC tipo pórtico" },
+          { label: "Controlador de altura", value: "Fangling F1621 THC" },
+          { label: "Principio de control", value: "Seguimiento por tensión de arco" },
+          { label: "Tensión nominal del THC", value: "24 VDC" },
+          { label: "Rango nominal de alimentación", value: "21,6–26,4 VDC" },
+          { label: "Motor de elevación", value: "24 VDC" },
+          { label: "Accionamiento del motor", value: "PWM" },
+          { label: "Corriente de salida", value: "0–3 A" },
+          { label: "Capacidad de carga", value: "100 W" },
+          { label: "Detección de altura inicial", value: "Proximidad o contacto del capuchón, según instalación" },
+          { label: "Interfaz CNC", value: "Señales aisladas por optoacoplador" },
+          { label: "Temperatura de trabajo THC", value: "0–50 °C" },
+          { label: "Humedad relativa", value: "5–95 %" },
+          { label: "Área útil de mesa", value: "Por confirmar en cada configuración" },
+          { label: "Fuente plasma y amperaje", value: "Por confirmar según material y espesor" },
+        ],
+        includedServices: [
+          "Levantamiento de material, espesor, formato y producción",
+          "Suministro local o gestión de importación del sistema",
+          "Integración de mesa, fuente plasma, CNC y control de altura",
+          "Instalación, puesta en marcha y pruebas de corte",
+          "Capacitación inicial, soporte técnico y consumibles",
+        ],
+        manualUrl: "output/pdf/guia-preliminar-plasma-cnc-f1621-maqelec.pdf",
+        manualLabel: "Guía preliminar MAQELEC · PDF",
+        projectId: "proy-corte-plasma-cnc",
+        source: {
+          name: "Manual oficial ARCBRO/Fangling F1621",
+          url: "https://www.arcbro.com/wp-content/uploads/2021/02/Scout2-THC-F1621-Manual-EN.pdf",
+          note: "Los datos publicados corresponden al controlador THC F1621. La mesa, la fuente plasma y su capacidad final deben confirmarse en cada propuesta.",
+        },
       },
       {
         id: "maq-oxicorte",
@@ -300,15 +384,15 @@
       {
         id: "srv-corte",
         slug: "corte-cnc-y-oxicorte",
-        name: "Corte CNC y oxicorte",
+        name: "Corte plasma CNC y oxicorte",
         category: "Fabricación",
-        image: "assets/trabajos-reales/piezas-metalicas-fabricadas.webp",
+        image: "assets/trabajos-reales/plasma-cnc-antorcha-corte.webp",
         imageAlt:
-          "Conjunto real de piezas metálicas fabricadas en diferentes formas y tamaños",
+          "Antorcha de plasma CNC cortando una plancha metálica en el taller",
         mediaType: "real",
         status: "live",
         summary:
-          "Ejecución de trabajos de corte para piezas y proyectos metalmecánicos según plano o requerimiento.",
+          "Corte automatizado de planchas y ejecución de piezas para proyectos metalmecánicos según plano, material y requerimiento.",
       },
       {
         id: "srv-esmerilado",
@@ -382,6 +466,50 @@
     ],
 
     projects: [
+      {
+        id: "proy-corte-plasma-cnc",
+        title: "Corte de planchas en mesa plasma CNC",
+        type: "Corte CNC y fabricación",
+        image: "assets/trabajos-reales/plasma-cnc-mesa-operacion.webp",
+        imageAlt:
+          "Mesa de plasma CNC cortando una plancha metálica con proyección de chispas",
+        gallery: [
+          {
+            src: "assets/trabajos-reales/plasma-cnc-vista-general.webp",
+            alt: "Vista general del pórtico, la mesa y el operador durante el corte",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-antorcha-corte.webp",
+            alt: "Antorcha recorriendo una geometría programada sobre la plancha",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-corte-primer-plano.webp",
+            alt: "Detalle del arco y la ranura producida por el plasma",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-panel-control.webp",
+            alt: "Control numérico instalado junto al pórtico de la mesa",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-f1621-controlador-altura.webp",
+            alt: "Controlador THC F1621 utilizado para regular la altura de antorcha",
+          },
+          {
+            src: "assets/trabajos-reales/plasma-cnc-operador.webp",
+            alt: "Operador supervisando el proceso de corte CNC",
+          },
+        ],
+        processSteps: [
+          "Preparación del archivo y definición de la trayectoria de corte",
+          "Carga y posicionamiento seguro de la plancha",
+          "Verificación de consumibles, altura inicial y parámetros de proceso",
+          "Ejecución CNC con seguimiento automático de altura F1621",
+          "Retiro, identificación y terminación de las piezas cortadas",
+        ],
+        status: "live",
+        summary:
+          "Proceso real de corte plasma sobre plancha metálica con desplazamiento CNC y control automático de altura de antorcha. MAQELEC ejecuta el servicio y también integra equipos con instalación y soporte.",
+      },
       {
         id: "proy-punzonado-hidraulico",
         title: "Punzonado y corte hidráulico de metal",
