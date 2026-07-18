@@ -107,6 +107,19 @@
           "Ejecución de trabajos de corte para piezas y proyectos metalmecánicos según plano o requerimiento.",
       },
       {
+        id: "srv-esmerilado",
+        slug: "esmerilado-y-terminaciones",
+        name: "Esmerilado y terminaciones",
+        category: "Terminaciones",
+        image: "assets/trabajos-reales/esmerilado-piezas-operacion.webp",
+        imageAlt:
+          "Operario realizando esmerilado de piezas metálicas con proyección de chispas",
+        mediaType: "real",
+        status: "live",
+        summary:
+          "Desbaste, limpieza de bordes y preparación de piezas metálicas después del corte o antes de su armado.",
+      },
+      {
         id: "srv-mecanizado",
         slug: "mecanizado-industrial",
         name: "Mecanizado industrial",
@@ -246,10 +259,22 @@
             src: "assets/trabajos-reales/piezas-metalicas-detalle.webp",
             alt: "Detalle de piezas metálicas terminadas con perforaciones y ranuras",
           },
+          {
+            src: "assets/trabajos-reales/esmerilado-piezas-chispas.webp",
+            alt: "Piezas metálicas durante el proceso de esmerilado con chispas al fondo",
+          },
+          {
+            src: "assets/trabajos-reales/esmerilado-piezas-operacion.webp",
+            alt: "Operario esmerilando y terminando piezas metálicas en el taller",
+          },
+          {
+            src: "assets/trabajos-reales/esmerilado-piezas-taller.webp",
+            alt: "Esmerilado manual de una pieza metálica con elementos de protección personal",
+          },
         ],
         status: "live",
         summary:
-          "Producción de piezas con distintas formas y perforaciones, seleccionando el proceso según su geometría y tamaño; las piezas mayores incluyen trabajos de oxicorte.",
+          "Producción de piezas con distintas formas y perforaciones, seleccionando el corte según su geometría y tamaño; las piezas mayores incluyen oxicorte y el acabado contempla esmerilado de bordes.",
       },
     ],
   };
