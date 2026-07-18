@@ -2,7 +2,7 @@
   "use strict";
 
   window.MAQELEC_CATALOG = {
-    schemaVersion: "1.4.0",
+    schemaVersion: "1.5.0",
     lastUpdated: "2026-07-18",
 
     machinery: [
@@ -208,6 +208,91 @@
           name: "Ficha técnica WMT C0636B",
           url: "https://cncwmt.com/product/c0636b/",
           note: "La apertura del husillo y otros componentes dependen de la configuración. Confirmar la variante final antes de cotizar.",
+        },
+      },
+      {
+        id: "maq-zay7045fg",
+        slug: "taladro-fresador-engranado-dtm-zay7045fg",
+        name: "Taladro fresador engranado DTM ZAY7045FG",
+        category: "Taladrado y fresado",
+        modality: "ambas",
+        image:
+          "assets/trabajos-reales/taladro-fresador-zay7045fg-vista-general.webp",
+        imageAlt:
+          "Taladro fresador engranado DTM ZAY7045FG utilizado en el taller",
+        mediaType: "real",
+        status: "live",
+        summary:
+          "Máquina combinada para perforado y fresado de piezas metálicas. MAQELEC trabaja con este equipo y también puede suministrarlo con instalación, puesta en marcha y soporte.",
+        specs: [
+          "Capacidad máxima de perforación: Ø45 mm",
+          "Fresado frontal: Ø80 mm",
+          "Mesa de trabajo: 800 × 240 mm",
+          "Instalación, puesta en marcha y soporte técnico",
+        ],
+        gallery: [
+          {
+            src: "assets/trabajos-reales/taladro-fresador-zay7045fg-vista-general.webp",
+            alt: "Vista general real del taladro fresador engranado DTM ZAY7045FG",
+          },
+          {
+            src: "assets/trabajos-reales/taladro-fresador-zay7045fg-husillo-mordaza.webp",
+            alt: "Detalle del cabezal, husillo, portabrocas y mordaza del ZAY7045FG",
+          },
+          {
+            src: "assets/trabajos-reales/taladro-fresador-zay7045fg-mesa-volantes.webp",
+            alt: "Detalle de la mesa, mordaza y volantes de avance del taladro fresador",
+          },
+        ],
+        keyFacts: [
+          { value: "Ø45 mm", label: "Perforación máxima" },
+          { value: "1,5 kW", label: "Motor principal" },
+          { value: "6 pasos", label: "Velocidades del husillo" },
+          { value: "323 kg", label: "Peso neto" },
+        ],
+        description: [
+          "El ZAY7045FG reúne funciones de taladrado y fresado en una estructura engranada de taller. Su mesa con movimientos longitudinal y transversal permite posicionar la pieza para perforaciones, ranuras, planeado y mecanizados de precisión.",
+          "El cabezal inclinable amplía las posibilidades de trabajo angular. MAQELEC puede orientar la configuración, suministrar o importar el equipo y acompañar la instalación, nivelación, puesta en marcha y soporte posterior.",
+        ],
+        operations: [
+          "Perforado de piezas metálicas hasta Ø45 mm",
+          "Fresado frontal hasta Ø80 mm",
+          "Fresado con fresa de extremo hasta Ø32 mm",
+          "Ranurado, planeado y preparación de superficies",
+          "Trabajos angulares mediante inclinación del cabezal hasta ±90°",
+          "Fabricación, ajuste y recuperación de componentes",
+        ],
+        technicalSpecs: [
+          { label: "Modelo de referencia", value: "ZAY7045FG" },
+          { label: "Capacidad máxima de perforación", value: "Ø45 mm" },
+          { label: "Capacidad de fresado frontal", value: "Ø80 mm" },
+          { label: "Capacidad de fresado de extremo", value: "Ø32 mm" },
+          { label: "Cono del husillo", value: "MT4 o R8, según configuración" },
+          { label: "Recorrido del husillo", value: "130 mm" },
+          { label: "Velocidades del husillo", value: "6 pasos" },
+          { label: "Rango a 50 Hz", value: "80–1250 rpm" },
+          { label: "Rango a 60 Hz", value: "95–1500 rpm" },
+          { label: "Distancia máxima husillo–mesa", value: "450 mm" },
+          { label: "Distancia husillo–columna", value: "260 mm" },
+          { label: "Inclinación del cabezal", value: "±90°" },
+          { label: "Dimensiones de la mesa", value: "800 × 240 mm" },
+          { label: "Recorrido longitudinal de mesa", value: "500 mm" },
+          { label: "Recorrido transversal de mesa", value: "175 mm" },
+          { label: "Motor principal", value: "1,5 kW" },
+          { label: "Peso neto / bruto", value: "323 / 373 kg" },
+        ],
+        includedServices: [
+          "Evaluación de piezas, materiales y procesos previstos",
+          "Selección de configuración y accesorios",
+          "Suministro local o gestión de importación",
+          "Entrega, instalación, nivelación y puesta en marcha",
+          "Inducción inicial para operadores",
+          "Soporte técnico y gestión de repuestos",
+        ],
+        source: {
+          name: "Ficha técnica Dintass Motori ZAY7045FG",
+          url: "https://www.dintassmotori.cl/products/taladro-fresador-engranado-dtm-zay7045fg",
+          note: "Especificaciones referenciales de la configuración publicada. El cono, la alimentación eléctrica, los accesorios y la capacidad final deben confirmarse en la cotización.",
         },
       },
       {
