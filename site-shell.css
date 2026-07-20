@@ -316,8 +316,8 @@ body {
 
 .ma-footer-grid {
   display: grid;
-  grid-template-columns: 1.1fr repeat(3, 1fr);
-  gap: 54px;
+  grid-template-columns: 1.15fr repeat(4, 1fr);
+  gap: 32px;
 }
 
 .ma-footer img {
@@ -787,6 +787,11 @@ body:not(.jao-inspired) .btn:hover {
 
   .ma-footer-grid > div:nth-child(3) h4 {
     grid-column: 1 / -1;
+  }
+
+  .ma-footer-grid > div:nth-child(5) {
+    grid-column: 1 / -1;
+    grid-row: 4;
   }
 
   .ma-footer h4 {

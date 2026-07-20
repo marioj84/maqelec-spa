@@ -36,6 +36,20 @@
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   }
 
+  function machinePageUrl(item) {
+    return item.technicalSpecs && item.slug
+      ? `maquina-${encodeURIComponent(item.slug)}.html`
+      : "maquinaria.html";
+  }
+
+  function servicePageUrl(item) {
+    return item.slug ? `servicio-${encodeURIComponent(item.slug)}.html` : "servicios.html";
+  }
+
+  function projectPageUrl(item) {
+    return item.id ? `proyecto-${encodeURIComponent(item.id.replace(/^proy-/, ""))}.html` : "proyectos.html";
+  }
+
   function machineCard(item) {
     const specs = item.specs
       .map((spec) => `<li>${escapeHTML(spec)}</li>`)
@@ -52,7 +66,7 @@
     const statusLabel =
       item.status === "live" ? "Equipo real" : "Ficha en preparación";
     return `
-      <article class="catalog-card machine-card" data-searchable="${escapeHTML(
+      <article id="${escapeHTML(item.id)}" class="catalog-card machine-card" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary, ...item.specs].join(" "),
       )}">
         ${visual}
@@ -64,7 +78,7 @@
           <div class="card-footer">
             <b>${escapeHTML(modalityLabel(item.modality))}</b>
             <div class="card-links">
-              ${item.technicalSpecs ? `<a href="maquina.html?id=${encodeURIComponent(item.id)}">Ver ficha técnica →</a>` : ""}
+              ${item.technicalSpecs ? `<a href="${machinePageUrl(item)}">Ver ficha técnica →</a>` : ""}
               <a href="${whatsappLink(`Hola MAQELEC, quiero cotizar: ${item.name}`)}" target="_blank" rel="noopener noreferrer">Cotizar equipo →</a>
             </div>
           </div>
@@ -76,14 +90,14 @@
     const hasPhoto = Boolean(item.image);
     if (!hasPhoto) {
       return `
-        <article class="catalog-card service-card service-card-text" data-searchable="${escapeHTML(
+        <article id="${escapeHTML(item.id)}" class="catalog-card service-card service-card-text" data-searchable="${escapeHTML(
           [item.name, item.category, item.summary].join(" "),
         )}">
           <div class="catalog-card-body">
             <div class="card-meta"><span>${escapeHTML(item.category)}</span><span>Disponible a consulta</span></div>
             <h3>${escapeHTML(item.name)}</h3>
             <p>${escapeHTML(item.summary)}</p>
-            <a class="text-link" href="${whatsappLink(`Hola MAQELEC, necesito cotizar el servicio: ${item.name}`)}" target="_blank" rel="noopener noreferrer">Consultar servicio →</a>
+            <a class="text-link" href="${servicePageUrl(item)}">Ver servicio →</a>
           </div>
         </article>`;
     }
@@ -91,7 +105,7 @@
       ? '<span class="real-media-label">Trabajo real</span>'
       : '<span class="real-media-label">Imagen referencial</span>';
     return `
-      <article class="catalog-card service-card" data-searchable="${escapeHTML(
+      <article id="${escapeHTML(item.id)}" class="catalog-card service-card" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary].join(" "),
       )}">
         <div class="service-image">
@@ -102,7 +116,7 @@
           <div class="card-meta"><span>${escapeHTML(item.category)}</span></div>
           <h3>${escapeHTML(item.name)}</h3>
           <p>${escapeHTML(item.summary)}</p>
-          <a class="text-link" href="${whatsappLink(`Hola MAQELEC, necesito cotizar el servicio: ${item.name}`)}" target="_blank" rel="noopener noreferrer">Cotizar servicio →</a>
+          <div class="card-links"><a class="text-link" href="${servicePageUrl(item)}">Ver servicio →</a><a class="text-link" href="${whatsappLink(`Hola MAQELEC, necesito cotizar el servicio: ${item.name}`)}" target="_blank" rel="noopener noreferrer">Consultar →</a></div>
         </div>
       </article>`;
   }
@@ -118,7 +132,7 @@
           <strong>MAQELEC</strong>
         </div>`;
     return `
-      <a class="machine-teaser" href="${item.technicalSpecs ? `maquina.html?id=${encodeURIComponent(item.id)}` : "maquinaria.html"}" data-searchable="${escapeHTML(
+      <a class="machine-teaser" href="${machinePageUrl(item)}" data-searchable="${escapeHTML(
         [item.name, item.category].join(" "),
       )}">
         ${visual}
@@ -160,6 +174,7 @@
             <div><dt>Resultado</dt><dd>${escapeHTML(caseStudy.result)}</dd></div>
           </dl>
           ${steps ? `<details class="project-process"><summary>Ver proceso paso a paso</summary><ol class="project-steps">${steps}</ol></details>` : ""}
+          <a class="text-link" href="${projectPageUrl(item)}">Abrir caso documentado →</a>
         </div>
       </article>`;
   }
@@ -234,9 +249,7 @@
     const records = [
       ...data.machinery.map((item) => ({
         type: "Maquinaria",
-        href: item.technicalSpecs
-          ? `maquina.html?id=${encodeURIComponent(item.id)}`
-          : "maquinaria.html",
+        href: machinePageUrl(item),
         title: item.name,
         text: item.summary,
         searchable: [
@@ -248,14 +261,14 @@
       })),
       ...data.services.map((item) => ({
         type: "Servicio",
-        href: "servicios.html",
+        href: servicePageUrl(item),
         title: item.name,
         text: item.summary,
         searchable: [item.name, item.category, item.summary].join(" "),
       })),
       ...data.projects.map((item) => ({
         type: "Proyecto",
-        href: "proyectos.html",
+        href: projectPageUrl(item),
         title: item.title,
         text: item.summary,
         searchable: [item.title, item.type, item.summary].join(" "),
@@ -293,7 +306,7 @@
     if (!mount) return;
 
     const params = new URLSearchParams(window.location.search);
-    const requested = params.get("id") || "";
+    const requested = params.get("id") || document.body.dataset.machineId || "";
     const item = data.machinery.find(
       (machine) => machine.id === requested || machine.slug === requested,
     );

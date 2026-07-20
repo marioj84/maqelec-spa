@@ -78,7 +78,7 @@
         label: "Maquinaria",
         navBadge: false,
         dependencies: ["content.machineryCatalog", "channel.whatsapp"],
-        selectors: ['a[href="maquinaria.html"]', '[data-feature="machinery"]'],
+        selectors: ['a[href="maquinaria.html"]', 'a[href^="maquina-"]', '[data-feature="machinery"]'],
       },
       parts: {
         state: "off",
@@ -136,6 +136,18 @@
         dependencies: ["core.navigation", "channel.whatsapp"],
         selectors: ['a[href="buscar.html"]'],
       },
+      company: {
+        state: "live",
+        label: "Quiénes somos",
+        dependencies: ["core.brand", "core.navigation", "channel.whatsapp"],
+        selectors: ['a[href="quienes-somos.html"]'],
+      },
+      guides: {
+        state: "live",
+        label: "Guías técnicas",
+        dependencies: ["core.navigation", "content.machineryCatalog", "content.services"],
+        selectors: ['a[href="guias.html"]', '[data-feature="guides"]'],
+      },
     },
 
     pages: {
@@ -150,6 +162,10 @@
       "manuales.html": "manuals",
       "seguimiento.html": "tracking",
       "vip.html": "technicalCenter",
+      "quienes-somos.html": "company",
+      "guias.html": "guides",
+      "guia-cotizar-corte-plasma-cnc.html": "guides",
+      "guia-elegir-maquinaria-industrial.html": "guides",
     },
   };
 })();
