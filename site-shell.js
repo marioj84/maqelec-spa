@@ -64,6 +64,7 @@
                 <div class="ma-service-dropdown" id="serviceDropdown">
                   <a href="maquinaria.html"><strong>Maquinaria</strong><span>Equipos para suministro o importación.</span></a>
                   <a href="servicios.html"><strong>Servicios</strong><span>Trabajos industriales ejecutados por MAQELEC.</span></a>
+                  <a href="guias.html"><strong>Guías técnicas</strong><span>Criterios para evaluar equipos, procesos y cotizaciones.</span></a>
                 </div>
               </div>
 
@@ -110,6 +111,12 @@
               <a href="manuales.html" data-feature="manuals">Manuales</a>
               <a href="vip.html" data-feature="technicalCenter">Centro Técnico</a>
               <a href="buscar.html">Buscar en el sitio</a>
+            </div>
+            <div>
+              <h4>MAQELEC</h4>
+              <a href="quienes-somos.html">Quiénes somos</a>
+              <a href="guias.html">Guías técnicas</a>
+              <p>Base de atención en Santiago · Proyectos coordinados en Chile</p>
             </div>
           </div>
           <div class="ma-copy">© 2026 MAQELEC SpA · Todos los derechos reservados</div>
@@ -211,11 +218,11 @@
   }
 
   function injectStructuredData() {
-    if (document.querySelector("[data-maqelec-schema]")) return;
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.dataset.maqelecSchema = "";
-    script.textContent = JSON.stringify({
+    if (!document.querySelector("[data-maqelec-schema]")) {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.dataset.maqelecSchema = "";
+      script.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "MAQELEC SpA",
@@ -223,17 +230,22 @@
       logo: "https://maqelec.cl/logo.png",
       telephone: "+56991514957",
       email: "contacto@maqelec.cl",
-      areaServed: "CL",
-      founder: { "@type": "Person", name: "Patricio Palma" },
+      description: "Empresa chilena de maquinaria y servicios industriales: suministro e importación de equipos, corte plasma CNC, punzonado, mecanizado, fabricación, instalación, puesta en marcha y soporte técnico.",
+      address: { "@type": "PostalAddress", addressLocality: "Santiago", addressCountry: "CL" },
+      areaServed: { "@type": "Country", name: "Chile" },
+      sameAs: ["https://www.instagram.com/maqelec.spa/"],
+      knowsAbout: ["maquinaria industrial", "corte plasma CNC", "punzonado y cizallado", "mecanizado industrial", "fabricación metalmecánica", "puesta en marcha de maquinaria"],
       contactPoint: [{
         "@type": "ContactPoint",
         telephone: "+56991514957",
+        email: "contacto@maqelec.cl",
         contactType: "ventas y soporte técnico",
         areaServed: "CL",
         availableLanguage: "es"
       }]
-    });
-    document.head.appendChild(script);
+      });
+      document.head.appendChild(script);
+    }
 
     const cleanPath = window.location.pathname
       .replace(/^\/maqelec-spa(?=\/|$)/, "")
