@@ -1,0 +1,21 @@
+.machinery-hero-grid {
+  grid-template-columns: 1fr;
+}
+
+.machinery-hero-copy {
+  max-width: 880px;
+}
+
+.machine-search-row {
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 0.3fr);
+}
+
+@media (max-width: 980px) {
+  .machine-search-row {
+    grid-template-columns: 1fr;
+  }
+
+  .machine-search-field {
+    grid-column: auto;
+  }
+}
