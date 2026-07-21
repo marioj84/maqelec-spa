@@ -172,7 +172,7 @@ catalog.machinery.filter((item) => item.technicalSpecs && item.status === "live"
 catalog.services.filter((item) => item.status === "live").forEach(createServicePage);
 catalog.projects.filter((item) => item.status === "live").forEach(createProjectPage);
 
-const corePages = ["", "maquinaria.html", "servicios.html", "proyectos.html", "quienes-somos.html", "guias.html", "guia-cotizar-corte-plasma-cnc.html", "guia-elegir-maquinaria-industrial.html", "cotizar.html", "manuales.html"];
+const corePages = ["", "maquinaria.html", "servicios.html", "proyectos.html", "quienes-somos.html", "cobertura.html", "guias.html", "guia-cotizar-corte-plasma-cnc.html", "guia-elegir-maquinaria-industrial.html", "cotizar.html", "manuales.html"];
 const urls = [
   ...corePages,
   ...catalog.machinery.filter((item) => item.technicalSpecs && item.status === "live").map(slugMachine),

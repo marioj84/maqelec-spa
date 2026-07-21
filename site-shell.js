@@ -103,7 +103,7 @@
             </details>
             <details class="ma-footer-section" open>
               <summary><h4>Empresa</h4></summary>
-              <div class="ma-footer-links"><a href="quienes-somos.html">Quiénes somos</a><a href="proyectos.html">Proyectos</a><a href="guias.html">Guías técnicas</a><a href="contacto.html">Contacto</a></div>
+              <div class="ma-footer-links"><a href="quienes-somos.html">Quiénes somos</a><a href="proyectos.html">Proyectos</a><a href="cobertura.html">Cobertura en Chile</a><a href="guias.html">Guías técnicas</a><a href="contacto.html">Contacto</a></div>
             </details>
             <details class="ma-footer-section" open>
               <summary><h4>Soporte</h4></summary>

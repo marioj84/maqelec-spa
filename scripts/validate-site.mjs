@@ -8,6 +8,7 @@ const errors = [];
 const titles = new Map();
 const descriptions = new Map();
 const canonicals = new Map();
+const indexedCanonicals = new Set();
 
 function record(map, value, file, label) {
   if (!value) return;
@@ -46,6 +47,7 @@ for (const file of htmlFiles) {
     record(titles, title, file, "title");
     record(descriptions, description, file, "description");
     record(canonicals, canonical, file, "canonical");
+    if (canonical) indexedCanonicals.add(canonical);
   }
 
   for (const match of html.matchAll(/<(?:a|link)[^>]+href="([^"]+)"/gi)) {
@@ -60,9 +62,30 @@ for (const file of htmlFiles) {
 }
 
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-for (const match of sitemap.matchAll(/<loc>https:\/\/maqelec\.cl\/([^<]*)<\/loc>/g)) {
-  const target = match[1] || "index.html";
+const sitemapUrls = [...sitemap.matchAll(/<loc>(https:\/\/maqelec\.cl\/[^<]*)<\/loc>/g)].map((match) => match[1]);
+const uniqueSitemapUrls = new Set(sitemapUrls);
+if (uniqueSitemapUrls.size !== sitemapUrls.length) errors.push("sitemap.xml: contiene URLs duplicadas");
+
+for (const sitemapUrl of sitemapUrls) {
+  const target = sitemapUrl.replace("https://maqelec.cl/", "") || "index.html";
   if (!fs.existsSync(path.join(root, target))) errors.push(`sitemap.xml: URL sin archivo ${target}`);
+  if (!indexedCanonicals.has(sitemapUrl)) errors.push(`sitemap.xml: URL no indexable o canónica distinta ${sitemapUrl}`);
+}
+
+for (const canonical of indexedCanonicals) {
+  if (!uniqueSitemapUrls.has(canonical)) errors.push(`sitemap.xml: falta página pública ${canonical}`);
+}
+
+const robotsTxt = fs.readFileSync(path.join(root, "robots.txt"), "utf8");
+if (!/^Sitemap: https:\/\/maqelec\.cl\/sitemap\.xml$/m.test(robotsTxt)) errors.push("robots.txt: falta referencia exacta al sitemap");
+if (!/User-agent: OAI-SearchBot\s+Allow: \//m.test(robotsTxt)) errors.push("robots.txt: OAI-SearchBot no tiene acceso explícito");
+
+const llmsPath = path.join(root, "llms.txt");
+if (!fs.existsSync(llmsPath)) errors.push("falta llms.txt");
+else {
+  const llms = fs.readFileSync(llmsPath, "utf8");
+  if (!llms.includes("https://maqelec.cl/")) errors.push("llms.txt: falta el dominio canónico");
+  if (!llms.includes("https://maqelec.cl/cobertura.html")) errors.push("llms.txt: falta la página de cobertura");
 }
 
 if (errors.length) {
