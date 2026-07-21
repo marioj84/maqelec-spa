@@ -57,21 +57,18 @@
     const visual = item.image
       ? `<div class="machine-visual machine-visual-photo">
           <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy" decoding="async">
-          <span>${item.mediaType === "real" ? "Equipo real" : "Imagen referencial"}</span>
         </div>`
       : `<div class="machine-visual" aria-hidden="true">
           <span>${escapeHTML(item.category)}</span>
           <strong>MAQELEC</strong>
         </div>`;
-    const statusLabel =
-      item.status === "live" ? "Equipo real" : "Ficha en preparación";
     return `
       <article id="${escapeHTML(item.id)}" class="catalog-card machine-card" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary, ...item.specs].join(" "),
       )}">
         ${visual}
         <div class="catalog-card-body">
-          <div class="card-meta"><span>${escapeHTML(item.category)}</span><span class="status-pill">${statusLabel}</span></div>
+          <div class="card-meta"><span>${escapeHTML(item.category)}</span></div>
           <h3>${escapeHTML(item.name)}</h3>
           <p>${escapeHTML(item.summary)}</p>
           <ul>${specs}</ul>
@@ -101,16 +98,12 @@
           </div>
         </article>`;
     }
-    const mediaLabel = item.mediaType === "real"
-      ? '<span class="real-media-label">Trabajo real</span>'
-      : '<span class="real-media-label">Imagen referencial</span>';
     return `
       <article id="${escapeHTML(item.id)}" class="catalog-card service-card" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary].join(" "),
       )}">
         <div class="service-image">
           <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy" decoding="async"${item.imagePosition ? ` style="object-position:${escapeHTML(item.imagePosition)}"` : ""}>
-          ${mediaLabel}
         </div>
         <div class="catalog-card-body">
           <div class="card-meta"><span>${escapeHTML(item.category)}</span></div>
@@ -125,7 +118,6 @@
     const visual = item.image
       ? `<div class="machine-teaser-visual machine-teaser-photo">
           <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy">
-          <span>${item.mediaType === "real" ? "Equipo real" : "Imagen referencial"}</span>
         </div>`
       : `<div class="machine-teaser-visual" aria-hidden="true">
           <span>${escapeHTML(item.category)}</span>
@@ -164,7 +156,6 @@
           ${gallery ? `<div class="project-gallery">${gallery}</div>` : ""}
         </div>
         <div class="project-copy">
-          <span class="status-pill">Trabajo real</span>
           <small>${escapeHTML(item.type)}</small>
           <h3>${escapeHTML(item.title)}</h3>
           <p>${escapeHTML(item.summary)}</p>
@@ -386,12 +377,11 @@
             <div class="machine-gallery">
               <div class="machine-gallery-main">
                 <img data-gallery-main src="${escapeHTML(item.gallery?.[0]?.src || item.image)}" alt="${escapeHTML(item.gallery?.[0]?.alt || item.imageAlt || "")}">
-                <span>Fotografías reales del equipo y su operación</span>
               </div>
               <div class="machine-gallery-thumbs">${gallery}</div>
             </div>
             <div class="machine-product-copy">
-              <div class="machine-product-labels"><span>Equipo real</span><small>${escapeHTML(item.category)}</small></div>
+              <div class="machine-product-labels"><small>${escapeHTML(item.category)}</small></div>
               <h1>${escapeHTML(item.name)}</h1>
               <p class="machine-product-summary">${escapeHTML(item.summary)}</p>
               <div class="machine-key-facts">${facts}</div>
