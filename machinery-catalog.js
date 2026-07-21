@@ -7,19 +7,15 @@
     if (!catalog?.machinery || !mount) return;
 
     const searchInput = document.querySelector("[data-machine-filter]");
-    const statusSelect = document.querySelector("[data-machine-status]");
     const sortSelect = document.querySelector("[data-machine-sort]");
     const categoryMount = document.querySelector("[data-machine-categories]");
     const countMount = document.querySelector("[data-machine-count]");
     const emptyMount = document.querySelector("[data-machine-empty]");
-    const realCountMount = document.querySelector("[data-machine-real-count]");
-    const totalCountMount = document.querySelector("[data-machine-total-count]");
     const whatsappNumber = "56991514957";
 
     const state = {
       query: "",
       category: "all",
-      status: "all",
       sort: "priority",
     };
 
@@ -46,12 +42,6 @@
         stock: "Disponibilidad local",
         ambas: "Suministro local o importación",
       }[value] || "Disponibilidad por confirmar";
-    }
-
-    function experienceLabel(item) {
-      return item.mediaType === "real"
-        ? "Experiencia real MAQELEC"
-        : "Configuración referencial";
     }
 
     function detailUrl(item) {
@@ -82,17 +72,19 @@
         .map((spec) => `<li>${escapeHTML(spec)}</li>`)
         .join("");
       const hasDetail = Boolean(item.technicalSpecs && item.slug);
-      const mediaClass = item.mediaType === "real" ? "is-real" : "is-reference";
-      const primaryLabel = hasDetail ? "Ver ficha técnica" : "Solicitar configuración";
+      const primaryLabel = hasDetail ? "Ver ficha técnica" : "Consultar equipo";
+      const badges = [
+        item.mediaType === "real"
+          ? '<span class="machine-card-badge is-real">Experiencia MAQELEC</span>'
+          : "",
+        hasDetail ? '<span class="machine-card-badge">Ficha técnica</span>' : "",
+      ].filter(Boolean).join("");
 
       return `
         <article class="machine-catalog-card" data-machine-id="${escapeHTML(item.id)}">
           <div class="machine-card-media">
             <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || item.name)}" loading="lazy" decoding="async">
-            <div class="machine-card-badges">
-              <span class="machine-card-badge ${mediaClass}">${escapeHTML(experienceLabel(item))}</span>
-              ${hasDetail ? '<span class="machine-card-badge">Ficha técnica</span>' : '<span class="machine-card-badge">A configurar</span>'}
-            </div>
+            ${badges ? `<div class="machine-card-badges">${badges}</div>` : ""}
           </div>
           <div class="machine-card-body">
             <span class="machine-card-category">${escapeHTML(item.category)}</span>
@@ -137,11 +129,7 @@
       const items = catalog.machinery.filter((item) => {
         const matchesQuery = !state.query || searchableText(item).includes(normalize(state.query));
         const matchesCategory = state.category === "all" || item.category === state.category;
-        const matchesStatus = state.status === "all"
-          || (state.status === "real" && item.mediaType === "real")
-          || (state.status === "reference" && item.mediaType !== "real")
-          || (state.status === "detail" && Boolean(item.technicalSpecs));
-        return matchesQuery && matchesCategory && matchesStatus;
+        return matchesQuery && matchesCategory;
       });
 
       return items.sort((a, b) => {
@@ -180,24 +168,13 @@
           render();
         });
       }
-      statusSelect?.addEventListener("change", () => {
-        state.status = statusSelect.value;
-        render();
-      });
       sortSelect?.addEventListener("change", () => {
         state.sort = sortSelect.value;
         render();
       });
     }
 
-    function setSummary() {
-      const real = catalog.machinery.filter((item) => item.mediaType === "real").length;
-      if (realCountMount) realCountMount.textContent = String(real);
-      if (totalCountMount) totalCountMount.textContent = String(catalog.machinery.length);
-    }
-
     bindControls();
-    setSummary();
     renderCategories();
     render();
   }
