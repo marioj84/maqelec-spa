@@ -594,9 +594,9 @@ html {
 body.catalog-site {
   margin: 0;
   overflow-x: hidden;
-  background: #ffffff;
+  background: #f1f3f4;
   color: var(--catalog-ink);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Poppins, system-ui, sans-serif;
   line-height: 1.55;
 }
 
@@ -626,7 +626,7 @@ body.catalog-site main > section + section {
 .catalog-site h2,
 .catalog-site h3 {
   margin-top: 0;
-  font-family: Archivo, Inter, sans-serif;
+  font-family: Poppins, sans-serif;
   line-height: 1.04;
 }
 
@@ -885,7 +885,7 @@ body.catalog-site .home-hero::after {
 }
 
 .machine-visual strong {
-  font-family: Archivo, sans-serif;
+  font-family: Poppins, sans-serif;
   font-size: 2rem;
   letter-spacing: -0.05em;
 }
@@ -1581,7 +1581,7 @@ body.catalog-site .page-intro h1 {
 
 .machine-key-facts strong {
   color: var(--catalog-navy);
-  font-family: Archivo, sans-serif;
+  font-family: Poppins, sans-serif;
   font-size: 1.28rem;
 }
 
@@ -1806,7 +1806,7 @@ body.catalog-site .page-intro h1 {
 }
 
 .machine-support-cta strong {
-  font-family: Archivo, sans-serif;
+  font-family: Poppins, sans-serif;
   font-size: 1.35rem;
 }
 
@@ -1989,6 +1989,251 @@ body.catalog-site .page-intro h1 {
   }
 }
 
+/* Renovación visual industrial 2026: compacta, táctil y mobile-first */
+body.catalog-site.commerce-home { background: #f1f3f4; }
+
+body.commerce-home .commercial-showcase { background: #f1f3f4; }
+
+.promo-carousel {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #152f3a;
+}
+
+.promo-slide {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.015);
+  transition: opacity .55s ease, transform .8s ease;
+}
+
+.promo-slide.is-active {
+  z-index: 1;
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.promo-slide > img,
+.promo-slide > video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo-slide > video { object-position: center 50%; }
+
+.promo-slide .promo-content { z-index: 3; }
+
+body.commerce-home .promo-slide .promo-content h2 {
+  max-width: 690px;
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+}
+
+.promo-control {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 50%;
+  background: rgba(13,37,46,.46);
+  color: #fff;
+  cursor: pointer;
+  font: 500 1.6rem/1 Poppins, sans-serif;
+  transform: translateY(-50%);
+}
+
+.promo-prev { left: 13px; }
+.promo-next { right: 13px; }
+.promo-control:hover, .promo-control:focus-visible { background: #087fbd; }
+
+.promo-dots {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  z-index: 6;
+  display: flex;
+  gap: 7px;
+}
+
+.promo-dots button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: rgba(255,255,255,.34);
+  cursor: pointer;
+}
+
+.promo-dots button.is-active { width: 25px; border-radius: 999px; background: #fff; }
+
+.trust-band {
+  padding: 18px 0 !important;
+  border-top: 1px solid #dfe5e8 !important;
+  border-bottom: 1px solid #dfe5e8;
+  background: #fff;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+}
+
+.trust-grid article {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 5px 17px;
+  border-right: 1px solid #e0e6e9;
+}
+
+.trust-grid article:first-child { padding-left: 0; }
+.trust-grid article:last-child { padding-right: 0; border-right: 0; }
+.trust-icon { color: #3d983f; font-size: 1.7rem; font-weight: 700; line-height: 1; text-align: center; }
+.trust-grid strong { display: block; color: #1d292f; font-size: .72rem; line-height: 1.25; text-transform: uppercase; }
+.trust-grid p { margin: 4px 0 0; color: #66747b; font-size: .64rem; line-height: 1.35; }
+
+body.commerce-home .solution-band { background: #f1f3f4; }
+
+.solution-rail .solution-featured,
+.solution-rail .solution-quote {
+  border-color: #dbe2e5;
+  background: #fff;
+  color: #203b48;
+}
+
+.solution-rail a:hover,
+.solution-rail a:focus-visible,
+.solution-rail a:active {
+  border-color: #087fbd;
+  background: #087fbd;
+  color: #fff;
+}
+
+.solution-rail .solution-quote:hover,
+.solution-rail .solution-quote:focus-visible,
+.solution-rail .solution-quote:active {
+  border-color: #3d983f;
+  background: #3d983f;
+  color: #fff;
+}
+
+.machine-teaser,
+.shortcut-grid a,
+.home-guide-links a { transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease, background .2s ease; }
+
+.machine-teaser:hover,
+.machine-teaser:focus-within,
+.shortcut-grid a:hover,
+.shortcut-grid a:focus-visible,
+.home-guide-links a:hover,
+.home-guide-links a:focus-visible {
+  border-color: rgba(8,127,189,.55);
+  box-shadow: 0 13px 28px rgba(18,48,59,.1);
+  transform: translateY(-3px);
+}
+
+body.commerce-home .home-coverage {
+  padding: 48px 0 !important;
+  background: #edf0f1;
+}
+
+.coverage-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr);
+  gap: 55px;
+  align-items: center;
+}
+
+.coverage-copy h2 { margin: 7px 0 15px; max-width: 520px; color: #1d292f; font-size: clamp(1.7rem, 3vw, 2.5rem); }
+.coverage-copy > p { max-width: 590px; margin: 0 0 18px; color: #607078; font-size: .88rem; }
+.coverage-cities { margin: 0 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
+.coverage-cities li { padding: 6px 10px; border: 1px solid #d5dee2; border-radius: 999px; background: #fff; color: #29444f; font-size: .68rem; font-weight: 700; }
+
+.chile-map-card {
+  margin: 0;
+  padding: 14px 18px 10px;
+  border: 1px solid #d8e0e3;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 17px 45px rgba(21,47,58,.08);
+}
+
+.chile-map { width: 100%; max-height: 450px; display: block; }
+.map-point circle { fill: #168cca; stroke: #fff; stroke-width: 3px; }
+.map-point line { stroke: #8fa5ae; stroke-width: 1.5px; }
+.map-point text { fill: #29444f; font: 600 13px Poppins, sans-serif; }
+.map-point.is-base circle { fill: #3d983f; r: 9px; }
+.map-point.is-base text { fill: #2f7d33; font-weight: 800; }
+.chile-map-card figcaption { padding: 7px 0 3px; border-top: 1px solid #e6eaec; color: #69787f; font-size: .64rem; text-align: center; }
+
+@media (max-width: 980px) {
+  .promo-carousel { min-height: 390px; }
+  .trust-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 0; }
+  .trust-grid article:nth-child(3) { border-right: 0; }
+  .coverage-layout { grid-template-columns: minmax(0, .8fr) minmax(370px, 1.2fr); gap: 30px; }
+}
+
+@media (max-width: 720px) {
+  .promo-carousel { min-height: 286px; }
+  .promo-slide .promo-content { inset: auto 20px 42px; max-width: calc(100% - 40px); }
+  body.commerce-home .promo-slide .promo-content h1,
+  body.commerce-home .promo-slide .promo-content h2 { max-width: 90%; font-size: clamp(1.65rem, 8vw, 2.2rem); line-height: 1; }
+  .promo-slide .promo-content p { max-width: 92%; margin-top: 9px; font-size: .72rem; line-height: 1.38; }
+  .promo-slide .promo-content small { margin-bottom: 7px; font-size: .56rem; }
+  .promo-slide .promo-button { min-height: 36px; margin-top: 12px; padding: 0 14px; font-size: .68rem; }
+  .promo-control { top: 18px; width: 32px; height: 32px; transform: none; }
+  .promo-prev { left: auto; right: 50px; }
+  .promo-next { right: 12px; }
+  .promo-dots { right: auto; left: 20px; bottom: 17px; }
+  .trust-band { padding: 10px 0 !important; }
+  .trust-grid {
+    width: min(100% - 22px, 1235px);
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(245px, 78%);
+    gap: 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+  .trust-grid article,
+  .trust-grid article:first-child,
+  .trust-grid article:last-child {
+    grid-template-columns: 28px 1fr;
+    padding: 10px 12px;
+    border: 1px solid #e1e7e9;
+    border-radius: 10px;
+    scroll-snap-align: start;
+  }
+  .trust-icon { font-size: 1.25rem; }
+  .trust-grid p { margin-top: 2px; }
+  .coverage-layout { grid-template-columns: 1fr; gap: 20px; }
+  body.commerce-home .home-coverage { padding: 30px 0 !important; }
+  .coverage-copy h2 { font-size: 1.45rem; }
+  .chile-map-card { padding: 8px 8px 7px; }
+  .chile-map { max-height: 390px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-slide { transition: none; }
+}
+
 /* Inicio comercial inspirado en la composición de JAO Group */
 body.commerce-home .ma-container {
   width: min(1235px, calc(100% - 32px));
@@ -2157,7 +2402,7 @@ body.commerce-home .solution-band {
 body.commerce-home .solution-band h2 {
   margin: 0 0 22px;
   color: var(--catalog-ink);
-  font-family: Inter, sans-serif;
+  font-family: Poppins, sans-serif;
   font-size: 1.05rem;
   letter-spacing: 0;
 }
@@ -2594,7 +2839,7 @@ body.commerce-home .compact-heading h2 {
 
 .machine-teaser-visual strong {
   color: #294753;
-  font-family: Archivo, sans-serif;
+  font-family: Poppins, sans-serif;
   font-size: 1.25rem;
 }
 
@@ -2934,4 +3179,42 @@ body.commerce-home .commercial-cta-box h2 {
   .commercial-cta-box .section-actions {
     width: 100%;
   }
+}
+
+/* Capa final del tema: prevalece sobre los estilos heredados de portada. */
+body.catalog-site.commerce-home,
+body.commerce-home .commercial-showcase,
+body.commerce-home .solution-band { background: #f1f3f4; }
+
+.solution-rail .solution-featured,
+.solution-rail .solution-quote {
+  border-color: #dbe2e5;
+  background: #fff;
+  color: #203b48;
+}
+
+.solution-rail a:hover,
+.solution-rail a:focus-visible,
+.solution-rail a:active {
+  border-color: #087fbd;
+  background: #087fbd;
+  color: #fff;
+}
+
+.solution-rail .solution-quote:hover,
+.solution-rail .solution-quote:focus-visible,
+.solution-rail .solution-quote:active {
+  border-color: #3d983f;
+  background: #3d983f;
+  color: #fff;
+}
+
+@media (max-width: 720px) {
+  .promo-carousel { min-height: 286px; }
+  .promo-slide .promo-content { inset: auto 20px 42px; max-width: calc(100% - 40px); }
+  body.commerce-home .promo-slide .promo-content h1,
+  body.commerce-home .promo-slide .promo-content h2 { max-width: 90%; font-size: clamp(1.65rem, 8vw, 2.2rem); line-height: 1; }
+  .promo-slide .promo-content p { max-width: 92%; margin-top: 9px; font-size: .72rem; line-height: 1.38; }
+  .promo-slide .promo-content small { margin-bottom: 7px; font-size: .56rem; }
+  .promo-slide .promo-button { min-height: 36px; margin-top: 12px; padding: 0 14px; font-size: .68rem; }
 }
