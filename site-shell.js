@@ -88,36 +88,27 @@
       <footer class="ma-footer">
         <div class="ma-container">
           <div class="ma-footer-grid">
-            <div>
+            <div class="ma-footer-brand">
               <img src="logo.png" alt="MAQELEC SpA">
               <p>Maquinaria y servicios industriales con apoyo desde la selección hasta la puesta en marcha.</p>
+              <span class="ma-footer-location">Santiago · Proyectos en Chile</span>
             </div>
-            <div>
-              <h4>Categorías</h4>
-              <a href="maquinaria.html" data-feature="machinery">Maquinaria</a>
-              <a href="servicios.html" data-feature="services">Servicios</a>
-              <a href="proyectos.html" data-feature="projects">Proyectos</a>
-              <a href="cotizar.html">Cotizar</a>
-            </div>
-            <div>
-              <h4>Contacto</h4>
-              <a href="tel:+56991514957">+56 9 9151 4957</a>
-              <a href="mailto:contacto@maqelec.cl">contacto@maqelec.cl</a>
-              <p>Santiago, Chile</p>
-            </div>
-            <div>
-              <h4>Cliente</h4>
-              <a href="seguimiento.html" data-feature="tracking">Seguimiento</a>
-              <a href="manuales.html" data-feature="manuals">Manuales</a>
-              <a href="vip.html" data-feature="technicalCenter">Centro Técnico</a>
-              <a href="buscar.html">Buscar en el sitio</a>
-            </div>
-            <div>
-              <h4>MAQELEC</h4>
-              <a href="quienes-somos.html">Quiénes somos</a>
-              <a href="guias.html">Guías técnicas</a>
-              <p>Base de atención en Santiago · Proyectos coordinados en Chile</p>
-            </div>
+            <details class="ma-footer-section" open>
+              <summary><h4>Maquinaria</h4></summary>
+              <div class="ma-footer-links"><a href="maquinaria.html">Ver catálogo</a><a href="maquina-mesa-corte-plasma-cnc-thc-f1621.html">Plasma CNC</a><a href="maquina-punzonadora-cizalla-hidraulica-q35y20.html">Punzonadora y cizalla</a><a href="maquina-torno-convencional-c0636b.html">Tornos</a></div>
+            </details>
+            <details class="ma-footer-section" open>
+              <summary><h4>Servicios</h4></summary>
+              <div class="ma-footer-links"><a href="servicios.html">Servicios industriales</a><a href="servicio-soldadura-y-fabricacion.html">Fabricación</a><a href="servicio-puesta-en-marcha-y-capacitacion.html">Puesta en marcha</a><a href="cotizar.html">Solicitar cotización</a></div>
+            </details>
+            <details class="ma-footer-section" open>
+              <summary><h4>Empresa</h4></summary>
+              <div class="ma-footer-links"><a href="quienes-somos.html">Quiénes somos</a><a href="proyectos.html">Proyectos</a><a href="guias.html">Guías técnicas</a><a href="contacto.html">Contacto</a></div>
+            </details>
+            <details class="ma-footer-section" open>
+              <summary><h4>Soporte</h4></summary>
+              <div class="ma-footer-links"><a href="seguimiento.html">Seguimiento</a><a href="manuales.html">Manuales</a><a href="vip.html">Centro Técnico</a><a href="buscar.html">Buscar en el sitio</a><a href="tel:+56991514957">+56 9 9151 4957</a><a href="mailto:contacto@maqelec.cl">contacto@maqelec.cl</a></div>
+            </details>
           </div>
           <div class="ma-copy">© 2026 MAQELEC SpA · Todos los derechos reservados</div>
         </div>
@@ -168,13 +159,24 @@
     const menuToggle = document.querySelector("[data-menu-toggle]");
     const menu = document.getElementById("navMenu");
     const search = document.querySelector("[data-site-search]");
+    const footerSections = Array.from(document.querySelectorAll(".ma-footer-section"));
+    let footerDesktop = null;
+
+    const syncFooterSections = () => {
+      const desktop = window.matchMedia("(min-width: 621px)").matches;
+      if (desktop === footerDesktop) return;
+      footerDesktop = desktop;
+      footerSections.forEach((section) => { section.open = desktop; });
+    };
 
     const syncScrollState = () => {
       document.body.classList.toggle("mq-scrolled", window.scrollY > 60);
     };
 
     window.addEventListener("scroll", syncScrollState, { passive: true });
+    window.addEventListener("resize", syncFooterSections, { passive: true });
     syncScrollState();
+    syncFooterSections();
 
     serviceToggle?.addEventListener("click", (event) => {
       event.stopPropagation();

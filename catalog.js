@@ -497,6 +497,59 @@
     });
   }
 
+  function bindPromoCarousel() {
+    const carousel = document.querySelector("[data-promo-carousel]");
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll("[data-promo-slide]"));
+    const dots = Array.from(carousel.querySelectorAll("[data-promo-dot]"));
+    const previous = carousel.querySelector("[data-promo-prev]");
+    const next = carousel.querySelector("[data-promo-next]");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let current = 0;
+    let timer = null;
+
+    const show = (index) => {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        const active = slideIndex === current;
+        slide.classList.toggle("is-active", active);
+        slide.setAttribute("aria-hidden", String(!active));
+        slide.inert = !active;
+        const video = slide.querySelector("video");
+        if (!video) return;
+        if (active && !reduceMotion) video.play().catch(() => {});
+        else video.pause();
+      });
+      dots.forEach((dot, dotIndex) => {
+        const active = dotIndex === current;
+        dot.classList.toggle("is-active", active);
+        if (active) dot.setAttribute("aria-current", "true");
+        else dot.removeAttribute("aria-current");
+      });
+    };
+
+    const stop = () => {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    };
+    const start = () => {
+      stop();
+      if (!reduceMotion && !document.hidden) timer = window.setInterval(() => show(current + 1), 6000);
+    };
+
+    previous?.addEventListener("click", () => { show(current - 1); start(); });
+    next?.addEventListener("click", () => { show(current + 1); start(); });
+    dots.forEach((dot) => dot.addEventListener("click", () => { show(Number(dot.dataset.promoDot)); start(); }));
+    carousel.addEventListener("mouseenter", stop);
+    carousel.addEventListener("mouseleave", start);
+    carousel.addEventListener("focusin", stop);
+    carousel.addEventListener("focusout", start);
+    document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+    show(0);
+    start();
+  }
+
   function init() {
     renderCollection("[data-machine-grid]", data.machinery, machineCard);
     renderCollection(
@@ -529,6 +582,7 @@
     renderUnifiedSearch();
     renderMachineDetail();
     bindRequirementForms();
+    bindPromoCarousel();
   }
 
   if (document.readyState === "loading") {
