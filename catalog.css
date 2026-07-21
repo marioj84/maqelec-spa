@@ -3218,3 +3218,57 @@ body.commerce-home .solution-band { background: #f1f3f4; }
   .promo-slide .promo-content small { margin-bottom: 7px; font-size: .56rem; }
   .promo-slide .promo-button { min-height: 36px; margin-top: 12px; padding: 0 14px; font-size: .68rem; }
 }
+
+/* Correcciones visuales posteriores a la revisión en pantalla completa. */
+body.catalog-site,
+body.catalog-site button,
+body.catalog-site input,
+body.catalog-site select,
+body.catalog-site textarea { font-family: Poppins, system-ui, sans-serif; }
+
+body.catalog-site.commerce-home { background: #eceff1; }
+body.commerce-home .commercial-showcase,
+body.commerce-home .solution-band,
+body.commerce-home .home-resources { background: #eceff1; }
+body.commerce-home .machine-window { background: #f8f9fa; }
+body.commerce-home .owner-support { background: #e4eaed; }
+body.commerce-home .service-shortcuts { padding: 29px 0 !important; background: #f7f8f9; }
+
+.promo-carousel { height: 100%; min-height: 416px; }
+.promo-carousel .promo-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.promo-carousel .promo-slide > img,
+.promo-carousel .promo-slide > video { display: block; width: 100%; height: 100%; }
+
+body.commerce-home .service-shortcuts .compact-heading { margin-bottom: 13px; }
+body.commerce-home .service-shortcuts .compact-heading h2 { font-size: clamp(1.45rem, 2.2vw, 1.9rem); }
+body.commerce-home .service-shortcuts .compact-heading > div > span { font-size: .6rem; }
+.service-shortcuts .shortcut-grid { gap: 10px; }
+.service-shortcuts .shortcut-grid a { min-height: 60px; padding: 11px 14px; }
+
+.trust-band-bottom { border-top: 1px solid #d9e1e4 !important; }
+
+.chile-map-image {
+  width: 100%;
+  height: 500px;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 980px) {
+  .promo-carousel { min-height: 390px; }
+}
+
+@media (max-width: 720px) {
+  .promo-carousel { min-height: 286px; }
+  body.commerce-home .service-shortcuts { padding: 21px 0 !important; }
+  body.commerce-home .service-shortcuts .compact-heading { margin-bottom: 10px; }
+  .service-shortcuts .shortcut-grid a { min-height: 54px; }
+  .chile-map-image { height: 390px; }
+}
