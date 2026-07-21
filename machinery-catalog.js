@@ -36,6 +36,15 @@
         .trim();
     }
 
+    function displayText(value) {
+      return String(value ?? "")
+        .replace("La configuración final se define", "La selección final se define")
+        .replace("Configuración según requerimiento", "Selección según requerimiento")
+        .replace("Configuración a medida", "Selección según proyecto")
+        .replace("Compresor según configuración", "Compresor según necesidad")
+        .replace("Configuración eléctrica por confirmar", "Alimentación eléctrica por confirmar");
+    }
+
     function modalityLabel(value) {
       return {
         importacion: "Importación a pedido",
@@ -69,7 +78,7 @@
     function machineCard(item) {
       const specs = (item.specs || [])
         .slice(0, 3)
-        .map((spec) => `<li>${escapeHTML(spec)}</li>`)
+        .map((spec) => `<li>${escapeHTML(displayText(spec))}</li>`)
         .join("");
       const hasDetail = Boolean(item.technicalSpecs && item.slug);
       const primaryLabel = hasDetail ? "Ver ficha técnica" : "Consultar equipo";
@@ -89,7 +98,7 @@
           <div class="machine-card-body">
             <span class="machine-card-category">${escapeHTML(item.category)}</span>
             <h3>${escapeHTML(item.name)}</h3>
-            <p class="machine-card-summary">${escapeHTML(item.summary)}</p>
+            <p class="machine-card-summary">${escapeHTML(displayText(item.summary))}</p>
             ${specs ? `<ul class="machine-card-specs">${specs}</ul>` : ""}
             <div class="machine-card-commercial">${escapeHTML(modalityLabel(item.modality))}</div>
             <div class="machine-card-actions">
