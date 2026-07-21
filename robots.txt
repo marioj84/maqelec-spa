@@ -1,9 +1,11 @@
 User-agent: *
 Allow: /
 
+# Rastreo utilizado para resultados y citas en la búsqueda de ChatGPT.
 User-agent: OAI-SearchBot
 Allow: /
 
+# Rastreo de OpenAI para mejora de modelos; separado de OAI-SearchBot.
 User-agent: GPTBot
 Allow: /
 

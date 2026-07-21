@@ -1,0 +1,25 @@
+# MAQELEC SpA
+
+> Empresa chilena de maquinaria y servicios industriales con base en Santiago y proyectos coordinados en Chile.
+
+Sitio canónico: https://maqelec.cl/
+Idioma: español de Chile
+Teléfono: +56 9 9151 4957
+Correo: contacto@maqelec.cl
+
+## Contenido principal
+
+- [Maquinaria industrial](https://maqelec.cl/maquinaria.html): equipos para suministro o importación, con configuración, instalación y soporte sujetos a evaluación.
+- [Servicios industriales](https://maqelec.cl/servicios.html): corte, punzonado, mecanizado, soldadura, fabricación, terminaciones y puesta en marcha.
+- [Proyectos documentados](https://maqelec.cl/proyectos.html): casos de procesos y fabricación desarrollados por MAQELEC.
+- [Cobertura en Chile](https://maqelec.cl/cobertura.html): base en Santiago y trabajos documentados en Arica, La Serena, Viña del Mar, Santiago, Temuco y Valdivia.
+- [Quiénes somos](https://maqelec.cl/quienes-somos.html): misión, visión, valores y forma de trabajo.
+- [Guías técnicas](https://maqelec.cl/guias.html): orientación para evaluar maquinaria y preparar cotizaciones industriales.
+- [Solicitar cotización](https://maqelec.cl/cotizar.html): formulario para enviar requerimientos de maquinaria o servicios.
+
+## Criterios de precisión
+
+- La disponibilidad, configuración, procedencia, accesorios, plazos y precios de cada equipo se confirman en la propuesta comercial.
+- La factibilidad de un servicio depende del material, las medidas, la cantidad, la ubicación y las condiciones técnicas.
+- La cobertura regional se evalúa según logística, alcance y condiciones de terreno.
+- Las páginas de proyecto describen casos documentados; no constituyen una promesa de resultado idéntico para otro requerimiento.

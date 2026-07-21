@@ -43,6 +43,11 @@ const coreMetadata = {
     description:
       "Conoce a MAQELEC, su misión, visión, valores, forma de trabajo y el equipo humano detrás de sus soluciones de maquinaria y servicios industriales en Chile.",
   },
+  "cobertura.html": {
+    title: "Cobertura de maquinaria y servicios industriales en Chile | MAQELEC",
+    description:
+      "Cobertura de MAQELEC desde Santiago para proyectos de maquinaria y servicios industriales en Chile, con trabajos documentados en Arica, La Serena, Viña del Mar, Santiago, Temuco y Valdivia.",
+  },
   "guias.html": {
     title: "Guías de maquinaria y procesos industriales | MAQELEC",
     description:
@@ -147,6 +152,20 @@ function breadcrumb(file, title) {
   return { "@type": "BreadcrumbList", itemListElement: items };
 }
 
+function itemList(name, items) {
+  return {
+    "@type": "ItemList",
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
 function schemaFor(file, title, description, image) {
   const url = canonicalFor(file);
   const graph = [];
@@ -185,6 +204,41 @@ function schemaFor(file, title, description, image) {
         },
       ],
     });
+  }
+
+  if (file === "maquinaria.html") {
+    graph.push(itemList(
+      "Maquinaria industrial disponible para evaluación",
+      catalog.machinery
+        .filter((item) => item.status === "live" && item.technicalSpecs)
+        .map((item) => ({ name: item.name, url: `${baseUrl}maquina-${item.slug}.html` })),
+    ));
+  }
+
+  if (file === "servicios.html") {
+    graph.push(itemList(
+      "Servicios industriales MAQELEC",
+      catalog.services
+        .filter((item) => item.status === "live")
+        .map((item) => ({ name: item.name, url: `${baseUrl}servicio-${item.slug}.html` })),
+    ));
+  }
+
+  if (file === "proyectos.html") {
+    graph.push(itemList(
+      "Proyectos industriales documentados por MAQELEC",
+      catalog.projects
+        .filter((item) => item.status === "live")
+        .map((item) => ({ name: item.title, url: `${baseUrl}proyecto-${item.id.replace(/^proy-/, "")}.html` })),
+    ));
+  }
+
+  if (file === "cobertura.html") {
+    graph.push(itemList(
+      "Ciudades con proyectos industriales de MAQELEC",
+      ["Arica", "La Serena", "Viña del Mar", "Santiago", "Temuco", "Valdivia"]
+        .map((name) => ({ name, url: `${url}#${name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "-")}` })),
+    ));
   }
 
   const machine = catalog.machinery.find((item) => file === `maquina-${item.slug}.html`);
@@ -243,8 +297,9 @@ function schemaFor(file, title, description, image) {
     });
   }
 
+  const collectionPages = new Set(["maquinaria.html", "servicios.html", "proyectos.html", "guias.html", "cobertura.html"]);
   graph.push({
-    "@type": file === "quienes-somos.html" ? "AboutPage" : "WebPage",
+    "@type": file === "quienes-somos.html" ? "AboutPage" : collectionPages.has(file) ? "CollectionPage" : "WebPage",
     "@id": `${url}#webpage`,
     url,
     name: title,
