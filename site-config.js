@@ -80,6 +80,13 @@
         dependencies: ["content.machineryCatalog", "channel.whatsapp"],
         selectors: ['a[href="maquinaria.html"]', 'a[href^="maquina-"]', '[data-feature="machinery"]'],
       },
+      importation: {
+        state: "live",
+        label: "Importación",
+        navBadge: false,
+        dependencies: ["core.navigation", "channel.whatsapp"],
+        selectors: ['a[href="importacion.html"]', '[data-feature="importation"]'],
+      },
       parts: {
         state: "off",
         label: "Repuestos",
@@ -154,6 +161,7 @@
       "index.html": "home",
       "maquinaria.html": "machinery",
       "maquina.html": "machinery",
+      "importacion.html": "importation",
       "repuestos.html": "parts",
       "servicios.html": "services",
       "proyectos.html": "projects",
