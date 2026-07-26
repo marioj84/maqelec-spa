@@ -75,7 +75,7 @@
                 <a href="maquinaria.html" data-feature="machinery"${activeFor(["machinery"])}>Maquinaria</a>
                 <a href="importacion.html" data-feature="importation"${activeFor(["importation"])}>Importación</a>
                 <a href="servicios.html" data-feature="services"${activeFor(["services"])}>Servicios</a>
-                <a href="proyectos.html" data-feature="projects"${activeFor(["projects"])}>Proyectos</a>
+                <a href="proyectos.html" data-feature="projects"${activeFor(["projects"])}>Asesorías</a>
                 <a href="cotizar.html" data-feature="contact"${activeAttribute("contact")}>Cotizar</a>
               </div>
 
@@ -105,7 +105,7 @@
             </details>
             <details class="ma-footer-section" open>
               <summary><h4>Empresa</h4></summary>
-              <div class="ma-footer-links"><a href="quienes-somos.html">Quiénes somos</a><a href="proyectos.html">Proyectos</a><a href="cobertura.html">Cobertura en Chile</a><a href="guias.html">Guías técnicas</a><a href="contacto.html">Contacto</a></div>
+              <div class="ma-footer-links"><a href="quienes-somos.html">Quiénes somos</a><a href="proyectos.html">Proyectos y asesorías</a><a href="cobertura.html">Cobertura en Chile</a><a href="guias.html">Guías técnicas</a><a href="contacto.html">Contacto</a></div>
             </details>
             <details class="ma-footer-section" open>
               <summary><h4>Soporte</h4></summary>
