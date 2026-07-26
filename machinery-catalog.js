@@ -54,9 +54,7 @@
     }
 
     function detailUrl(item) {
-      return item.technicalSpecs && item.slug
-        ? `maquina-${encodeURIComponent(item.slug)}.html`
-        : `cotizar.html?tipo=maquinaria&equipo=${encodeURIComponent(item.id)}`;
+      return `maquina.html?id=${encodeURIComponent(item.id)}`;
     }
 
     function quoteUrl(item) {
