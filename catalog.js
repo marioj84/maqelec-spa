@@ -43,7 +43,7 @@
   }
 
   function servicePageUrl(item) {
-    return item.slug ? `servicio-${encodeURIComponent(item.slug)}.html` : "servicios.html";
+    return item.page || (item.slug ? `servicio-${encodeURIComponent(item.slug)}.html` : "servicios.html");
   }
 
   function projectPageUrl(item) {
