@@ -98,7 +98,7 @@
       },
       projects: {
         state: "live",
-        label: "Trabajos y proyectos",
+        label: "Proyectos y asesorías",
         navBadge: false,
         dependencies: ["content.realProjects"],
         selectors: ['a[href="proyectos.html"]', '[data-feature="projects"]'],
