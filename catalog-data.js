@@ -123,6 +123,7 @@
       {
         id: "srv-taladrado-fresado-zay7045fg",
         slug: "taladrado-y-fresado-zay7045fg",
+        page: "servicio-mecanizado-industrial.html",
         name: "Taladrado y fresado con DTM ZAY7045FG",
         category: "Fabricación",
         image: "assets/trabajos-reales/taladro-fresador-zay7045fg-vista-general.webp",
@@ -134,6 +135,7 @@
       {
         id: "srv-fabricacion-mesa-plasma-f1621",
         slug: "fabricacion-mesa-plasma-cnc-f1621",
+        page: "servicio-soldadura-y-fabricacion.html",
         name: "Fabricación de mesa de corte plasma CNC con THC F1621",
         category: "Fabricación de maquinaria",
         image: "assets/trabajos-reales/plasma-cnc-vista-general.webp",
