@@ -62,7 +62,8 @@
                   <span>☰ &nbsp; EXPLORAR CATÁLOGO</span><span aria-hidden="true">⌄</span>
                 </button>
                 <div class="ma-service-dropdown" id="serviceDropdown">
-                  <a href="maquinaria.html"><strong>Maquinaria</strong><span>Equipos para suministro o importación.</span></a>
+                  <a href="maquinaria.html"><strong>Maquinaria</strong><span>Equipos disponibles para venta.</span></a>
+                  <a href="importacion.html"><strong>Importación</strong><span>Próximos equipos gestionados a pedido.</span></a>
                   <a href="servicios.html"><strong>Servicios</strong><span>Trabajos industriales ejecutados por MAQELEC.</span></a>
                   <a href="guias.html"><strong>Guías técnicas</strong><span>Criterios para evaluar equipos, procesos y cotizaciones.</span></a>
                 </div>
@@ -72,6 +73,7 @@
               <div class="ma-menu" id="navMenu">
                 <a href="index.html"${activeAttribute("home")}>Inicio</a>
                 <a href="maquinaria.html" data-feature="machinery"${activeFor(["machinery"])}>Maquinaria</a>
+                <a href="importacion.html" data-feature="importation"${activeFor(["importation"])}>Importación</a>
                 <a href="servicios.html" data-feature="services"${activeFor(["services"])}>Servicios</a>
                 <a href="proyectos.html" data-feature="projects"${activeFor(["projects"])}>Proyectos</a>
                 <a href="cotizar.html" data-feature="contact"${activeAttribute("contact")}>Cotizar</a>
@@ -95,7 +97,7 @@
             </div>
             <details class="ma-footer-section" open>
               <summary><h4>Maquinaria</h4></summary>
-              <div class="ma-footer-links"><a href="maquinaria.html">Ver catálogo</a><a href="maquina-mesa-corte-plasma-cnc-thc-f1621.html">Plasma CNC</a><a href="maquina-punzonadora-cizalla-hidraulica-q35y20.html">Punzonadora y cizalla</a><a href="maquina-torno-convencional-c0636b.html">Tornos</a></div>
+              <div class="ma-footer-links"><a href="maquinaria.html">Ver catálogo</a><a href="importacion.html">Importación</a><a href="maquina-mesa-corte-plasma-cnc-thc-f1621.html">Plasma CNC</a><a href="maquina-punzonadora-cizalla-hidraulica-q35y20.html">Punzonadora y cizalla</a><a href="maquina-torno-convencional-c0636b.html">Tornos</a></div>
             </details>
             <details class="ma-footer-section" open>
               <summary><h4>Servicios</h4></summary>
