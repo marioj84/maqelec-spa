@@ -52,27 +52,13 @@
 
       <section id="catalogo" class="machine-catalog-section" aria-label="Catálogo de equipos MAQELEC">
         <div class="ma-container">
-          <div class="machine-catalog-toolbar" aria-label="Filtros del catálogo">
-            <div class="machine-search-row">
-              <label class="machine-search-field">
-                <span>Buscar por equipo, modelo, proceso o capacidad</span>
-                <input type="search" data-machine-filter autocomplete="off" placeholder="Ej.: láser 1500 W, plasma, compresor LUFT" />
-              </label>
-              <label class="machine-select-field">
-                <span>Ordenar</span>
-                <select data-machine-sort>
-                  <option value="priority">Recomendados primero</option>
-                  <option value="name">Nombre A–Z</option>
-                  <option value="category">Por proceso</option>
-                </select>
-              </label>
-            </div>
-            <div class="machine-filter-row">
+          <div class="machine-catalog-toolbar" aria-label="Categorías del catálogo">
+<div class="machine-filter-row">
               <div class="machine-filter-tabs" data-machine-categories aria-label="Filtrar por proceso">
                 <button type="button" class="is-active">Todas</button>
                 <button type="button">Plasma CNC</button>
-                <button type="button">Mecanizado y torneado</button>
                 <button type="button">Corte láser</button>
+                <button type="button">Aire comprimido</button>
               </div>
               <span class="machine-catalog-count" data-machine-count>4 equipos visibles</span>
             </div>
