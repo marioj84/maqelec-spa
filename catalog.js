@@ -87,7 +87,7 @@
     const hasPhoto = Boolean(item.image);
     if (!hasPhoto) {
       return `
-        <article id="${escapeHTML(item.id)}" class="catalog-card service-card service-card-text" data-searchable="${escapeHTML(
+        <article id="${escapeHTML(item.id)}" class="catalog-card service-card service-card-text${item.featuredSupport ? " is-support" : ""}" data-searchable="${escapeHTML(
           [item.name, item.category, item.summary].join(" "),
         )}">
           <div class="catalog-card-body">
@@ -99,7 +99,7 @@
         </article>`;
     }
     return `
-      <article id="${escapeHTML(item.id)}" class="catalog-card service-card" data-searchable="${escapeHTML(
+      <article id="${escapeHTML(item.id)}" class="catalog-card service-card${item.featuredSupport ? " is-support" : ""}" data-searchable="${escapeHTML(
         [item.name, item.category, item.summary].join(" "),
       )}">
         <div class="service-image">
@@ -149,7 +149,7 @@
     const caseStudy = projectCaseStudy(item);
     return `
       <article id="${escapeHTML(item.id)}" class="project-card" data-searchable="${escapeHTML(
-        [item.title, item.type, item.summary].join(" "),
+        [item.title, item.type, item.summary, item.location].join(" "),
       )}">
         <div class="project-media">
           <img class="project-main-image" src="${escapeHTML(item.image)}" alt="${escapeHTML(item.imageAlt || "")}" loading="lazy" decoding="async">
@@ -157,6 +157,7 @@
         </div>
         <div class="project-copy">
           <small>${escapeHTML(item.type)}</small>
+          ${item.location ? `<span class="project-location">${escapeHTML(item.location)}</span>` : ""}
           <h3>${escapeHTML(item.title)}</h3>
           <p>${escapeHTML(item.summary)}</p>
           <dl class="case-study-summary">
