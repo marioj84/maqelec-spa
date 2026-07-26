@@ -330,15 +330,15 @@
   ],
   "services": [
     {
-      "id": "srv-corte-laser",
-      "slug": "corte-laser-fibra",
-      "name": "Corte láser de fibra",
+      "id": "srv-corte",
+      "slug": "corte-cnc-y-oxicorte",
+      "name": "Corte plasma CNC con mesa THC F1621",
       "category": "Fabricación",
-      "image": "assets/trabajos-reales/corte-laser-fibra-proceso.webp",
-      "imageAlt": "Cabezal de corte láser de fibra trabajando sobre una plancha metálica",
-      "mediaType": "reference",
+      "image": "assets/trabajos-reales/plasma-cnc-antorcha-corte.webp",
+      "imageAlt": "Antorcha de plasma CNC cortando una plancha metálica en el taller",
+      "mediaType": "real",
       "status": "live",
-      "summary": "Corte preciso de piezas y geometrías en lámina metálica, con definición según material, espesor, plano y volumen requerido."
+      "summary": "Corte automatizado de planchas y ejecución de piezas para proyectos metalmecánicos según plano, material y requerimiento."
     },
     {
       "id": "srv-punzonado-hidraulico",
@@ -352,27 +352,15 @@
       "summary": "Perforación, corte y conformado de piezas metálicas con matrices intercambiables para distintos diámetros y geometrías."
     },
     {
-      "id": "srv-corte",
-      "slug": "corte-cnc-y-oxicorte",
-      "name": "Corte plasma CNC con mesa THC F1621",
-      "category": "Fabricación",
-      "image": "assets/trabajos-reales/plasma-cnc-antorcha-corte.webp",
-      "imageAlt": "Antorcha de plasma CNC cortando una plancha metálica en el taller",
+      "id": "srv-mecanizado",
+      "slug": "mecanizado-industrial",
+      "name": "Taladrado, fresado, torneado y mecanizado",
+      "category": "Mecanizado",
+      "image": "assets/trabajos-reales/ejes-bujes-mecanizados.webp",
+      "imageAlt": "Piezas mecanizadas mediante torno, taladrado y fresado",
       "mediaType": "real",
       "status": "live",
-      "summary": "Corte automatizado de planchas y ejecución de piezas para proyectos metalmecánicos según plano, material y requerimiento."
-    },
-    {
-      "id": "srv-taladrado-fresado-zay7045fg",
-      "slug": "taladrado-y-fresado-zay7045fg",
-      "page": "servicio-mecanizado-industrial.html",
-      "name": "Taladrado y fresado con DTM ZAY7045FG",
-      "category": "Fabricación",
-      "image": "assets/trabajos-reales/taladro-fresador-zay7045fg-vista-general.webp",
-      "imageAlt": "Taladro fresador engranado DTM ZAY7045FG utilizado para servicios de mecanizado",
-      "mediaType": "real",
-      "status": "live",
-      "summary": "Servicio de perforado, ranurado, planeado y fresado de piezas metálicas con el equipo DTM ZAY7045FG."
+      "summary": "Servicios complementarios de taladrado, fresado, cilindrado, refrentado, fabricación, recuperación y ajuste de piezas con torno C0636B y taladro fresador ZAY7045FG."
     },
     {
       "id": "srv-fabricacion-mesa-plasma-f1621",
@@ -398,17 +386,6 @@
       "summary": "Desbaste, pulido, limpieza de bordes y preparación de piezas metálicas después del corte o antes de su armado."
     },
     {
-      "id": "srv-mecanizado",
-      "slug": "mecanizado-industrial",
-      "name": "Torneado y mecanizado con C0636B",
-      "category": "Fabricación",
-      "image": "assets/trabajos-reales/ejes-bujes-mecanizados.webp",
-      "imageAlt": "Ejes, bujes y componentes metálicos mecanizados sobre un banco de trabajo",
-      "mediaType": "real",
-      "status": "live",
-      "summary": "Servicio de cilindrado, refrentado, roscado, fabricación y recuperación de piezas con torno convencional C0636B."
-    },
-    {
       "id": "srv-soldadura",
       "slug": "soldadura-y-fabricacion",
       "name": "Soldadura y fabricación",
@@ -423,13 +400,14 @@
       "id": "srv-puesta-marcha",
       "slug": "puesta-en-marcha-y-capacitacion",
       "name": "Puesta en marcha y capacitación",
-      "category": "Implementación",
+      "category": "Acompañamiento técnico",
       "image": "assets/trabajos-reales/plasma-cnc-operador.webp",
       "imageAlt": "Operador supervisando una máquina CNC durante pruebas y puesta en marcha",
       "mediaType": "real",
       "imagePosition": "center 72%",
       "status": "live",
-      "summary": "Instalación, configuración inicial, pruebas y capacitación para operar nuevos equipos."
+      "summary": "Instalación, configuración inicial, pruebas y capacitación para operar nuevos equipos.",
+      "featuredSupport": true
     }
   ],
   "videos": [
@@ -493,7 +471,8 @@
         "Inspección visual y dimensional del acabado obtenido"
       ],
       "status": "live",
-      "summary": "Proceso real de desbaste y pulido para retirar rebabas, suavizar aristas y preparar piezas cortadas antes del armado o la entrega. Las imágenes muestran la pieza sujeta, el trabajo con esmeril angular y la terminación progresiva del borde."
+      "summary": "Proceso real de desbaste y pulido para retirar rebabas, suavizar aristas y preparar piezas cortadas antes del armado o la entrega. Las imágenes muestran la pieza sujeta, el trabajo con esmeril angular y la terminación progresiva del borde.",
+      "location": ""
     },
     {
       "id": "proy-corte-plasma-cnc",
@@ -535,7 +514,8 @@
         "Retiro, identificación y terminación de las piezas cortadas"
       ],
       "status": "live",
-      "summary": "Proceso real de corte plasma sobre plancha metálica con desplazamiento CNC y control automático de altura de antorcha. MAQELEC ejecuta el servicio y también integra equipos con instalación y soporte."
+      "summary": "Proceso real de corte plasma sobre plancha metálica con desplazamiento CNC y control automático de altura de antorcha. MAQELEC ejecuta el servicio y también integra equipos con instalación y soporte.",
+      "location": ""
     },
     {
       "id": "proy-punzonado-hidraulico",
@@ -584,7 +564,8 @@
         "Cilindrado exterior hasta obtener el diámetro final"
       ],
       "status": "live",
-      "summary": "Trabajo real con la Q35Y-20 en sus distintas estaciones. En este proceso se recortó primero el material para preparar el perfil que después continuó a la etapa de cilindrado en torno."
+      "summary": "Trabajo real con la Q35Y-20 en sus distintas estaciones. En este proceso se recortó primero el material para preparar el perfil que después continuó a la etapa de cilindrado en torno.",
+      "location": ""
     },
     {
       "id": "proy-torneado-cilindrado",
@@ -621,7 +602,8 @@
         "Terminación cilíndrica del diámetro exterior"
       ],
       "status": "live",
-      "summary": "Transformación del perfil exterior de piezas metálicas mediante giro controlado, avance de la herramienta de corte y lubricación hasta obtener una geometría cilíndrica."
+      "summary": "Transformación del perfil exterior de piezas metálicas mediante giro controlado, avance de la herramienta de corte y lubricación hasta obtener una geometría cilíndrica.",
+      "location": ""
     },
     {
       "id": "proy-yegua-industrial",
@@ -663,7 +645,8 @@
         "Montaje de ruedas, verificación y terminación superficial"
       ],
       "status": "live",
-      "summary": "Fabricación completa de un carro manual de carga —conocido en Chile como yegua— integrando corte de perfiles y placas, mecanizado de componentes, armado, soldadura, montaje de ruedas y terminaciones."
+      "summary": "Fabricación completa de un carro manual de carga —conocido en Chile como yegua— integrando corte de perfiles y placas, mecanizado de componentes, armado, soldadura, montaje de ruedas y terminaciones.",
+      "location": ""
     },
     {
       "id": "proy-tolva-tractor",
@@ -702,7 +685,8 @@
         "Terminación y preparación para montaje del sistema de rodado y conexión"
       ],
       "status": "live",
-      "summary": "Fabricación integral de una tolva o carro metálico de arrastre para tractor. El trabajo combina corte plasma CNC de planchas, preparación de perfiles, mecanizado de componentes en torno, armado estructural y soldadura."
+      "summary": "Fabricación integral de una tolva o carro metálico de arrastre para tractor. El trabajo combina corte plasma CNC de planchas, preparación de perfiles, mecanizado de componentes en torno, armado estructural y soldadura.",
+      "location": ""
     },
     {
       "id": "proy-piezas-metalicas",
@@ -741,7 +725,8 @@
         }
       ],
       "status": "live",
-      "summary": "Producción de piezas con distintas formas y perforaciones, seleccionando el corte según su geometría y tamaño; las piezas mayores incluyen oxicorte y el acabado contempla esmerilado de bordes."
+      "summary": "Producción de piezas con distintas formas y perforaciones, seleccionando el corte según su geometría y tamaño; las piezas mayores incluyen oxicorte y el acabado contempla esmerilado de bordes.",
+      "location": ""
     }
   ]
 };
